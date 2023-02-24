@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Salon ALEGRIA</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  
+  <header id="header">
+    <h1 class="site-title">
+      <a href="index.html">Salon ALEGRIA</a>
+    </h1>
+          <span class="nav-toggle">  
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+          <nav class="nav" id="">
+            <ul class="nav-menu-ul">
+              <li><a class="concept" href="#concept">Concept</a></li>
+              <li><a class="news" href="#news">News</a></li>
+              <li><a class="style" href="#style">Style</a></li>
+              <li><a class="menu" href="#menu">Menu</a></li>
+              <li><a class="access" href="#access">Access</a></li>
+              <li><a id="showreserv" class="reserve-btn" href="#access">ご予約はこちら</a></li>
+              <li><a id="showlogin" class="login-btn" href="##">会員様ログイン</a></li>
+            </ul>
+          </nav>
+  </header>
+
+
+  <main>
+    <div class="mainvisual">
+
+      <div id="login-modal">
+        <form action="">
+          <p>メールアドレス</p>
+          <input type="email">
+          <p>パスワード</p>
+          <input type="password">
+          <div class="btns">
+            <input class="btn" id="submit-btn" type="submit" value="ログイン">
+            <input class="btn" id="close-btn" type="button" value="閉じる">
+          </div>
+        </form>
+      </div>
+    </div>
+    
+
+    <section id="concept">
+      <div class="concept-container">
+        <img src="img/eyes01.jpg" width="40%" height=20%" alt="女性の目線">
+        <p class="text">
+          シックなモノトーンに
+          こだわったヘアーサロン、<br>
+          それが<span>ALEGRIA</span>です。<br>
+          熟練のスタイリストがあなたを
+          最新のトレンドへと導きます。
+          ご来店いただいたすべてのお客様を<br>笑顔に、<br>
+          それが私たちの想いです。<br>
+          アレグリアはスペイン語で『幸せ』を意味します。<br>ぜひ一度、幸せを感じにお越しください。
+        </p>
+      </div>
+      <div class="concept-title">
+        <h2 class="section-title reverse-title"><span>C</span>ONCEPT</h2>
+      </div>
+    </section>
+ 
+
+    <section id="news">
+      <div class="news-container">
+        <h2 class="section-title"><span>N</span>EWS</h2>
+        <div class="news-contents">
+          <dl>
+            <dt>2022/12/22</dt>
+            <dd><a href="##">年末年始における営業時間のお知らせ</a></dd>
+            <dt>2022/12/16</dt>
+            <dd><a href="##">クリスマス特別イベントを開催いたします！</a></dd>
+            <dt>2022/12/03</dt>
+            <dd><a href="##">インナーカラー・イルミナカラーを試してみませんか？</a></dd>
+            <dt>2022/11/28</dt>
+            <dd><a href="##">髪質改善メニュー好評受付中です！</a></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="style">
+      <div class="style-title">
+        <h2 class="section-title reverse-title">STYL<span>E</span></h2>
+      </div>
+      <div class="style-container mobile-hover">
+        <div class="style-left mobile-left">
+          <figure><img class="hover" src="img/style03.jpg" alt="パープルレイヤーの女性"></figure>
+          <figure><img class="hover" src="img/style02.jpg" alt="黒髪ロングの女性"></figure>
+          <figure><img class="hover" src="img/style04.jpg" alt="ハイブリーチイルミナカラーの女性"></figure>
+        </div>
+        <div class="style-right mobile-right">
+          <figure><img class="hover" src="img/style05.jpg" alt="ダークレイヤーの女性"></figure>
+          <figure><img class="hover" src="img/style06.jpg" alt="お子様のカットシーン"></figure>
+          <figure><img class="hover" src="img/style07.jpg" alt="髪飾りを装飾する女性"></figure>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="menu">
+      <div class="menu-title">
+        <h2 class="section-title"><span>M</span>ENU</h2>
+      </div>
+
+        <div class="menu-container">
+          <div class="menu left">
+            <h3 class="list-title"><span>C</span>ut & Color</h3>
+            <dl>
+              <dt>似合わせデザインカット</dt><dd>\4,800</dd>
+              <dt>デザインカット ＆ ブロー</dt><dd>￥5,800</dd>
+              <dt>カット ＆ カラー（リタッチ）</dt><dd>￥7,700</dd>
+              <dt>カット ＆ カラー（フルカラー）</dt><dd>￥8,800</dd>
+              <dt>カット ＆ 髪質改善フルカラー</dt><dd>￥9,800</dd>
+              <dt>カット ＆ ダブルカラー<br>（ケアブリーチ ＋ カラー）</dt><dd><div class="price">￥13,800</div></dd>
+              <dt>カット ＆ ハイライト<br>or<br>グラデーション（ケアブリーチ）</dt><dd><div class="price">￥15,800</div></dd>
+              <dt>カット ＆ インナーカラー<br>or<br>イルミナカラー（ケアブリーチ）</dt><dd><div class="price">￥17,800</div></dd>
+            </dl>
+          </div>
+
+          <div class="menu right">
+            <h3 class="list-title"><span>T</span>reatments & Special Care</h3>
+            <dl>
+              <dt>カラー with 美容液<br>＋<br>ケラチントリートメント</dt><dd><div class="price">\7,900</div></dd>
+              <dt>カラー with 美容液<br>＋<br>オリジナル髪質改善トリートメント</dt><dd><div class="price">\9,900</div></dd>
+              <dt>ヘッドスパ　25分</dt><dd>￥2,200</dd>
+              <dt>顔脱毛</dt><dd>￥1,900</dd>
+              <dt>高濃度水素フェイシャルクリーニング<br>毛穴洗浄＆吸引<br>ざらつき、皮脂詰まりに！</dt><dd><div class="price">￥3,200</div></dd>
+            </dl>
+              <h3 class="list-title"><span>M</span>ens</h3>
+                <dl>
+                  <dt>デザインカット ＆ ブロー</dt><dd>￥5,800</dd>
+                  <dt>カット ＆ 各種カラー</dt><dd>￥7,700 &#12316;</dd>
+                  <dt>カット ＆ デザインパーマ</dt><dd>￥9,900 &#12316;</dd>
+                </dl>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <section id="access">
+      <div class="access-title">
+        <h2 class="section-title reverse-title"><span>A</span>CCESS</h2>
+      </div>
+
+      <div class="reserve-container">
+        <div id="reserve-wrapper">
+          <div class="reserve-tel">
+            <p>お電話 <span><i class="fa-solid fa-phone-volume"></i></span> でのご予約はこちら</p><br>
+            <p class="tel-btn">03-XXXX-XXXX</p><br>
+            <a class="tel-btn-mobile" href="tel:XX-XXXX-XXXX"><span><i class="fa-solid fa-phone-volume"></i></span>03-XXXX-XXXX</a>
+            <p>受付時間：11:00 - 19:00　</p><br>
+            <p>営業時間：11:00 - 20:00　</p><br>
+            <p>定休日：火曜日　</p>
+          </div>
+
+          <div class="reserve-line">
+            <p>LINE <span><i class="fa-brands fa-line"></i></span> でのご予約はこちら</p>
+            <img src="img/newQR_064466.png" alt="QRコード">
+            <a href="##" class="line-btn-mobile"><span><i class="fa-brands fa-line"></i></span>LINEで予約</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-wrapper">
+        <div class="map-contents">
+          <div class="map-text">
+            <p>・お支払い方法：VISA／MasterCard／JCB／American Express／Diners／Discover</p>
+            <p>Suica, Pasmo, iD, PayPay, auPay, d払い, LINE Pay, 楽天Pay, メルペイ</p>
+            <p>・着付けサービスございます。お気軽にお問合せください。</p>
+            <p>・お子様同伴歓迎いたします。</p>
+            <p>・完全禁煙です。</p>
+            <p>・無料ドリンクサービスあります。</p>
+            <p class="address">・住所：東京都渋谷区渋谷X-XX-X　　／　　JR渋谷駅から徒歩3分です</p>
+          </div>
+          <div class="map-wrap">
+            <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25931.294486283594!2d139.6751064048662!3d35.666860732632905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cb2eb3108d1%3A0xf11cd9b2395b6677!2z5p2x5Lqs6YO95riL6LC35Yy6!5e0!3m2!1sja!2sjp!4v1673100161309!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+
+
+  <footer id="footer">
+    <div class="sns-wrapper">
+      <ul>
+        <li><a href="##"><i class="fa-brands fa-square-twitter"></i><span>T</span>witter</a></li>
+        <li><a href="##"><i class="fa-brands fa-square-facebook"></i><span>F</span>acebook</a></li>
+        <li><a href="##"><i class="fa-brands fa-square-instagram"></i><span>I</span>nstagram</a></li>
+      </ul>
+    </div>
+
+    <div class="contact-wrapper">
+      <ul>
+        <li><a href="##">当店について</a></li>
+        <li><a href="##">お仕事のご依頼</a></li>
+        <li><a href="##">お問い合わせ</a></li>
+        <li><p>&copy; Salon ALEGRIA 2022</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+ 

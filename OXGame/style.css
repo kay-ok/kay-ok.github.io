@@ -1,0 +1,51 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+main {
+  height: 70%;
+  font-size: 35px;
+  text-align: center;
+  border: 15px outset goldenrod;
+  padding: 45px;
+}
+
+main p {
+  background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+input {
+  font-size: 25px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.blocks {
+  height: 75px;
+  width: 75px;
+  margin-bottom: 15px;
+  vertical-align: middle;
+}
+
+input[value="O"] {
+  color: green;
+} 
+
+input[value="X"] {
+  color: red;
+}
+
+#reset {
+  border: 4px outset goldenrod;
+  border-radius: 1px;
+  color: beige; 
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
