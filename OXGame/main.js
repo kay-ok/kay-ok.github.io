@@ -52,11 +52,11 @@ function judgeEnd() {
       return true;
     }
   }
-  // 盾3マスが同じマークかを判定する
+  // 縦3マスが同じマークかを判定する
   for (let col = 0; col < 3; col++) {
     isEnd = isWin(IDS[0][col], IDS[1][col], IDS[2][col]);
     if (isEnd) {
-      displayResult($(IDS[0][cal]).value + 'の勝ち！');
+      displayResult($(IDS[0][col]).value + 'の勝ち！');
       return true;
     }
   }
