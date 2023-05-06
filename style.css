@@ -3,55 +3,790 @@ html {
 }
 
 body {
-  font-family: 'Noto Serif JP', 'Playfair Display', sans-serif;
+  font-family:  'Poppins', 'Noto Serif JP', 'Sawarabi Gothic', 'Klee One', 'Shippori Mincho', 'Cinzel', sans-serif, serif;
+  
 }
-
+/* 'Playfair Display', */
 a {
   text-decoration: none;
-  color: #000;
 }
 
 li {
   list-style: none;
 }
 
-/* ヘッダー */
-
-/* メイン */
-
-/* main {
-  text-align: center;
+/* img {
+  max-width: 100%;
 } */
 
-#first-section {
-  width: 100%;
-  height: 85vh;
-  /* レスポンシブの場合heightの値に注意 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-#first-section p {
-  font-size: 10rem;
-}
 
+/* セクションタイトル（共通部） */
 .section-title {
-  font-size: 4.5rem;
-  font-family: 'Playfair Display';
-  text-align: center;
-  padding-top: 3%;
-  color: skyblue;
-  -webkit-text-stroke: 1px #000;
+  font-size: 2.2rem;
+  /* text-align: center; */
+  padding-top: 4%;
+  letter-spacing: 0.07em;
+  color: #000;
+  font-family: 'Poppins';
+
+  /* -webkit-text-stroke: 1px gray; */
 }
 
 .sub-title {
-  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.09em;
+  /* text-align: center; */
+  padding-bottom: 3.5%;
+  color: #000;
+  font-family: 'Poppins';
+  /* font-weight: lighter; */
 }
 
-#works {
+.bgextend{
+	animation-name:bgextendAnimeBase;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	position: relative;
+	overflow: hidden;/*　はみ出た色要素を隠す　*/
+	opacity:0;
+}
+
+@keyframes bgextendAnimeBase{
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;  
+}
+}
+
+/*中の要素*/
+.bgappear{
+	animation-name:bgextendAnimeSecond;
+	animation-duration:1s;
+	animation-delay: 0.6s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes bgextendAnimeSecond{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+/*左から右*/
+.bgLRextend::before{
+	animation-name:bgLRextendAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    /* background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);黒系 */
+    /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);青きれい */
+
+    /* background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%); */
+/*     
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen; */
+}
+
+@keyframes bgLRextendAnime{
+	0% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+	50% {
+		transform-origin:left;
+		transform:scaleX(1);
+	}
+	50.001% {
+		transform-origin:right;
+	}
+	100% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.bgappearTrigger,
+.bgLRextendTrigger{
+    opacity: 0;
+}
+
+
+/* .container {
+  border: 3px solid blue;
+  height: 100vh;
   width: 100%;
-  height: 90vh;
+
+} */
+
+
+
+
+#bgc {
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  background-image: cover;
+}
+
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	/* background:#eee; */
+  /* bgi num.89 */
+  background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+  background-blend-mode: screen;
+	text-align:center;
+	color:#fff;
+}
+
+/* Loading画像中央配置　*/
+#splash-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash-logo svg{
+    width: 500px;
+}
+
+/*=============== SVGアニメーション内の指定 =================*/
+
+/*アニメーション前の指定*/
+#mask path {
+		fill-opacity: 0;/*最初は透過0で見えない状態*/
+		transition: fill-opacity .5s;/*カラーがつく際のアニメーション0.5秒で変化*/
+		fill: none;/*塗りがない状態*/
+		stroke: #333;/*線の色*/
+	}
+
+/*アニメーション後に.doneというクラス名がで付与された時の指定*/
+#mask.done path{
+	  fill: #333;/*塗りの色*/
+	  fill-opacity: 1;/*透過1で見える状態*/
+	  stroke: none;/*線の色なし*/
+	}
+
+
+
+/* ヘッダー */
+#header {
+  width: 100%;
+  height: 50px;
+  /* display: flex; */
+  /* align-items: center; */
+
+}
+
+.header-nav {
+
+  /* margin: 0 auto; */
+  width: 100%;
+  /* line-height: 45px; */
+}
+
+.header-nav ul {
+  display: flex;
+  text-align: center;
+  width: 100%;
+}
+
+.header-nav ul li {
+  display: inline;
+  width: 100%;
+  max-width: calc(100% / 3);
+}
+/*== ボタン共通設定 */
+.btn02 {
+  /*背景の基点とするためrelativeを指定*/
+  position: relative;
+  /*ボタンの形状*/
+  display: inline-block;
+  width:100%;
+  max-width: 250px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  outline: none;
+}
+
+/*ボタン内側の設定*/
+.btn02 span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #000;
+  /* 重なりを3Dで表示 */
+  transform-style: preserve-3d;
+  /* アニメーションの設定 数字が少なくなるほど早く回転 */
+  transition: 0.5s;
+}
+
+/*== くるっと回転（奥に） */
+
+/* 回転前 */
+.rotateback span:nth-child(1) {
+  background: rgba(0, 0, 0, 0);
+  color: #000;
+  letter-spacing: 0.07em;
+  transform: rotateX(0deg);/*はじめは回転なし*/
+  transform-origin: 0 50%  -25px;/* 回転する起点 */
+  font-family: 'Poppins';
+}
+
+/*hoverをした後の形状*/
+.rotateback:hover span:nth-child(1) {
+  transform: rotateX(90deg);/* X軸に90度回転 */
+}
+
+/* 回転後 */
+.rotateback span:nth-child(2) {
+  background: rgba(0, 0, 0, 0);
+  color: #000;
+  letter-spacing: 0.15em;
+  font-family: 'Sawarabi Gothic';
+  font-weight: lighter;
+  transform: rotateX(-90deg);/*はじめはX軸に-90度回転*/
+  transform-origin: 0 50%  -25px;/* 回転する起点 */
+}
+
+/*hoverをした後の形状*/
+.rotateback:hover span:nth-child(2) {
+  transform: rotateX(0deg);/* X軸に0度回転 */
+}
+
+
+
+/* memo */
+/* Oはそのまま表示、スクロール発火後0はFadeOut, img fadeIn */
+
+/* メイン */
+main {
+
+}
+
+/* ファーストセクション */
+
+#first-section {
+  font-family: 'Cinzel';
+  width: 100%;
+  height: calc(100vh - 50px);
+  /* レスポンシブの場合heightの値に注意 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+
+/* クラス名のまとめ方調べる */
+.flex-first, .flex-second, .flex-third {
+  display: flex;
+  padding-left: 10%;
+  margin: 3.3% 0;
+  font-size: 2.1rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.box {
+  width: 70px;
+  padding: 30px;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  /* 拡大回転の場合 */
+  /* opacity: 0; */
+  /* blurの場合 */
+  filter: blur(20px);
+}
+
+
+.fadeUp {
+  animation-name: fadeUpAnimation;
+  animation-duration: .7s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeDown {
+  animation-name: fadeDownAnimation;
+  animation-duration: .7s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeDownAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.delaySec1 {
+  animation-delay: 5.8s;
+}
+
+.delaySec2 {
+  animation-delay: 7.0s;
+}
+
+.fadeIn {
+  animation: fadeIn 4.7s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    filter: blur(1.5px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.lamp-position {
+  display: flex;
+  position: absolute;
+  bottom: 0%;
+  right: 0;
+  height: 100%;
+  max-height: 340px;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* .lamp-opacity {
+  opacity: 0;
+} */
+
+.lamp-position img {
+  opacity: 0;
+  width: 280%;
+  max-width: 100%;
+  align-self: flex-end;
+  object-fit: cover;
+}
+
+
+/* ぽよよん
+.lampAnimation {
+  -webkit-animation: lampAnimation 1.1s linear 0s 1;
+  animation: lampAnimation 1.1s linear 0s 1;
+}
+
+@-webkit-keyframes lampAnimation {
+  0%   { -webkit-transform: scale(0.8, 1.4) translate(0%, -100%); }
+  10%  { -webkit-transform: scale(0.8, 1.4) translate(0%, -15%); }
+  20%  { -webkit-transform: scale(1.4, 0.6) translate(0%, 30%); }
+  30%  { -webkit-transform: scale(0.9, 1.1) translate(0%, -10%); }
+  40%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -30%); }
+  50%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -10%); }
+  60%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
+  70%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+  100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+}
+@keyframes lampAnimation {
+  0%   { -webkit-transform: scale(0.8, 1.4) translate(0%, -100%); }
+  10%  { -webkit-transform: scale(0.8, 1.4) translate(0%, -15%); }
+  20%  { -webkit-transform: scale(1.4, 0.6) translate(0%, 30%); }
+  30%  { -webkit-transform: scale(0.9, 1.1) translate(0%, -10%); }
+  40%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -30%); }
+  50%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -10%); }
+  60%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
+  70%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+  100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
+
+} */
+
+
+
+/* スクロールバーの場所 */
+.scrolldown2 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  
+}
+
+/* スクロールテキスト */
+.scrolldown2 span {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-family: 'Poppins';
+  color: #000;
+  font-size: .9rem;
+  letter-spacing: 0.06em;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+  content:"";
+  position:absolute;
+  bottom: 0;
+  left: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+  animation:
+    circlemove 1.6s ease-in-out infinite,
+    circlemovehide 1.6s ease-out infinite; 
+}
+
+/* 丸の動き（上から下） */
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+/* 透過度（上から下） */
+@keyframes circlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* バーの描写 */
+.scrolldown2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 50px;
+  background-color: #000;
+}
+
+
+/* aboutme セクション */
+
+#aboutme {
+
+
+}
+
+/* stickyfill */
+
+/* h1,h2{
+  font-size:1.2rem;
+} */
+
+h4, #container p, small {
+  font-size: 1.2rem;
+  margin:0 0 30px 0;
+}
+
+small{
+  display: block;
+  text-align: center;
+}
+/*========= 左固定レイアウトのためのCSS ===============*/
+
+/*左と右を囲う全体のエリア*/
+#left-wrapper{
+  position: relative;/*position stickyの基点にするため relativeをかける*/
+    display: flex;/*左エリア、右エリア横並び指定*/
+  flex-wrap: wrap;/*ボックスの折り返し可*/
+}
+
+/*左エリア*/
+#left-fixed{
+  /*左固定記述*/
+    position: -webkit-sticky;/*Safari用*/
+    position: sticky;
+  top:0;
+  /*横半分50%　縦を100vhにする*/
+  width: 45%;
+  height: 100vh;
+  margin-left: 5%;
+  /*装飾のためのCSS*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:url("http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/6-4/img/daniel-chen-546446-unsplash.jpg") no-repeat center;
+  background-size:cover;
+
+}
+
+/*右エリア*/
+#right-wrapper{
+  /*横半分50%にする*/
+  width:50%;
+}
+/*右各セクション 装飾のためのCSS*/
+.right-section {
+  min-height: 100vh;
+  margin: 0 10% 10% 10%;
+  /* padding:30px; */
+}
+
+section:nth-of-type(2n){
+/*装飾のためのCSS*/
+  background: transparent;
+}
+
+.text-wrapper {
+  position: relative;
+}
+
+.text-wrapper::before, .text-wrapper::after {
+  position: absolute;
+  content:"";
+  width: 50%;
+  height: 9%;
+}
+
+.text-wrapper::before {
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  /* border-right: 1px solid #000; */
+  top: 0;
+  left: 0;
+}
+
+.text-wrapper::after {
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  /* border-left: 1px solid #000; */
+  bottom: 0;
+  right: 0;
+}
+
+.text {
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text dt, .text dd {
+  text-align: center;
+  width: 50%;
+  font-size: 1.45rem;
+  padding: 2.5% 0;
+  vertical-align: middle;
+  font-family: 'Klee One';
+  font-weight: bold;
+}
+
+
+
+/* right-section スキル欄 */
+.skill-section {
+  display: flex;
+  align-items: center;
+}
+
+
+.text p {
+  font-size: 1.15rem;
+  font-family: 'Klee One';
+  font-weight: bold;
+  padding: 8% 0;
+  margin: 0 auto;
+}
+
+
+/* スキルセクションここまで、以下職歴・経歴セクション */
+
+
+.mytimeline{
+  /* border: 1px solid purple; */
+	/* margin:50px auto; */
+	/* padding:0 30px; */
+  padding: 5%;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+
+}
+
+.mytimeline li {
+  position: relative;
+  padding-bottom: 20px;
+
+}
+
+.mytimeline li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.mytimeline dl {
+  margin: 0 0 20px 3em;
+}
+
+.mytimeline dt:nth-child(1) {
+  font-family: 'Poppins';
+  font-size: 1.45rem;
+}
+
+.mytimeline dt:nth-child(2) {
+  padding: 2px 0 4px 0;
+  font-family: 'Klee One';
+  font-weight: bold;
+  font-size: 1.45rem;
+}
+
+
+/* タグ同士の場合、コンマで区切る */
+/* em {
+  font-family: 'Klee One';
+  font-weight: bold;
+  font-size: 1.35rem;
+} */
+
+
+.mytimeline dd {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Klee One';
+  font-weight: bold;
+  font-size: 1.15rem;
+  padding-left: 1.35rem;
+  
+}
+
+.border-line {
+  position: absolute;
+  left: 0.22em;
+  top: 10px;
+  width: 2px;
+  height: 12px;
+  background-color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* stickfillここまで */
+
+/* .introduce {
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  font-family: 'Shippori Mincho';
+  border: 3px solid red;
+} */
+
+
+
+
+/* #luxy {
+
+  width: 100%;
+  position: fixed;
+  transform: translate3d(0px, 0px, 0px);
+
+  
+}
+
+.area {
+  position: relative;
+  margin: 0 auto 20% auto;
+  padding: 0 30px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.area figure {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 20%;
+  line-height: 0;
+  transform: translate3d(0px, 50px, 0px);
+}
+
+
+.area img {
+  height: 190%;
+  width: 280%;
+
+}
+
+.area .luxy-box {
+  position: absolute;
+  top: 30%;
+  left: 70%;
+  background: #fff;
+  width: 50%;
+  box-shadow: 0 0 40px rgba(0,0,0,0.1);
+  transform: translate3d(0px, 0px, 0px);
+} */
+
+
+/* worksセクション */
+
+#works {
+
 }
 
 .works-contents {
@@ -73,3 +808,59 @@ li {
 .works-contents p {
   text-align: center;
 }
+
+
+
+
+
+/* 文字枠を浮かせ、色、透明度をつける場合。
+
+.introduce {
+  margin: 0 auto;
+  padding: 4%;
+  border: 1px solid black;
+  width: 75%;
+  height: 55%;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  font-family: 'Shippori Mincho';
+ 
+
+}
+
+.bg {
+  background-image: url(img/jumpingMan_L.jpg);
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.bg-opacity {
+  background-color: rgba(255, 255, 255, 0.68);
+}
+
+.introduce-text {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 3.5%;
+}
+
+.introduce-text h4 {
+  font-size: 5.1rem;
+  margin-left: 7%;
+}
+
+.introduce-text p {
+  font-size: 1.8rem;
+  padding: 3% 0;
+}
+ */
+
+
+ /* stickyfill resposive */
+
+/*＝＝＝＝＝＝＝＝＝＝＝768px以下の見え方＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+
