@@ -297,9 +297,9 @@ main {
   margin-bottom: 100px;
 }
 
-h1 {
+/* h1 {
   margin: 0 auto;
-}
+} */
 
 .flex-first, .flex-second, .flex-third {
   display: flex;
