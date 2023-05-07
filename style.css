@@ -138,6 +138,8 @@ li {
   background-image: cover;
 }
 
+
+
 /*========= LoadingのためのCSS ===============*/
 
 /* Loading背景画面設定　*/
@@ -297,9 +299,6 @@ main {
   margin-bottom: 100px;
 }
 
-/* h1 {
-  margin: 0 auto;
-} */
 
 .flex-first, .flex-second, .flex-third {
   display: flex;
@@ -309,6 +308,10 @@ main {
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
+
+/* h1 {
+  margin: 0 auto;
+} */
 
 .box {
   width: 70px;
@@ -384,10 +387,10 @@ main {
 }
 
 .lamp-position {
-  /* display: flex;
+  display: flex;
   position: absolute;
-  bottom: 0%;
-  right: 0; */
+  bottom: 0;
+  right: 0;
   height: 100%;
   max-height: 340px;
   width: 100%;
@@ -865,4 +868,3 @@ section:nth-of-type(2n){
  /* stickyfill resposive */
 
 /*＝＝＝＝＝＝＝＝＝＝＝768px以下の見え方＝＝＝＝＝＝＝＝＝＝＝＝＝*/
-
