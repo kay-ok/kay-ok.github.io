@@ -28,7 +28,8 @@ li {
   padding-top: 4%;
   letter-spacing: 0.07em;
   color: #000;
-  font-family: 'Poppins';
+  font-family: 'Noto Sans JP';
+
 
   /* -webkit-text-stroke: 1px gray; */
 }
@@ -299,19 +300,16 @@ main {
   margin-bottom: 100px;
 }
 
-
 .flex-first, .flex-second, .flex-third {
   display: flex;
   padding-left: 10%;
   margin: 3.3% 0;
+  /* padding-left: calc(100vw / 8.5);
+  margin: calc(100vh / 13) 0; */
   font-size: 2.1rem;
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
-
-/* h1 {
-  margin: 0 auto;
-} */
 
 .box {
   width: 70px;
@@ -386,6 +384,8 @@ main {
   }
 }
 
+/* ランプを一時的に削除 */
+/* 
 .lamp-position {
   display: flex;
   position: absolute;
@@ -397,48 +397,17 @@ main {
   max-width: 300px;
 }
 
-/* .lamp-opacity {
-  opacity: 0;
-} */
-
 .lamp-position img {
   opacity: 0;
   width: 280%;
   max-width: 100%;
   align-self: flex-end;
   object-fit: cover;
-}
-
-
-/* ぽよよん
-.lampAnimation {
-  -webkit-animation: lampAnimation 1.1s linear 0s 1;
-  animation: lampAnimation 1.1s linear 0s 1;
-}
-
-@-webkit-keyframes lampAnimation {
-  0%   { -webkit-transform: scale(0.8, 1.4) translate(0%, -100%); }
-  10%  { -webkit-transform: scale(0.8, 1.4) translate(0%, -15%); }
-  20%  { -webkit-transform: scale(1.4, 0.6) translate(0%, 30%); }
-  30%  { -webkit-transform: scale(0.9, 1.1) translate(0%, -10%); }
-  40%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -30%); }
-  50%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -10%); }
-  60%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
-  70%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
-  100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
-}
-@keyframes lampAnimation {
-  0%   { -webkit-transform: scale(0.8, 1.4) translate(0%, -100%); }
-  10%  { -webkit-transform: scale(0.8, 1.4) translate(0%, -15%); }
-  20%  { -webkit-transform: scale(1.4, 0.6) translate(0%, 30%); }
-  30%  { -webkit-transform: scale(0.9, 1.1) translate(0%, -10%); }
-  40%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -30%); }
-  50%  { -webkit-transform: scale(0.95, 1.2) translate(0%, -10%); }
-  60%  { -webkit-transform: scale(1.1, 0.9) translate(0%, 5%); }
-  70%  { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
-  100% { -webkit-transform: scale(1.0, 1.0) translate(0%, 0%); }
-
 } */
+
+
+
+
 
 
 
