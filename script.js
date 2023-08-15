@@ -142,8 +142,8 @@ function(){
 );
 
 $(window).on('load',function(){
-  $("#splash").delay(2400).fadeOut(0);//ローディング画面を3秒（3000ms）待機してからフェイドアウト
-	$("#splash_logo").delay(2400).fadeOut(0);//ロゴを3秒（3000ms）待機してからフェイドアウト
+  $("#splash").delay(2700).fadeOut(0);//ローディング画面を3秒（3000ms）待機してからフェイドアウト
+	$("#splash_logo").delay(2700).fadeOut(100);//ロゴを3秒（3000ms）待機してからフェイドアウト
         stroke.play();//SVGアニメーションの実行
 });
 
