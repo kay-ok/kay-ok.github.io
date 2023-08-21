@@ -6,9 +6,10 @@ body {
   font-family:  'Poppins', 'Noto Serif JP', 'Sawarabi Gothic', 'Klee One', 'Shippori Mincho', 'Cinzel', sans-serif, serif;
   
 }
-/* 'Playfair Display', */
+
 a {
   text-decoration: none;
+  color: #2874A6;
 }
 
 li {
@@ -29,7 +30,7 @@ li {
   letter-spacing: 0.07em;
   color: #000;
   font-family: 'Noto Sans JP';
-
+  margin-top: 10%;
 
   /* -webkit-text-stroke: 1px gray; */
 }
@@ -136,61 +137,11 @@ li {
 
 #bgc {
   background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-  background-image: cover;
 }
-
-
-
-/*========= LoadingのためのCSS ===============*/
-
-/* Loading背景画面設定　*/
-#splash {
-  /*fixedで全面に固定*/
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	z-index: 999;
-	/* background:#eee; */
-  /* bgi num.89 */
-  background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
-  background-blend-mode: screen;
-	text-align:center;
-	color:#fff;
-}
-
-/* Loading画像中央配置　*/
-#splash-logo {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-/* Loading アイコンの大きさ設定　*/
-#splash-logo svg{
-    width: 500px;
-}
-
-/*=============== SVGアニメーション内の指定 =================*/
-
-/*アニメーション前の指定*/
-#mask path {
-		fill-opacity: 0;/*最初は透過0で見えない状態*/
-		transition: fill-opacity .5s;/*カラーがつく際のアニメーション0.5秒で変化*/
-		fill: none;/*塗りがない状態*/
-		stroke: #333;/*線の色*/
-	}
-
-/*アニメーション後に.doneというクラス名がで付与された時の指定*/
-#mask.done path{
-	  fill: #333;/*塗りの色*/
-	  fill-opacity: 1;/*透過1で見える状態*/
-	  stroke: none;/*線の色なし*/
-	}
-
 
 
 /* ヘッダー */
+
 #header {
   width: 100%;
   height: 50px;
@@ -237,7 +188,7 @@ li {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #fff;
   /* 重なりを3Dで表示 */
   transform-style: preserve-3d;
   /* アニメーションの設定 数字が少なくなるほど早く回転 */
@@ -249,7 +200,9 @@ li {
 /* 回転前 */
 .rotateback span:nth-child(1) {
   background: rgba(0, 0, 0, 0);
-  color: #000;
+  color: #fff;
+  font-weight: bold;
+  /* text-shadow: 1px 1px 0px #000; */
   letter-spacing: 0.07em;
   transform: rotateX(0deg);/*はじめは回転なし*/
   transform-origin: 0 50%  -25px;/* 回転する起点 */
@@ -264,7 +217,8 @@ li {
 /* 回転後 */
 .rotateback span:nth-child(2) {
   background: rgba(0, 0, 0, 0);
-  color: #000;
+  color: #fff;
+  /* text-shadow: 1px 1px 0 #000; */
   letter-spacing: 0.15em;
   font-family: 'Sawarabi Gothic';
   font-weight: lighter;
@@ -283,8 +237,10 @@ li {
 /* Oはそのまま表示、スクロール発火後0はFadeOut, img fadeIn */
 
 /* メイン */
-main {
-
+#main-bg {
+  position: relative;
+  background: url("img/stock-photo-black-desk-lamp-on-wooden-floor.png") no-repeat center;
+  background-size: cover;
 }
 
 /* ファーストセクション */
@@ -297,13 +253,14 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
+  
 }
 
 .flex-first, .flex-second, .flex-third {
   display: flex;
-  padding-left: 10%;
-  margin: 3.3% 0;
+  padding-left: 48%;
+  margin: 2.3% 0;
   /* padding-left: calc(100vw / 8.5);
   margin: calc(100vh / 13) 0; */
   font-size: 2.1rem;
@@ -312,15 +269,18 @@ main {
 }
 
 .box {
-  width: 70px;
-  padding: 30px;
-  font-size: 4rem;
+  width: 50px;
+  padding: 20px;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   /* 拡大回転の場合 */
   /* opacity: 0; */
   /* blurの場合 */
   filter: blur(20px);
+  /* 以下、追加1 */
+  color: #fff;
+  text-shadow: 3px 1.25px .1px #000;
 }
 
 
@@ -362,11 +322,11 @@ main {
 }
 
 .delaySec1 {
-  animation-delay: 5.8s;
+  animation-delay: 3.5s;
 }
 
 .delaySec2 {
-  animation-delay: 7.0s;
+  animation-delay: 4.5s;
 }
 
 .fadeIn {
@@ -534,7 +494,6 @@ small{
   /* background:url("http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/6-4/img/daniel-chen-546446-unsplash.jpg") no-repeat center; */
   background:url("img/13485_color.png") no-repeat center;
   background-size: contain;
-
 }
 
 /*右エリア*/
@@ -764,6 +723,10 @@ section:nth-of-type(2n){
 
 }
 
+#title-center {
+  text-align: center;
+}
+
 .works-contents {
   width: 100%;
 }
@@ -778,6 +741,9 @@ section:nth-of-type(2n){
   width: 25em;
   height: 15em;
   object-fit: cover;
+  border: 2px solid;
+  padding: 0px;
+  border-radius: 8px;
 }
 
 .works-contents p {
@@ -785,6 +751,98 @@ section:nth-of-type(2n){
 }
 
 
+
+/* コンタクトセクション */
+
+.contact-container {
+  font-family: 'Klee One';
+  font-size: 1.25rem;
+}
+
+.contact-form {
+  margin: 0 auto;
+  width: 50%;
+  
+}
+
+/* .contact-title {
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  background-color: lightgreen;
+} */
+
+.contact-form dl {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form dt {
+  width: 100%;
+  text-align: left;
+}
+
+.contact-form input, textarea {
+  width: 100%;
+  margin-bottom: .5%;
+  border: 2px solid #4e454a;
+  font-family: 'Klee One';
+  font-size: 1.05rem;
+  /* border: 2px solid lightgreen; */
+}
+
+.contact-form input {
+  padding: 0.75% 0;
+}
+
+.contact-form textarea {
+  height: 9rem;
+}
+
+.contact-form span {
+  background-color: #4e454a;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 0px 5px;
+  margin-left: 3%;
+  border-radius: 4px;
+}
+
+.submit-button {
+  text-align: center;
+  margin: 45px 0;
+}
+
+.submit-button button {
+  width: 30%;
+  background-color: #4e454a;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: 'Klee One';
+}
+
+.submit-button button:hover {
+  background-color: #fff;
+  color: #4e454a;
+}
+
+/* フッターセクション */
+
+#footer {
+  background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+  color: #47266e;
+  font-family: 'Cinzel';
+  text-align: center;
+  /* padding: .25%;
+  margin-top: 100px; */
+  margin-top: 10%;
+}
+
+#footer span {
+  letter-spacing: .75px;
+}
+
+/* 2023/08/15 no-repeat center cover, containなど試す */
 
 
 

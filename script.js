@@ -2,6 +2,7 @@ $(function(){
 });
 
 
+
 // セクションアニメーション一度だけここから
 
 // 動きのきっかけの起点となるアニメーションの名前を定義
@@ -101,9 +102,9 @@ const fadeBox = document.querySelectorAll('.box');
 for (let i = 0; i < fadeBox.length; i++){
   const keyframes = {
     // opacity: [0, 1],
-    rotate: ['35deg', 0],
+    rotate: ['20deg', 0],
     // scale: [1.4, 1],
-    filter: ['blur(20px)', 'blur(0)'],
+    filter: ['blur(25px)', 'blur(0)'],
     translate: ['0 4px', 0],
   };
   const options = {
@@ -114,7 +115,7 @@ for (let i = 0; i < fadeBox.length; i++){
 
   setTimeout(function(){
   fadeBox[i].animate(keyframes, options);
-  },2600);
+  },125);
 }
 
   setTimeout(function(){
@@ -126,41 +127,7 @@ for (let i = 0; i < fadeBox.length; i++){
 // ここまで
 
 
-
-//SVGアニメーションの描画
-var stroke;
-stroke = new Vivus('mask', {//アニメーションをするIDの指定
-    start:'manual',//自動再生をせずスタートをマニュアルに
-    type: 'scenario-sync',// アニメーションのタイプを設定
-    duration: 6.3,//アニメーションの時間設定。数字が小さくなるほど速い
-    forceRender: false,//パスが更新された場合に再レンダリングさせない
-    animTimingFunction:Vivus.linear,//動きの加速減速設定
-},
-function(){
-       $("#mask").attr("class", "done");//描画が終わったらdoneというクラスを追加
-}
-);
-
-$(window).on('load',function(){
-  $("#splash").delay(2400).fadeOut(500);//ローディング画面を3秒（3000ms）待機してからフェイドアウト
-	$("#splash_logo").delay(2400).fadeOut(500);//ロゴを3秒（3000ms）待機してからフェイドアウト
-        stroke.play();//SVGアニメーションの実行
-});
-
-// if(matchMedia('(min-width: 768px)').matches){
-//   luxy.init();
-//   } 
-
-
-// $(window).on('load resize', function() {
-//   var windowWidth = window.innerWidth;
-//   var elements = $('#fixed-area');
-//   if (windowWidth >= 768) {
-//   Stickyfill.add(elements);
-//   }else{
-//   Stickyfill.remove(elements);
-//   } 
-//   });
+// チャートセクション
 
 $('#chart').on('inview', function(event, isInView) {//画面上に入ったらグラフを描画
   if (isInView) {
