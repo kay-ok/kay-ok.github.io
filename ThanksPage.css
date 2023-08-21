@@ -1,0 +1,61 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family:  'Poppins', 'Noto Serif JP', 'Sawarabi Gothic', 'Klee One', 'Shippori Mincho', 'Cinzel', sans-serif, serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+main {
+  height: calc(100vh - 20px);
+  width: 100%;
+  max-width: 100%;
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.section-title {
+  font-size: 3.3rem;
+  padding-top: 4%;
+  letter-spacing: 0.07em;
+  color: #000;
+  font-family: 'Noto Sans JP';
+  margin: 5% 0;
+  text-align: center;
+}
+
+
+.sub-title {
+  font-size: 1.5rem;
+  letter-spacing: 0.09em;
+  padding-bottom: 3.5%;
+  color: #000;
+  font-family: 'Poppins';
+  text-align: center;
+}
+
+
+#footer {
+  height: 20px;
+  background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+  color: #47266e;
+  font-family: 'Cinzel';
+  text-align: center;
+}
+
+
+#footer span {
+  letter-spacing: .75px;
+}
