@@ -23,26 +23,22 @@ li {
 
 
 /* セクションタイトル（共通部） */
+
 .section-title {
   font-size: 2.2rem;
-  /* text-align: center; */
   padding-top: 4%;
   letter-spacing: 0.07em;
   color: #000;
   font-family: 'Noto Sans JP';
   margin-top: 10%;
-
-  /* -webkit-text-stroke: 1px gray; */
 }
 
 .sub-title {
   font-size: 1.5rem;
   letter-spacing: 0.09em;
-  /* text-align: center; */
   padding-bottom: 3.5%;
   color: #000;
   font-family: 'Poppins';
-  /* font-weight: lighter; */
 }
 
 .bgextend{
@@ -91,13 +87,6 @@ li {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(to right, #434343 0%, black 100%);
-    /* background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);黒系 */
-    /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);青きれい */
-
-    /* background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%); */
-/*     
-    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
-    background-blend-mode: screen; */
 }
 
 @keyframes bgLRextendAnime{
@@ -125,16 +114,6 @@ li {
 }
 
 
-/* .container {
-  border: 3px solid blue;
-  height: 100vh;
-  width: 100%;
-
-} */
-
-
-
-
 #bgc {
   background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 }
@@ -145,16 +124,10 @@ li {
 #header {
   width: 100%;
   height: 50px;
-  /* display: flex; */
-  /* align-items: center; */
-
 }
 
 .header-nav {
-
-  /* margin: 0 auto; */
   width: 100%;
-  /* line-height: 45px; */
 }
 
 .header-nav ul {
@@ -168,6 +141,8 @@ li {
   width: 100%;
   max-width: calc(100% / 3);
 }
+
+
 /*== ボタン共通設定 */
 .btn02 {
   /*背景の基点とするためrelativeを指定*/
@@ -202,7 +177,6 @@ li {
   background: rgba(0, 0, 0, 0);
   color: #fff;
   font-weight: bold;
-  /* text-shadow: 1px 1px 0px #000; */
   letter-spacing: 0.07em;
   transform: rotateX(0deg);/*はじめは回転なし*/
   transform-origin: 0 50%  -25px;/* 回転する起点 */
@@ -218,7 +192,6 @@ li {
 .rotateback span:nth-child(2) {
   background: rgba(0, 0, 0, 0);
   color: #fff;
-  /* text-shadow: 1px 1px 0 #000; */
   letter-spacing: 0.15em;
   font-family: 'Sawarabi Gothic';
   font-weight: lighter;
@@ -233,15 +206,15 @@ li {
 
 
 
-/* memo */
-/* Oはそのまま表示、スクロール発火後0はFadeOut, img fadeIn */
 
 /* メイン */
+
 #main-bg {
   position: relative;
   background: url("img/stock-photo-black-desk-lamp-on-wooden-floor.png") no-repeat center;
   background-size: cover;
 }
+
 
 /* ファーストセクション */
 
@@ -253,16 +226,12 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* margin-bottom: 100px; */
-  
 }
 
 .flex-first, .flex-second, .flex-third {
   display: flex;
   padding-left: 48%;
   margin: 2.3% 0;
-  /* padding-left: calc(100vw / 8.5);
-  margin: calc(100vh / 13) 0; */
   font-size: 2.1rem;
   letter-spacing: 0.08em;
   white-space: nowrap;
@@ -278,7 +247,6 @@ li {
   /* opacity: 0; */
   /* blurの場合 */
   filter: blur(20px);
-  /* 以下、追加1 */
   color: #fff;
   text-shadow: 3px 1.25px .1px #000;
 }
@@ -343,31 +311,6 @@ li {
     filter: blur(0);
   }
 }
-
-/* ランプを一時的に削除 */
-/* 
-.lamp-position {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  max-height: 340px;
-  width: 100%;
-  max-width: 300px;
-}
-
-.lamp-position img {
-  opacity: 0;
-  width: 280%;
-  max-width: 100%;
-  align-self: flex-end;
-  object-fit: cover;
-} */
-
-
-
-
 
 
 
@@ -448,16 +391,6 @@ li {
 
 /* aboutme セクション */
 
-#aboutme {
-
-
-}
-
-/* stickyfill */
-
-/* h1,h2{
-  font-size:1.2rem;
-} */
 
 h4, #container p, small {
   font-size: 1.2rem;
@@ -468,6 +401,8 @@ small{
   display: block;
   text-align: center;
 }
+
+
 /*========= 左固定レイアウトのためのCSS ===============*/
 
 /*左と右を囲う全体のエリア*/
@@ -527,7 +462,6 @@ section:nth-of-type(2n){
 .text-wrapper::before {
   border-left: 1px solid #000;
   border-top: 1px solid #000;
-  /* border-right: 1px solid #000; */
   top: 0;
   left: 0;
 }
@@ -535,7 +469,6 @@ section:nth-of-type(2n){
 .text-wrapper::after {
   border-right: 1px solid #000;
   border-bottom: 1px solid #000;
-  /* border-left: 1px solid #000; */
   bottom: 0;
   right: 0;
 }
@@ -557,13 +490,11 @@ section:nth-of-type(2n){
 }
 
 
-
 /* right-section スキル欄 */
 .skill-section {
   display: flex;
   align-items: center;
 }
-
 
 .text p {
   font-size: 1.15rem;
@@ -578,13 +509,7 @@ section:nth-of-type(2n){
 
 
 .mytimeline{
-  /* border: 1px solid purple; */
-	/* margin:50px auto; */
-	/* padding:0 30px; */
   padding: 5%;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-
 }
 
 .mytimeline li {
@@ -621,14 +546,6 @@ section:nth-of-type(2n){
 }
 
 
-/* タグ同士の場合、コンマで区切る */
-/* em {
-  font-family: 'Klee One';
-  font-weight: bold;
-  font-size: 1.35rem;
-} */
-
-
 .mytimeline dd {
   display: flex;
   flex-wrap: wrap;
@@ -650,78 +567,7 @@ section:nth-of-type(2n){
 
 
 
-
-
-
-
-
-
-
-
-
-
-/* stickfillここまで */
-
-/* .introduce {
-  -ms-writing-mode: tb-rl;
-  -webkit-writing-mode: vertical-rl;
-  writing-mode: vertical-rl;
-  font-family: 'Shippori Mincho';
-  border: 3px solid red;
-} */
-
-
-
-
-/* #luxy {
-
-  width: 100%;
-  position: fixed;
-  transform: translate3d(0px, 0px, 0px);
-
-  
-}
-
-.area {
-  position: relative;
-  margin: 0 auto 20% auto;
-  padding: 0 30px;
-  max-width: 1000px;
-  width: 100%;
-}
-
-.area figure {
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 20%;
-  line-height: 0;
-  transform: translate3d(0px, 50px, 0px);
-}
-
-
-.area img {
-  height: 190%;
-  width: 280%;
-
-}
-
-.area .luxy-box {
-  position: absolute;
-  top: 30%;
-  left: 70%;
-  background: #fff;
-  width: 50%;
-  box-shadow: 0 0 40px rgba(0,0,0,0.1);
-  transform: translate3d(0px, 0px, 0px);
-} */
-
-
 /* worksセクション */
-
-#works {
-
-}
 
 #title-center {
   text-align: center;
@@ -762,15 +608,8 @@ section:nth-of-type(2n){
 .contact-form {
   margin: 0 auto;
   width: 50%;
-  
 }
 
-/* .contact-title {
-  color: #000;
-  font-weight: bold;
-  text-align: center;
-  background-color: lightgreen;
-} */
 
 .contact-form dl {
   display: flex;
@@ -788,7 +627,6 @@ section:nth-of-type(2n){
   border: 2px solid #4e454a;
   font-family: 'Klee One';
   font-size: 1.05rem;
-  /* border: 2px solid lightgreen; */
 }
 
 .contact-form input {
@@ -833,8 +671,6 @@ section:nth-of-type(2n){
   color: #47266e;
   font-family: 'Cinzel';
   text-align: center;
-  /* padding: .25%;
-  margin-top: 100px; */
   margin-top: 10%;
 }
 
@@ -842,57 +678,6 @@ section:nth-of-type(2n){
   letter-spacing: .75px;
 }
 
-/* 2023/08/15 no-repeat center cover, containなど試す */
 
 
-
-/* 文字枠を浮かせ、色、透明度をつける場合。
-
-.introduce {
-  margin: 0 auto;
-  padding: 4%;
-  border: 1px solid black;
-  width: 75%;
-  height: 55%;
-  -ms-writing-mode: tb-rl;
-  -webkit-writing-mode: vertical-rl;
-  writing-mode: vertical-rl;
-  font-family: 'Shippori Mincho';
- 
-
-}
-
-.bg {
-  background-image: url(img/jumpingMan_L.jpg);
-  object-fit: cover;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-}
-
-.bg-opacity {
-  background-color: rgba(255, 255, 255, 0.68);
-}
-
-.introduce-text {
-  max-width: 100%;
-  max-height: 100%;
-  padding: 3.5%;
-}
-
-.introduce-text h4 {
-  font-size: 5.1rem;
-  margin-left: 7%;
-}
-
-.introduce-text p {
-  font-size: 1.8rem;
-  padding: 3% 0;
-}
- */
-
-
- /* stickyfill resposive */
-
-/*＝＝＝＝＝＝＝＝＝＝＝768px以下の見え方＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+/* レスポンシブ768px以下 */
