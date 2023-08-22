@@ -328,7 +328,7 @@ li {
   left: 10px;
   bottom: 10px;
   font-family: 'Poppins';
-  color: #000;
+  color: #fff;
   font-size: .9rem;
   letter-spacing: 0.06em;
   -ms-writing-mode: tb-rl;
@@ -345,7 +345,7 @@ li {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #000;
+  background-color: #0000ff;
   animation:
     circlemove 1.6s ease-in-out infinite,
     circlemovehide 1.6s ease-out infinite; 
@@ -385,7 +385,7 @@ li {
   left: 0;
   width: 2px;
   height: 50px;
-  background-color: #000;
+  background-color: #0000ff;
 }
 
 
