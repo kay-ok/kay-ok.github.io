@@ -1,5 +1,5 @@
 // 先攻のマーク
-const FIRST_MARK = 'O';
+const FIRST_MARK = '○';
 
 // 後攻のマーク
 const NEXT_MARK = 'X';

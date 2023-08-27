@@ -1,14 +1,19 @@
+html {
+  font-size: 100%;
+}
+
 body {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  min-width: 100vw;
   background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
 main {
-  height: 70%;
+  height: 63%;
   font-size: 35px;
   text-align: center;
   border: 15px outset goldenrod;
@@ -16,6 +21,7 @@ main {
 }
 
 main p {
+  margin: 10% 0;
   background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -35,7 +41,7 @@ input {
   vertical-align: middle;
 }
 
-input[value="O"] {
+input[value="○"] {
   color: green;
 } 
 
@@ -48,4 +54,20 @@ input[value="X"] {
   border-radius: 1px;
   color: beige; 
   background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+}
+
+
+@media screen and (max-width: 380px) {
+  
+  .blocks {
+      height: 29%;
+      width: 29%;
+  }
+}
+
+@media screen and (min-height: 1200px) {
+  
+  main {
+    height: 780px;
+  }
 }
