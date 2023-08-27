@@ -825,13 +825,6 @@ section:nth-of-type(2n){
 
   #main-bg img {
     object-fit: cover;
-    /* object-position: 0% 100%; */
-  }
-
-  #first-section {
-    /* position: absolute;
-    top: 0%;
-    left: -4%; */
   }
 
   .flex-first, .flex-second, .flex-third {
