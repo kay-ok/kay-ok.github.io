@@ -17,18 +17,26 @@
     name="hidden_iframe"
     id="hidden_iframe"
     style="display: none"
-    onload="if(submitted){window.location='/TP/ThanksPage.html';}"
+    onload="if(submitted){window.location='';}"
   ></iframe>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
 
+<div id="loading">
+  <img src="img/Ellipsis-1s-200px.gif" alt="" class="spinner">
+</div>
+
+
 <div id="main-bg">
   <header id="header">
+
     <div class="header-nav fadeDown delaySec1">
       <ul>
         <li><a href="#aboutme" class="btn02 rotateback">
-          <span>ABOUT ME</span><span>自己紹介</span>
+          <span class="jp">ABOUT ME</span><span>自己紹介</span>
         </a></li>
         <li><a href="#works" class="btn02 rotateback">
           <span>WORKS</span><span>制作物</span>
@@ -38,6 +46,23 @@
           </a></li>
       </ul>
     </div>
+
+    <nav class="nav">
+      <ul class="nav_menu_ul">
+        <li class="nav_menu_li"><a href="#aboutme" class="btn02">ABOUT ME</a></li>
+        <li class="nav_menu_li"><a href="#works" class="btn02">WORKS</a></li>
+        <li class="nav_menu_li"><a href="#contact" class="btn02">CONTACT</a></li>
+      </ul>
+    </nav>
+    <span class="nav_toggle">
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+   
+
+    
+
   </header>
 
   <main>
@@ -78,38 +103,37 @@
 
 
   <div id="bgc">
-
     <section id="aboutme">
-
       <div id="left-wrapper">
 
         <div id="left-fixed"><!--左固定エリア-->
         </div>
           
         <div id="right-wrapper"><!--右エリア-->
-
           <section class="right-section">
             <div class="right-area">
-              <h2 class="section-title">
+              <h2 class="section-title" id="title-center">
                 <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">About Me</span></span>
               </h2>
-              <h3 class="sub-title">
-                <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 自己紹介- </span></span>
+              <h3 class="sub-title" id="title-center">
+                <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 自己紹介 -</span></span>
               </h3>
+
               <div class="text-wrapper">
                 <dl class="text">
-                  <dt>名前</dt><dd>大久保　慧</dd>
+                  <dt class="vertical-fix">名前</dt><dd><span class="ruby">おおくぼ　けい</span><br>大久保　慧</dd>
                   <dt>性別</dt><dd>男</dd>
                   <dt>誕生日</dt><dd>1987年 9月 16日</dd>
                   <dt>年齢</dt><dd>35歳</dd>
                   <dt>血液型</dt><dd>O型</dd>
-                  <dt>性格</dt><dd>慎重、几帳面、<br>好奇心旺盛、完璧主義</dd>
-                  <dt>好きなこと</dt><dd>サッカー全般、読書、<br>音楽鑑賞、<br>ランニング</dd>
-                  <dt>得意なこと</dt><dd>誰にでも積極的に話しかけられること<br>精密な作業や調整が好きなこと</dd>
-                  <dt>不得意なこと</dt><dd>完璧性を求め過ぎてしまうこと</dd>
-                  <dt>自身の強み</dt><dd>協調性があり、気配りができること、<br>人を思いやれること</dd>
-                  <dt>興味があること</dt><dd>WEBサイトデザイン、<br>アプリケーション開発</dd>
-                  <dt>抱えている障害</dt><dd>抑うつ、<br>持続性気分障害、<br>入眠障害</dd>
+                  <dt class="vertical-fix">性格</dt><dd>・慎重<br>・几帳面<br>・好奇心旺盛<br>・完璧主義</dd>
+                  <dt class="vertical-fix">好きなこと</dt><dd><span class="dot"></span><br>・人と話すこと<br>・サッカー全般<br>・読書<br>・音楽鑑賞<br>・ランニング</dd>
+                  <dt class="vertical-fix">得意なこと</dt><dd>・初対面でも積極的に話しかけられること<br>・精密な作業や調整が好きなこと</dd>
+                  <dt class="vertical-fix">不得意なこと</dt><dd>・完璧性を求め過ぎてしまうこと<br>・効率的に物事を進めること</dd>
+                  <dt class="vertical-fix">自身の強み</dt><dd>・協調性があり、気配りができること<br>・他人を思いやれること</dd>
+                  <dt class="vertical-fix">自身の弱み</dt><dd>・相手を尊重しすぎること<br>・自分を大切にできないこと</dd>
+                  <dt class="vertical-fix">興味があること</dt><dd>・WEBサイトデザイン<br>・アプリケーション開発</dd>
+                  <dt class="vertical-fix">抱えている障害</dt><dd>・うつ病<br>・双極性障害<br>・持続性気分障害<br>・入眠障害</dd>
                 </dl>
               </div>
             </div>
@@ -117,15 +141,16 @@
 
           <section class="right-section skill-section">
             <div class="right-area">
-              <h3 class="sub-title">
+              <h3 class="sub-title" id="title-center">
                 <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- スキル -</span></span>
               </h3>
               <div class="text-wrapper">
                 <div class="text">
                   <canvas id="chart"></canvas>
                   <p>  
-                  <span id="inview-point">JavaScript</span>に少し苦手意識があるので、<br>克服のために再勉強しています。<br>
-                  React, Pythonは学習中です。</p>
+                  <span id="inview-point">HTML, CSS, jQueryなどのWEBサイト制作に<br>
+                    直結する言語が得意です。<br>
+                    現在はReact, Pythonを集中的に学習しています。</span></p>
                 </div>
               </div>
             </div>
@@ -134,7 +159,7 @@
           
           <section class="right-section">
             <div class="right-area">
-              <h3 class="sub-title">
+              <h3 class="sub-title" id="title-center">
                 <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 経歴・職歴 -</span></span>
               </h3>
               <div class="text-wrapper">
@@ -172,7 +197,7 @@
                       <dl>
                         <dt>2008 - 2022</dt>
                         <dt><em>下り坂の日々と止まない雨</em></dt>
-                        <dd>コンビニやパチンコ店など主に接客業でアルバイト経験を積む。夜勤の仕事から不眠症を発症し、徐々にうつ病になり生活保護を受給するようになる。</dd>
+                        <dd>コンビニやパチンコ店など主に接客業でアルバイト経験を積む。夜勤の仕事から不眠症を発症し、徐々にうつ病になり自宅に引きこもるようになる。</dd>
                       </dl>
                       <span class="border-line"></span>
                     </li>
@@ -212,7 +237,7 @@
               <li>
                 <a href="https://kay-ok.github.io/OXGame/" target="blank">
                   <img src="img/OXGame02.png" alt="マルバツゲームのウェブサイト">
-                  <p>シンプルマルバツゲーム</p>
+                  <p>シンブルマルバツゲーム</p>
                 </a>
               </li>
             </ul>
@@ -251,8 +276,8 @@
   <footer id="footer">
     <p>&copy; 2023<span> Kei Okubo </span></p>
   </footer>
-
 </div>
+
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js" integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

@@ -4,7 +4,6 @@ html {
 
 body {
   font-family:  'Poppins', 'Noto Serif JP', 'Sawarabi Gothic', 'Klee One', 'Shippori Mincho', 'Cinzel', sans-serif, serif;
-  
 }
 
 a {
@@ -118,6 +117,27 @@ li {
   background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 }
 
+/* ローディング */
+
+#loading {
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  transition: all 1s;
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  place-items: center;
+  display: grid;
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
 
 /* ヘッダー */
 
@@ -142,6 +162,9 @@ li {
   max-width: calc(100% / 3);
 }
 
+.nav {
+  display: none;
+}
 
 /*== ボタン共通設定 */
 .btn02 {
@@ -317,7 +340,7 @@ li {
 /* スクロールバーの場所 */
 .scrolldown2 {
   position: absolute;
-  bottom: 10px;
+  bottom: 3%;
   left: 50%;
   
 }
@@ -392,7 +415,7 @@ li {
 /* aboutme セクション */
 
 #aboutme {
-  padding-top: 5%;
+  padding-top: 1%;
 }
 
 h4, #container p, small {
@@ -418,9 +441,11 @@ small{
 /*左エリア*/
 #left-fixed{
   /*左固定記述*/
-    position: -webkit-sticky;/*Safari用*/
-    position: sticky;
-  top:0;
+  position: -webkit-sticky;/*Safari用*/
+  position: sticky;
+  top: 13%;
+  /* bottom: 7em; */
+  /* bottom: 0vh; */
   /*横半分50%　縦を100vhにする*/
   width: 45%;
   height: 100vh;
@@ -432,6 +457,14 @@ small{
   /* background:url("http://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/move02/6-4/img/daniel-chen-546446-unsplash.jpg") no-repeat center; */
   background:url("img/13485_color.png") no-repeat center;
   background-size: contain;
+  background-origin: border-box;
+
+}
+
+#chart {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*右エリア*/
@@ -482,14 +515,24 @@ section:nth-of-type(2n){
   flex-wrap: wrap;
 }
 
+.text .ruby {
+  font-size: .65em;
+}
+
 .text dt, .text dd {
   text-align: center;
   width: 50%;
   font-size: 1.45rem;
-  padding: 2.5% 0;
+  padding: 5% 0;
   vertical-align: middle;
   font-family: 'Klee One';
   font-weight: bold;
+}
+
+.text .vertical-fix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -641,7 +684,7 @@ section:nth-of-type(2n){
 }
 
 .contact-form span {
-  background-color: #4e454a;
+  background-color: #feada6;
   color: #fff;
   font-size: 0.9rem;
   padding: 0px 5px;
@@ -656,14 +699,14 @@ section:nth-of-type(2n){
 
 .submit-button button {
   width: 30%;
-  background-color: #4e454a;
+  background-color: #feada6;
   color: #fff;
   font-size: 1.2rem;
   font-family: 'Klee One';
 }
 
 .submit-button button:hover {
-  background-color: #fff;
+  background-color: #feada6;
   color: #4e454a;
 }
 
@@ -684,3 +727,225 @@ section:nth-of-type(2n){
 
 
 /* レスポンシブ768px以下 */
+
+@media screen and (max-width: 640px) {
+  
+  .header-nav {
+    display: none;
+  }
+ 
+  .nav {
+    display: block;
+    justify-content: space-evenly;
+    /* position: fixed;
+    top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0; */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+  }
+
+  .nav_menu_ul {
+    display: flex;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav_menu_li {
+    display: inline;
+    width: 100%;
+    max-width: calc(100% / 3.3);
+  }
+
+  .nav_menu_li a {
+    letter-spacing: .11rem;
+  }
+  
+  .nav.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav_toggle {
+    display: block;
+    position: absolute;
+    top: 1.65%;
+    right: 4%;
+    width: 1.75rem;
+    height: 1.5rem;  
+  }
+  
+  .nav_toggle i {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    transition: transform .5s, opacity .5s;
+  }
+  .nav_toggle i:nth-child(1) {
+    top: 0;
+  }
+  .nav_toggle i:nth-child(2) {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .nav_toggle i:nth-child(3) {
+    bottom: 0;
+  }
+  
+
+  .nav_toggle.show i:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  .nav_toggle.show i:nth-child(2) {
+    opacity: 0;
+  }
+  .nav_toggle.show i:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
+  }
+  
+  
+
+  /* ハンバーガーアイコンここまで */
+
+  .section-title {
+    margin-top: 200px;
+  }
+  
+  #main-bg {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  #main-bg img {
+    object-fit: cover;
+    /* object-position: 0% 100%; */
+  }
+
+  #first-section {
+    /* position: absolute;
+    top: 0%;
+    left: -4%; */
+  }
+
+  .flex-first, .flex-second, .flex-third {
+    padding-left: 38%;
+    letter-spacing: 0.01px;
+  }
+
+
+  .box {
+    width: 7%;
+    padding: 2%;
+    font-size: 1.1rem;
+    text-shadow: .3% .125% .01% #000;
+  }
+
+  /* AboutMEセクション */
+  #aboutme {
+    flex-direction: column;
+
+  }
+
+
+  .right-wrapper .section-title {
+    width: 100%;
+
+  }
+
+  #left-wrapper {
+    flex-direction: column;
+    position: relative;
+  }
+
+
+  #left-fixed {
+    position:static;
+    width: 100%;
+    height: 100vh;
+    margin-left: 0;
+
+  }
+
+  #right-wrapper {
+    width: 100%;
+
+  }
+
+  .right-area span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    padding: 0;
+  }
+
+  .mytimeline dt:nth-child(1),
+  .mytimeline dt:nth-child(2) {
+    font-size: 1.15rem;
+  }
+
+  .text dt, .text dd, .text p,
+  .mytimeline dd, .contact-container,
+  .contact-form input, textarea,
+  .submit-button button {
+    font-size: 1rem;
+  }
+
+  .right-section {
+    margin: 0 5px 5px 5px;
+  }
+
+
+  #works img {
+    width: calc(100% - 4px);
+    justify-content: initial;
+  }
+
+  #works li {
+    width: 100%;
+  }
+
+  #works li:nth-child(2) {
+    margin-top: 20px;
+  }
+
+
+  /* コンタクトセクション */
+  #contact dl span {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 20%;
+  }
+
+  .contact-form span {
+    font-size: 0.8rem;
+  }
+
+  .contact-form dd {
+    margin: 1px 0;
+  }
+
+  .contact-form dd input,
+  .contact-form dd textarea {
+    font-size: .75rem;
+  }
+
+
+ .submit-button button {
+    width: 100%;
+  }
+
+  #footer {
+    margin-top: 200px;
+  }
+}

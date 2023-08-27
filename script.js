@@ -1,7 +1,29 @@
 $(function(){
-});
+
+  const loading = document.querySelector('#loading');
+
+  window.addEventListener('load',() => {
+    loading.classList.add('loaded');
+  });
 
 
+  $('.nav_toggle').on('click', function(){
+    $('.nav_toggle, .nav').toggleClass('show');
+  });
+
+
+  $('header a').click(function() {
+    var scroll = $(this).attr('href');
+    var position = $(scroll).offset().top;
+    $('html, body').animate({
+      'scrollTop': position
+    }, 1600);
+  });
+
+
+  // $('#header .nav-toggle').click(function(){
+  //   $('.header-nav ul li:nth-child(-n+3').fadeOut();
+  // });
 
 // セクションアニメーション一度だけここから
 
@@ -108,8 +130,8 @@ for (let i = 0; i < fadeBox.length; i++){
     translate: ['0 4px', 0],
   };
   const options = {
-    duration: 405,
-    delay: i * 145,
+    duration: 415,
+    delay: i * 147,
     fill: 'forwards',
   };
 
@@ -118,11 +140,11 @@ for (let i = 0; i < fadeBox.length; i++){
   },125);
 }
 
-  setTimeout(function(){
-    $('#overWright').fadeOut(850);
-    // $('.lamp').removeClass('lamp-opacity');
-    $('.lamp').addClass('fadeIn');
-  }, 5150);
+  // setTimeout(function(){
+  //   $('#overWright').fadeOut(850);
+  //   $('.lamp').removeClass('lamp-opacity');
+  //   $('.lamp').addClass('fadeIn');
+  // }, 5150);
 
 // ここまで
 
@@ -193,4 +215,5 @@ function scrollTimelineAnime() {
 
 $(window).on('scroll',function(){
   scrollTimelineAnime();
+});
 });
