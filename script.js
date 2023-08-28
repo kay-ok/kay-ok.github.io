@@ -1,11 +1,11 @@
+
+const loading = document.querySelector('#loading');
+
+window.addEventListener('load',() => {
+  loading.classList.add('loaded');
+});
+
 $(function(){
-
-  const loading = document.querySelector('#loading');
-
-  window.addEventListener('load',() => {
-    loading.classList.add('loaded');
-  });
-
 
   $('.nav_toggle').on('click', function(){
     $('.nav_toggle, .nav').toggleClass('show');
