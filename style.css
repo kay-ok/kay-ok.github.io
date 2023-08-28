@@ -827,6 +827,14 @@ section:nth-of-type(2n){
     object-fit: cover;
   }
 
+  .delaySec1 {
+    animation-delay: none;
+  }
+  
+  .delaySec2 {
+    animation-delay: 3.0s;
+  }
+
   .flex-first, .flex-second, .flex-third {
     padding-left: 38%;
     letter-spacing: 0.01px;
