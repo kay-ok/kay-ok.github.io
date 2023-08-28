@@ -5,10 +5,22 @@ window.addEventListener('load',() => {
   loading.classList.add('loaded');
 });
 
-$(function(){
+
+
+
+$(function(){ 
 
   $('.nav_toggle').on('click', function(){
     $('.nav_toggle, .nav').toggleClass('show');
+  });
+
+
+  $('#btn-black, #btn-graphic').on('click', function() {
+    if ($('body').hasClass('dark-theme')) {
+      $('body').removeClass('dark-theme')
+    } else {
+      $('body').addClass('dark-theme')
+    }
   });
 
 
@@ -17,9 +29,18 @@ $(function(){
     var position = $(scroll).offset().top;
     $('html, body').animate({
       'scrollTop': position
-    }, 1600);
+    }, 2100);
   });
 
+
+
+
+  // const btn = document.querySelector('#btn');
+
+  // btn.addEventListener('click', () => {
+  //   document.header.classList.toggle('dark-theme');
+  // });
+  // ここまでトグルアクション
 
   // $('#header .nav-toggle').click(function(){
   //   $('.header-nav ul li:nth-child(-n+3').fadeOut();
@@ -99,7 +120,7 @@ $('.sub-title .bgappearTrigger').on('inview', function(event, isInView, visibleP
 });
 
 
-const fadeBox = document.querySelectorAll('.box');
+// const fadeBox = document.querySelectorAll('.box');
 // // 拡大回転スタートverここから。.boxのblur値外してopacityを0にする
 // for (let i = 0; i < fadeBox.length; i++){
 //   const keyframes = {
@@ -121,11 +142,12 @@ const fadeBox = document.querySelectorAll('.box');
 
 
 // blur verここから。CSS .boxにblur値をつけてから
+
+const fadeBox = document.querySelectorAll('.box');
+
 for (let i = 0; i < fadeBox.length; i++){
   const keyframes = {
-    // opacity: [0, 1],
     rotate: ['20deg', 0],
-    // scale: [1.4, 1],
     filter: ['blur(25px)', 'blur(0)'],
     translate: ['0 4px', 0],
   };
