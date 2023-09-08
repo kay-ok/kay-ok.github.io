@@ -60,7 +60,7 @@ input[value="X"] {
 @media screen and (max-width: 640px) {
   
   body {
-    height: 100dvh;
+    height: 100vh;
   }
 
   .blocks {
@@ -72,7 +72,7 @@ input[value="X"] {
 @media screen and (min-height: 1200px) {
   
   body {
-    height: 100dvh;
+    height: 100vh;
   }
   
   main {
