@@ -6,7 +6,47 @@ window.addEventListener('load',() => {
 });
 
 
+const btn = document.querySelector('.btn-area');
+// const bgc = document.querySelector('#bgc');
+const btnText = document.querySelector('#btn-graphic');
 
+const btnTextJP = ("ランプのシェードに触れると、色覚に障がいがある方にとって見やすい色に変わります。");
+const btnTextEN = ("Touch lampshade if you are COLOR BLINDNESS person. This Website's colors will be changed, easy to read for you.");
+
+// const formColors = document.querySelectorAll('.contact-form span');
+// const formColorAlt = document.querySelectorAll('.contact-form span');
+
+
+// btn.addEventListener('click', () => {
+//   document.body.classList.toggle('dark-theme');
+// });
+  
+
+
+btn.addEventListener('click', () => {
+
+  if(btnText.textContent === btnTextEN) {
+    btnText.textContent = btnTextJP;
+    document.body.classList.add('darkTheme');
+  } else {
+    btnText.textContent = btnTextEN;
+    document.body.classList.remove('darkTheme');
+    }
+});    
+
+// const boxes = document.querySelectorAll('.box');
+// const hasDark = document.body.classList.contains('dark-theme');
+
+// btn.addEventListener('click', () => {
+
+//   if(hasDark == true) {
+//     boxes.classList.remove('boxLight');
+//     boxes.classList.add('boxDark');
+//   } else {
+//     boxes.classList.remove('boxDark');
+//     boxes.classList.add('boxLight');
+//   }
+// });
 
 $(function(){ 
 
@@ -14,14 +54,23 @@ $(function(){
     $('.nav_toggle, .nav').toggleClass('show');
   });
 
+  
+  // ここからダークモード but jq
+  // const changeColor = $('');
 
-  $('#btn-black, #btn-graphic').on('click', function() {
-    if ($('body').hasClass('dark-theme')) {
-      $('body').removeClass('dark-theme')
-    } else {
-      $('body').addClass('dark-theme')
-    }
-  });
+  // $('.btn-area').on('click', function(){
+
+  //   if ($('body').hasClass('dark-theme')) {
+  //     $('#bgc').removeClass('.bgc-alt')
+  //     $('#bgc').addClass('.bgc-original')
+  //     // $('.required').css('background','blue')
+  //   } else {
+  //     $('#bgc').removeClass('.bgc-original')
+  //     $('#bgc').addClass('.bgc-alt')
+  //     // $('.required').css('background','#feada6')
+  //   }
+  // })
+
 
 
   $('header a').click(function() {
@@ -31,7 +80,7 @@ $(function(){
       'scrollTop': position
     }, 2100);
   });
-
+});
 
 
 
@@ -152,14 +201,14 @@ for (let i = 0; i < fadeBox.length; i++){
     translate: ['0 4px', 0],
   };
   const options = {
-    duration: 415,
+    duration: 416,
     delay: i * 147,
     fill: 'forwards',
   };
 
   setTimeout(function(){
   fadeBox[i].animate(keyframes, options);
-  },125);
+  },137);
 }
 
   // setTimeout(function(){
@@ -177,10 +226,10 @@ $('#chart').on('inview', function(event, isInView) {//画面上に入ったら�
   if (isInView) {
     var ctx = document.getElementById('chart');
     var data = {
-      labels: ["HTML", "CSS", "JavaScript", "jQuery", "React", "Python"],
+      labels: ["HTML", "CSS", "JavaScript", "jQuery", "Python"],
       datasets: [{
           label: 'プログラミングスキル',
-          data: [5, 5, 3, 4, 0, 1],
+          data: [6, 6, 4, 5, 1],
           backgroundColor: 'rgba(54, 162, 235, 0.5)',
           borderColor: 'rgb(54, 162, 235)'
     }]
@@ -238,4 +287,199 @@ function scrollTimelineAnime() {
 $(window).on('scroll',function(){
   scrollTimelineAnime();
 });
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// menuIconSPだけ実装する
+if (window.matchMedia('(max-width: 640px)').matches) {
+
+  const menuIconSP = document.querySelector('.nav_toggle');
+  const navSP = document.querySelector('.nav');
+  const navMessage = document.getElementById('nav_message');
+  const navMessageText = document.getElementById("nav_message_text");
+  const showSP = document.getElementsByClassName("showSP");
+
+  menuIconSP.addEventListener('click',() => {
+    navSP.classList.toggle('showSP');
+    // navMessageText.toggle('showSP');
+
+    // if(menuIconSP.contains('.show')) {
+    //   navMessageText.style.visibility = "visible";
+    // } else {
+    //   navMessageText.style.visibility = "hidden";
+    // }
+  });
+
+
+
+  menuIconSP.addEventListener('click',() => {
+
+    if(navSP.style.visibility == "visible") {
+      navMessageText.style.visibility = "visible";
+    } else {
+      navMessageText.style.visibility = "hidden";
+    }
+  });
+
+
+
+// ボタンの位置をキープしたまま非表示をトグル
+  document.getElementById("nav_message_text").style.visibility = "hidden";
+
+  function clickBtnAC() {
+    
+    if(navMessageText.style.visibility == "visible") {
+      navMessageText.style.visibility = "hidden";
+      // navMessageText.classList.add('textAnimation');
+      // navMessageText.classList.remove('textAnimationRev');
+    } else {
+      navMessageText.style.visibility = "visible";
+      // navMessageText.classList.remove('textAnimation');
+    }
+  };
+
+  // message表示時アニメーション
+  const linkShow = document.querySelector(".linkshow");
+
+  linkShow.addEventListener("click", function() {
+    navMessageText.animate(
+      {
+        opacity: [0, 1],
+        transform:["translateY(10px)", "translateY(0)"]
+      },
+      {
+        fill: "forwards",
+        duration: 250,
+      }
+    );  
+  });
+  
+  
+
+
+  // message表示時アニメーションJquery
+ 
+  
+
+
+
+  // const btnAC = document.querySelector('.nav ul li a:nth-child(4)');
+  // const addAnimation = document.classList.add(textAnimation);
+
+  // btnAC.addEventListener('click', 'addAnimation');
+  
+  
+  // const InOut = () => {
+
+
+  // }
+  // btnAC.addEventListener('click', )
+  
+// ここから上はいじらない
+
+  btn.addEventListener('click', () => {
+
+    if(btnText.textContent === btnTextEN) {
+    navMessageText.textContent = btnTextJP;
+    navMessage.style.animation = '';
+    document.body.classList.add('darkTheme');
+    } else {
+    navMessageText.textContent = btnTextEN;
+    document.body.classList.remove('darkTheme');
+    }
+  });    
+  
+  
+
+  // const bgc = document.querySelector('#bgc');
+  // const btnText = document.querySelector('#btn-graphic');
+
+
+  // const formColors = document.querySelectorAll('.contact-form span');
+  // const formColorAlt = document.querySelectorAll('.contact-form span');
+
+
+  // btn.addEventListener('click', () => {
+  //   document.body.classList.toggle('dark-theme');
+  // });
+  
+
+
+
+
+  // function clickBtnTG() {
+  //   if(menuIconSP.classList.contains(show)) {
+  //     navMessageText.style.visibility = "visible";
+  //   } else {
+  //     navMessageText.style.visibility = "hidden";
+  //   }
+  // };
+
+// 参照
+//   const menuIconSP = document.querySelector('.nav_toggle');
+//   const navSP = document.querySelector('.nav');
+//   const navMessage = document.getElementById('nav_message');
+//   const showSP = document.getElementsByClassName("showSP");
+// const navMessageText = document.getElementById("nav_message_text");
+// const btnTextJP = ("ランプのシェードに触れると、色覚に障がいがある方にとって見やすい色に変わります。");
+// const btnTextEN = ("Touch lampshade if you are COLOR BLINDNESS person. This Website's colors will be changed, easy to read for you.");
+
+
+
+
+
+
+
+};
+
+// if (window.matchMedia('(max-width: 640px)').matches) {
+
+//   document.getElementById("nav_message_text").style.visibility = "hidden";
+
+//   function clickBtnAC() {
+//     const navMessageText = document.getElementById("nav_message_text")
+    
+//     if(navMessageText.style.visibility == "visible") {
+//       navMessageText.style.visibility = "hidden";
+//     } else {
+//       navMessageText.style.visibility = "visible";
+//     }
+//   }
+// };
+
+
+
+
+
+
+  // const messageBtn = document.getElementById('nav_btn');
+  // const messageText = document.getElementById('nav_message_text');
+
+  // messageBtn.addEventListener('click', () => {
+  //   messageText.classList.add('hidden');
+  // });
+
+
+
+
+// $(function(){ 
+//   $('.nav_toggle').on('click', function(){
+//     $('.nav_message').addClass('showSP');
+//   });
