@@ -26,11 +26,4 @@ $(function() {
   $('.nav-toggle, .nav-menu-ul li').click(function(){
     $('.nav-toggle, .nav-toggle i, .nav').toggleClass('show');
   });
-
-  $('.mobile-hover img')
-    .bind('touchstart', function(){
-        $(this).addClass('.hover');
-    }).bind('touchend', function(){
-        $(this).removeClass('.hover');
-});
 });
