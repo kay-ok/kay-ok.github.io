@@ -12,6 +12,7 @@ const btnText = document.querySelector('#btn-graphic');
 
 const btnTextJP = ("ランプのシェードに触れると、色覚に障がいがある方にとって見やすい色に変わります。");
 const btnTextEN = ("Touch lampshade if you are COLOR BLINDNESS person. This Website's colors will be changed, easy to read for you.");
+const boxes = document.getElementsByClassName('box');
 
 // const formColors = document.querySelectorAll('.contact-form span');
 // const formColorAlt = document.querySelectorAll('.contact-form span');
@@ -22,17 +23,35 @@ const btnTextEN = ("Touch lampshade if you are COLOR BLINDNESS person. This Webs
 // });
   
 
+// テキスト切り替えJS
+// btn.addEventListener('click', () => {
 
-btn.addEventListener('click', () => {
+//   if(btnText.textContent === btnTextEN) {
+//     btnText.textContent = btnTextJP;
+//   } else {
+//     btnText.textContent = btnTextEN;
+//     }
+// });    
 
-  if(btnText.textContent === btnTextEN) {
-    btnText.textContent = btnTextJP;
-    document.body.classList.add('darkTheme');
-  } else {
-    btnText.textContent = btnTextEN;
-    document.body.classList.remove('darkTheme');
-    }
-});    
+  
+// 新テキスト切り替えふわっとJS
+// const messages = document.querySelectorAll('.message');
+// let i = 1;
+
+// function messageAppear() {
+//   if (i > 2) {
+//     i = 0;
+//   }
+
+//   messages.forEach(message => {
+//     message.classList.remove('appear');    
+//   });
+
+//   messages[i].classList.add('appear');
+//   i++;
+// }
+
+// setInterval(messageAppear, 3000);
 
 // const boxes = document.querySelectorAll('.box');
 // const hasDark = document.body.classList.contains('dark-theme');
@@ -54,6 +73,45 @@ $(function(){
     $('.nav_toggle, .nav').toggleClass('show');
   });
 
+
+  const darkBx = document.querySelectorAll('.box');
+  const darkFc = document.querySelectorAll('.section-title, .sub-title, .scrolldown2 span, .text dt, .text dd, .skill-section, .mytimeline, .works-contents p, .contact-container, .contact-form, textarea, .footer p');
+  const idDarkFc = document.getElementById('aboutme ');
+  const darkBgc = document.querySelector('.mytimeline li, .border-line');
+  // const darker = darkElements.css('color', '#030303');
+  // .mytimeline em border-bottom #d7fffe
+  $('.btn-area').on('click', function(){
+    $('#main-bg').toggleClass('darkTheme');
+    $('.message').toggleClass('appear');
+    $('.mytimeline em').toggleClass('mtlbbDark');
+
+    if($('#main-bg').hasClass('darkTheme') == true) {
+      $(darkBx).css('color', '#ff9a44')
+      // $(darkFc).css('color', '#f4d03f')
+      // $(darkFc).css('color', '#f9f047')
+      $(darkFc).css('color', '#ff9a44')
+      $(idDarkFc).css('color', '#ff9a44')
+      $(darkBgc).css('color', '#ff9a44')
+    } else {
+      $(darkBx).css('color', '#d7fffe')
+      $(darkFc).css('color', '#d7fffe')
+      $(idDarkFc).css('color', '#d7fffe')
+      $(darkBgc).css('color', '#d7fffe')
+    }
+  });
+ 
+
+
+  
+
+
+
+  //   if($('body').hasClass('darkTheme')){
+  //     $('.box').addClass('boxDark');
+  //   } else {
+  //     $('.box').removeClass('boxDark');
+  //   }
+  // });
   
   // ここからダークモード but jq
   // const changeColor = $('');
@@ -222,6 +280,8 @@ for (let i = 0; i < fadeBox.length; i++){
 
 // チャートセクション
 
+// borderColor 初期値 borderColor: 'rgb(54, 162, 235)'
+
 $('#chart').on('inview', function(event, isInView) {//画面上に入ったらグラフを描画
   if (isInView) {
     var ctx = document.getElementById('chart');
@@ -230,9 +290,10 @@ $('#chart').on('inview', function(event, isInView) {//画面上に入ったら�
       datasets: [{
           label: 'プログラミングスキル',
           data: [6, 6, 4, 5, 1],
-          backgroundColor: 'rgba(54, 162, 235, 0.5)',
+          backgroundColor: 'rgba(48, 207, 208, 0.5)',
           borderColor: 'rgb(54, 162, 235)'
     }]
+  }
 };
 
 var options = {
@@ -250,8 +311,16 @@ var options = {
 						// return  value +  '%'//数字＋%で表示
             },
           }
-      }
+      },
+    options: {
+      legend: {
+          labels: {
+              fontColor: '#ffffff'
+            }
+        }
+    }
     };
+
 
 var chart = new Chart(ctx, {
     type: 'bar',
@@ -260,7 +329,7 @@ var chart = new Chart(ctx, {
 });
 
   }
-});
+);
 
 
 

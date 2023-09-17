@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Klee+One:wght@400;600&family=Noto+Serif+JP&family=Poppins&family=Sawarabi+Gothic&family=Shippori+Mincho&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Gochi+Hand&family=Shippori+Mincho+B1&family=Zen+Kurenaido&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
@@ -21,23 +21,22 @@
 </div>
 
 
-<div id="main-bg">
-  <header id="header">
 
-    <div class="header-nav fadeDown delaySec1">
-      <ul>
-        <li><a href="#aboutme" class="btn02 rotateback">
-          <span>ABOUT ME</span><span>自己紹介</span>
-        </a></li>
-        <li><a href="#works" class="btn02 rotateback">
-          <span>WORKS</span><span>制作物</span>
-        </a></li>
-        <li><a href="#contact" class="btn02 rotateback">
+<!-- <div class="header-nav fadeDown delaySec1">
+  <ul>
+    <li><a href="#aboutme" class="btn02 rotateback">
+      <span>ABOUT ME</span><span>自己紹介</span>
+    </a></li>
+    <li><a href="#works" class="btn02 rotateback">
+      <span>WORKS</span><span>制作物</span>
+    </a></li>
+    <li><a href="#contact" class="btn02 rotateback">
           <span>CONTACT</span><span>お問い合わせ</span>
-          </a></li>
+        </a></li>
       </ul>
-    </div>
-
+    </div> -->
+    
+  <header id="header">
     <nav class="nav">
       <ul class="nav_menu_ul">
         <li class="nav_menu_li"><a href="#aboutme" class="btn02">ABOUT ME</a></li>
@@ -60,167 +59,175 @@
 
 
 
+<div id="main-bg">
   <main>
-
-    <div class="btn-area">
-      <input id="btn-black" type="button">
-        <span id="btn-graphic" class="fadeUp delaySec3">
-          <p>Touch lampshade if you are COLOR BLINDNESS person. This Website's colors will be changed, easy to read for you.</p>
-        </span>
-      </input>
-    </div>
-
-      <section id="first-section">
-        <h1>
-          <div class="flex-first delayShow">
-            <div class="box">O</div>
-            <div class="box">K</div>
-            <div class="box">U</div>
-            <div class="box">B</div>
-            <div class="box">O</div>
-          </div>
-          <div class="flex-second delayShow">
-            <div class="box">K</div>
-            <div class="box">E</div>
-            <div class="box">I</div>
-            <div class="box">'S</div>
-          </div>
-          <div class="flex-third delayShow">
-            <div class="box">P</div>
-            <div class="box">O</div>
-            <div class="box">R</div>
-            <div class="box">T</div>
-            <div class="box">F</div>
-            <div class="box">O</div>
-            <div class="box">L</div>
-            <div class="box">I</div>
-            <div class="box">O</div>
-          </div>
-        </h1>
-
-          <div class="scrolldown2 fadeUp delaySec2">
-            <span>Scroll</span>
-          </div>
-
-      </section>
-</div>
-
-
-  <div id="bgc">
-    <section id="aboutme">
-      <div id="left-wrapper">
-
-        <div id="left-fixed"><!--左固定エリア-->
+    <div id="left-wrapper">
+      <div id="left-fixed"><!--左固定エリア-->
+        <div class="btn-area">
+          <input id="btn-black" type="button">
+            <span id="btn-graphic" class="fadeUp delaySec3">
+              <p class="message">Touch lampshade if you are COLOR BLINDNESS person. This Website's colors will be changed, easy to read for you.</p>
+              <p class="message appear">ランプのシェードに触れると、色覚に障がいがある方にとって見やすい色に変わります。</p>
+            </span>
+          </input>
         </div>
-          
-        <div id="right-wrapper"><!--右エリア-->
-          <section class="right-section">
-            <div class="right-area">
-              <h2 class="section-title" id="title-center">
-                <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">About Me</span></span>
-              </h2>
-              <h3 class="sub-title" id="title-center">
-                <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 自己紹介 -</span></span>
-              </h3>
-
-              <div class="text-wrapper">
-                <dl class="text">
-                  <dt class="vertical-fix">名前</dt><dd><span class="ruby">おおくぼ　けい</span><br>大久保　慧</dd>
-                  <dt>性別</dt><dd>男</dd>
-                  <dt>誕生日</dt><dd>1987年 9月 16日</dd>
-                  <dt>年齢</dt><dd>35歳</dd>
-                  <dt>血液型</dt><dd>O型</dd>
-                  <dt class="vertical-fix">性格</dt><dd>・慎重<br>・几帳面<br>・好奇心旺盛<br>・完璧主義</dd>
-                  <dt class="vertical-fix">好きなこと</dt><dd><span class="dot"></span><br>・人と話すこと<br>・サッカー全般<br>・読書<br>・音楽鑑賞<br>・ランニング</dd>
-                  <dt class="vertical-fix">得意なこと</dt><dd>・初対面でも積極的に話しかけられること<br>・精密な作業や調整が好きなこと</dd>
-                  <dt class="vertical-fix">不得意なこと</dt><dd>・完璧性を求め過ぎてしまうこと<br>・効率的に物事を進めること</dd>
-                  <dt class="vertical-fix">自身の強み</dt><dd>・協調性があり、気配りができること<br>・他人を思いやれること</dd>
-                  <dt class="vertical-fix">自身の弱み</dt><dd>・相手を尊重しすぎること<br>・自分を大切にできないこと</dd>
-                  <dt class="vertical-fix">興味があること</dt><dd>・WEBサイトデザイン<br>・アプリケーション開発</dd>
-                  <dt class="vertical-fix">抱えている障害</dt><dd>・うつ病<br>・双極性障害<br>・持続性気分障害<br>・入眠障害</dd>
-                </dl>
-              </div>
-            </div>
-          </section>
-
-          <section class="right-section skill-section">
-            <div class="right-area">
-              <h3 class="sub-title" id="title-center">
-                <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- スキル -</span></span>
-              </h3>
-              <div class="text-wrapper">
-                <div class="text">
-                  <canvas id="chart"></canvas>
-                  <p>  
-                  <span id="inview-point">HTML, CSS, jQueryなどのWEBサイト制作に<br>
-                    直結する言語が得意です。<br>
-                    現在はPythonを集中的に学習しています。</span></p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          
-          <section class="right-section">
-            <div class="right-area">
-              <h3 class="sub-title" id="title-center">
-                <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 経歴・職歴 -</span></span>
-              </h3>
-              <div class="text-wrapper">
-                  <ul class="mytimeline">
-                    <li>
-                      <dl>
-                        <dt>1987</dt>
-                        <dt><em>福島県郡山市にて産声を上げる</em></dt>
-                        <dd>記憶はないが、愛着は今も強く残っている。</dd>
-                      </dl>
-                      <span class="border-line"></span>
-                    </li>
-
-                    <li>
-                      <dl>
-                        <dt>2000 - 2006</dt>
-                        <dt><em>栃木県宇都宮市へ移住</em></dt>
-                        <dd>運転マナーの劣悪さに驚愕しながら中学へ通い、青春を謳歌しながら高校を卒業する。</dd>
-                      </dl>
-                      <span class="border-line"></span>
-                    </li>
-                   
-                    <li>
-                      <dl>
-                        <dt>2008</dt>
-                        <dt><em>大学を中退、宇都宮へ戻る</em></dt>
-                        <dd>
-                          経済的な問題や大学に馴染めなかったこともあるが、最大の理由は作家になる夢を諦めきれず実家へ帰る。
-                        </dd>
-                      </dl>
-                      <span class="border-line"></span>
-                    </li>
-
-                    <li>
-                      <dl>
-                        <dt>2008 - 2022</dt>
-                        <dt><em>下り坂の日々と止まない雨</em></dt>
-                        <dd>コンビニやパチンコ店など主に接客業でアルバイト経験を積む。夜勤の仕事から不眠症を発症し、徐々にうつ病になり自宅に引きこもるようになる。</dd>
-                      </dl>
-                      <span class="border-line"></span>
-                    </li>
-
-                    <li>
-                      <dl>
-                        <dt>2022 - </dt>
-                        <dt><em>心機一転、万里一空</em></dt>
-                        <dd>作家の道を諦め始めたときプログラミングに興味を持つようになる。「就労移行支援事業所ITスクール八王子」へITスキルを学ぶために宇都宮市から八王子市へ引っ越す。<br>フロンドエンドエンジニアを目指し日々、学習を続けており、人の役に立つようなWEBアプリケーションを作りたいと考えている。</dd>
-                      </dl>
-                      <span class="border-line"></span>
-                    </li>
-                  </ul>
-              </div>
-            </div>
-          </section>
+        <div class="secret-container"> 
+          <p class="joke">A 1 1 3</p>
         </div>
       </div>
-    </section>
+
+    
+
+      <div id="right-wrapper"><!--右エリア-->
+        <div class="op-area"></div>  
+        <div class="blur-area"></div>
+          <section id="first-section">
+            <h1>
+              <div class="flex-first delayShow">
+                <div class="box">O</div>
+                <div class="box">K</div>
+                <div class="box">U</div>
+                <div class="box">B</div>
+                <div class="box">O</div>
+              </div>
+              <div class="flex-second delayShow">
+                <div class="box">K</div>
+                <div class="box">E</div>
+                <div class="box">I</div>
+                <div class="box">'S</div>
+              </div>
+              <div class="flex-third delayShow">
+                <div class="box">P</div>
+                <div class="box">O</div>
+                <div class="box">R</div>
+                <div class="box">T</div>
+                <div class="box">F</div>
+                <div class="box">O</div>
+                <div class="box">L</div>
+                <div class="box">I</div>
+                <div class="box">O</div>
+              </div>
+            </h1>
+    
+              <div class="scrolldown2 fadeUp delaySec2">
+                <span>Scroll</span>
+              </div>
+          </section>
+
+          <div id="right-wrapper">
+            <section class="right-section">
+              <div class="right-area">
+                <h2 class="section-title" id="title-center">
+                  <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">About Me</span></span>
+                </h2>
+                <h3 class="sub-title" id="title-center">
+                  <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 自己紹介 -</span></span>
+                </h3>
+                
+                <section id="aboutme">
+                  <div class="text-wrapper">
+                    <dl class="text">
+                      <dt class="vertical-fix">名前</dt><dd><span class="ruby">おおくぼ　けい</span><br>大久保　慧</dd>
+                      <!-- <dt>性別</dt><dd>男</dd> -->
+                      <!-- <dt>誕生日</dt><dd>1987年 9月 16日</dd> -->
+                      <dt>年齢</dt><dd>36歳</dd>
+                      <!-- <dt>血液型</dt><dd>O型</dd> -->
+                      <dt class="vertical-fix">性格</dt><dd>・好奇心旺盛<br>・几帳面<br>・完璧主義</dd>
+                      <dt class="vertical-fix">好きなこと</dt><dd><span class="dot"></span><br>・人と話すこと<br>・サッカー<br>・ビリヤード<br>（最近特にハマっています！）</dd>
+                      <dt class="vertical-fix">得意なこと</dt><dd>・初対面でも積極的に話しかけられること<br><br>・精密な作業や調整が好きなこと</dd>
+                      <dt class="vertical-fix">不得意なこと</dt><dd>・完璧性を求め過ぎてしまうこと<br><br>・効率的に物事を進めること</dd>
+                      <dt class="vertical-fix">自身の強み</dt><dd>・協調性があり、気配りができること</dd>
+                      <!-- <dt class="vertical-fix">自身の弱み</dt><dd>・自分を大切にできないこと</dd> -->
+                      <dt class="vertical-fix">興味があること</dt><dd>・WEBサイトデザイン<br>（ユーザーがWEBサイトを見た時に、どのようにしたら視覚的快楽を得られるかを考えながらWEBサイトを作っています。）</dd>
+                      </dd>
+                      <dt class="vertical-fix">抱えている障害</dt><dd>・うつ病<br>・双極性障害<br>・持続性気分障害<br>・入眠障害</dd>
+                    </dl>
+                  </div>
+                </section>
+              
+                <section class="right-section skill-section">
+                  <div class="right-area">
+                    <h3 class="sub-title" id="title-center">
+                      <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- スキル -</span></span>
+                    </h3>
+                    <div class="text-wrapper">
+                      <div class="text">
+                        <canvas id="chart"></canvas>
+                        <p>  
+                        <span id="inview-point">HTML, CSS, jQueryなどのWEBサイト制作に<br>
+                          直結する言語が得意です。<br>
+                          現在はPythonを集中的に学習しています。</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              
+                <section class="right-section">
+                  <div class="right-area">
+                    <h3 class="sub-title" id="title-center">
+                      <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 経歴 -</span></span>
+                    </h3>
+                    <div class="text-wrapper">
+                        <ul class="mytimeline">
+                          <li>
+                            <dl>
+                              <dt>1987</dt>
+                              <dt><em>福島県郡山市にて産声を上げる。</em></dt>
+                              <dd>記憶はないが、愛着は今も強く残っている。</dd>
+                            </dl>
+                            <span class="border-line"></span>
+                          </li>
+      
+                          <li>
+                            <dl>
+                              <dt>2000 - 2006</dt>
+                              <dt><em>栃木県宇都宮市へ移住。</em></dt>
+                              <dd>運転マナーの劣悪さに驚愕しながら中学へ通い、青春を謳歌しながら高校を卒業する。</dd>
+                            </dl>
+                            <span class="border-line"></span>
+                          </li>
+                        
+                          <li>
+                            <dl>
+                              <dt>2008</dt>
+                              <dt><em>大学を中退、宇都宮へ戻る。</em></dt>
+                              <dd>
+                                経済的な問題や大学に馴染めなかったこともあるが、最大の理由は作家になる夢を諦めきれず実家へ帰る。
+                              </dd>
+                            </dl>
+                            <span class="border-line"></span>
+                          </li>
+      
+                          <li>
+                            <dl>
+                              <dt>2008 - 2022</dt>
+                              <dt><em>下り坂の日々と止まない雨……</em></dt>
+                              <dd>コンビニやパチンコ店など主に接客業でアルバイト経験を積む。<br>お客様とコミュニケーションを取りながらする仕事は自分にピタリと合っていたが、夜勤の仕事の連続から不眠症を発症し、徐々にうつ病になり自宅に引きこもるようになる。</dd>
+                            </dl>
+                            <span class="border-line"></span>
+                          </li>
+      
+                          <li>
+                            <dl>
+                              <dt>2022 - </dt>
+                              <dt><em>心機一転！万里一空！</em></dt>
+                              <dd>作家の道を諦め始めたときプログラミングに興味を持つようになる。<br>「就労移行支援事業所ITスクール八王子」へITスキルを学ぶために宇都宮市から八王子市へ引っ越す。<br>フロンドエンドエンジニアを目指し日々、学習を続けており、人の役に立つようなWEBアプリケーションを作りたいと考えている。</dd>
+                            </dl>
+                            <span class="border-line"></span>
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+                </section>
+    </div>
+
+            
+            
+            </div>
+          </section>
+
+
+          
 
 
     <section id="works" class="container">  
@@ -276,10 +283,9 @@
         </section>
   </main>
 
-  <footer id="footer">
+  <footer class="footer" id="right-section">
     <p>&copy; 2023<span> Kei Okubo </span></p>
   </footer>
-
 </div>
 
 
@@ -287,7 +293,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js" integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js" integrity="sha512-dmLpQXesGDP0ZM/s8zGKQU3Xlbix57QfwFNFh+BY5Ad/afObQ/lBo200mHWuHu8LOoI7tlK09yP3L/4DjdQ5Xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" integrity="sha512-7U4rRB8aGAHGVad3u2jiC7GA5/1YhQcQjxKeaVms/bT66i3LVBMRcBI9KwABNWnxOSwulkuSXxZLGuyfvo7V1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js" integrity="sha512-D68mBFX2aQwVh2wV6uCDLmabIveaSQL3uVUo2Ze7VwxIeOcAd4C1/JagkVoObb/NLkYDrdvY3JHK1KOfenHVcA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js" integrity="sha512-dy8Q+KMsxJmEgLqvZA7kk/Pcaij/OhCK1LPj+oGuxfd/tcbbqrDSGOtiXNfzKbMun+ZBnQsTWUnhuXhVkISDOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <script type="text/javascript">
     let submitted = false;
   </script>
