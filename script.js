@@ -282,16 +282,28 @@ for (let i = 0; i < fadeBox.length; i++){
 
 // borderColor 初期値 borderColor: 'rgb(54, 162, 235)'
 
+
+
+
+
+// 横棒グラフ
 $('#chart').on('inview', function(event, isInView) {//画面上に入ったらグラフを描画
   if (isInView) {
     var ctx = document.getElementById('chart');
     var data = {
       labels: ["HTML", "CSS", "JavaScript", "jQuery", "Python"],
       datasets: [{
-          label: 'プログラミングスキル',
-          data: [6, 6, 4, 5, 1],
-          backgroundColor: 'rgba(48, 207, 208, 0.5)',
-          borderColor: 'rgb(54, 162, 235)'
+          label: '現役エンジニアを10としたプログラミングスキル',
+          data: [6.5, 6, 4, 5, 1],
+          backgroundColor:[
+            "rgba(153, 102, 255, 0.35)"
+          ],
+          borderColor: [
+            "rgba(153, 102, 255, 0.35)"
+          ],
+          fontColor: [
+            "rgba(255, 255, 255, 1)"
+          ]
     }]
   }
 };
@@ -307,18 +319,11 @@ var options = {
               suggestedMin: 0,
             ticks:{
               stepSize: 1,
-            //   callback: function(value){
-						// return  value +  '%'//数字＋%で表示
             },
           }
       },
     options: {
-      legend: {
-          labels: {
-              fontColor: '#ffffff'
-            }
-        }
-    }
+      }
     };
 
 
@@ -330,6 +335,51 @@ var chart = new Chart(ctx, {
 
   }
 );
+// 旧チャートここまで
+
+
+
+
+// $('#chart').on('inview', function(event, isInView) {//画面上に入ったらグラフを描画
+//     if (isInView) {
+//       var ctx = document.getElementById("Chart");
+// var myChart = new Chart(ctx, {
+//     type: 'bar',
+//     data: {
+//         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+//         datasets: [{
+//             label: '# of Votes',
+//             data: [12, 19, 3, 5, 2, 3],
+//             backgroundColor: [
+//                 'rgba(255, 99, 132, 0.2)',
+//                 'rgba(54, 162, 235, 0.2)',
+//                 'rgba(255, 206, 86, 0.2)',
+//                 'rgba(75, 192, 192, 0.2)',
+//                 'rgba(153, 102, 255, 0.2)',
+//                 'rgba(255, 159, 64, 0.2)'
+//             ],
+//             borderColor: [
+//                 'rgba(255,99,132,1)',
+//                 'rgba(54, 162, 235, 1)',
+//                 'rgba(255, 206, 86, 1)',
+//                 'rgba(75, 192, 192, 1)',
+//                 'rgba(153, 102, 255, 1)',
+//                 'rgba(255, 159, 64, 1)'
+//             ],
+//             borderWidth: 1
+//         }]
+//     },
+//     options: {
+//         scales: {
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero:true
+//                 }
+//             }]
+//         },
+//         responsive: false
+//     }
+// });
 
 
 
@@ -387,7 +437,7 @@ if (window.matchMedia('(max-width: 640px)').matches) {
 
   menuIconSP.addEventListener('click',() => {
     navSP.classList.toggle('showSP');
-    // navMessageText.toggle('showSP');
+    navMessageText.toggle('showSP');
 
     // if(menuIconSP.contains('.show')) {
     //   navMessageText.style.visibility = "visible";

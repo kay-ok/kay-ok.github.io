@@ -161,15 +161,15 @@ li {
 
 /* ヘッダー */
 
-/* #header {
+#header {
   width: 100%;
   height: 50px;
+  display: none;
 }
 
 .header-nav {
   width: 100%;
   position: fixed;
-  display: none;
 }
 
 .header-nav ul {
@@ -740,8 +740,9 @@ small{
 #chart {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  background-color: rgba(255, 255, 255, 0.35);
+  margin: 0 auto;
+  /* object-fit: cover; */
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -978,10 +979,10 @@ small{
 
 @media screen and (max-width: 640px) {
   
-  .header-nav {
-    display: none;
+  #header {
+    display: block;
   }
- 
+
   .nav {
     display: block;
     justify-content: space-evenly;
@@ -1020,23 +1021,24 @@ small{
     justify-content: center;
     width: 85%;
     height: 4.7rem;
-    /* color: #fff; */
-    /* opacity: 0; */
-    /* visibility: hidden; */
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
   }
 
   
   #nav_message_text {
-    color: #fff;
+    color: #D7FFFE;
+    font-style: italic;
     display: block;
     text-align: center;
     justify-content: center;
     letter-spacing: .03rem;
-    font-family: 'Poppins';
+    font-family: 'Shippori Mincho';
     font-weight: 550;
-    /* font-style: normal; */
-    /* opacity: 0; */
-    /* visibility: hidden; */
+    font-style: normal;
+    opacity: 0;
+    visibility: hidden;
   }
 
 
@@ -1060,7 +1062,7 @@ small{
     display: block;
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: #D7FFFE;
     position: absolute;
     transition: transform 1.1s, opacity .7s;
   }
@@ -1112,11 +1114,11 @@ small{
     margin-top: 200px;
   }
   
-  #main-bg {
+  /* #main-bg {
     width: 100vw;
     height: 100dvh;
     position: relative;
-  }
+  } */
 
   #main-bg img {
     object-fit: cover;
@@ -1150,28 +1152,25 @@ small{
   }
 
 
-  .right-wrapper .section-title {
-    width: 100%;
-
-  }
-
+  
   #left-wrapper {
     flex-direction: column;
     position: relative;
   }
-
-
+  
+  
   #left-fixed {
-    position:static;
-    width: 100%;
-    height: 100vh;
+    position: sticky;
+    position: -webkit-sticky;
+    width: 30%;
+    height: 100dvh;
+    top: 0;
     margin-left: 0;
-
+    
   }
 
-  #right-wrapper {
-    width: 100%;
-
+  .right-wrapper .section-title {
+    width: 70%;
   }
 
   .right-area span {

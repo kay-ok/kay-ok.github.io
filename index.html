@@ -36,6 +36,7 @@
       </ul>
     </div> -->
     
+<div id="main-bg">
   <header id="header">
     <nav class="nav">
       <ul class="nav_menu_ul">
@@ -58,8 +59,6 @@
   </header>
 
 
-
-<div id="main-bg">
   <main>
     <div id="left-wrapper">
       <div id="left-fixed"><!--左固定エリア-->
@@ -134,9 +133,9 @@
                       <!-- <dt>血液型</dt><dd>O型</dd> -->
                       <dt class="vertical-fix">性格</dt><dd>・好奇心旺盛<br>・几帳面<br>・完璧主義</dd>
                       <dt class="vertical-fix">好きなこと</dt><dd><span class="dot"></span><br>・人と話すこと<br>・サッカー<br>・ビリヤード<br>（最近特にハマっています！）</dd>
-                      <dt class="vertical-fix">得意なこと</dt><dd>・初対面でも積極的に話しかけられること<br><br>・精密な作業や調整が好きなこと</dd>
-                      <dt class="vertical-fix">不得意なこと</dt><dd>・完璧性を求め過ぎてしまうこと<br><br>・効率的に物事を進めること</dd>
-                      <dt class="vertical-fix">自身の強み</dt><dd>・協調性があり、気配りができること</dd>
+                      <dt class="vertical-fix">得意なこと</dt><dd>・初対面でも積極的に話しかけられること<br>・精密な作業や調整が好きなこと</dd>
+                      <dt>不得意なこと</dt><dd>・完璧性を求め過ぎてしまうこと</dd>
+                      <dt>自身の強み</dt><dd>・協調性があり、気配りができること</dd>
                       <!-- <dt class="vertical-fix">自身の弱み</dt><dd>・自分を大切にできないこと</dd> -->
                       <dt class="vertical-fix">興味があること</dt><dd>・WEBサイトデザイン<br>（ユーザーがWEBサイトを見た時に、どのようにしたら視覚的快楽を得られるかを考えながらWEBサイトを作っています。）</dd>
                       </dd>
@@ -152,7 +151,8 @@
                     </h3>
                     <div class="text-wrapper">
                       <div class="text">
-                        <canvas id="chart"></canvas>
+                        <!-- <canvas id="chart"></canvas> -->
+                        <canvas id="chart" width="300" height="150"></canvas>
                         <p>  
                         <span id="inview-point">HTML, CSS, jQueryなどのWEBサイト制作に<br>
                           直結する言語が得意です。<br>
@@ -172,8 +172,8 @@
                           <li>
                             <dl>
                               <dt>1987</dt>
-                              <dt><em>福島県郡山市にて産声を上げる。</em></dt>
-                              <dd>記憶はないが、愛着は今も強く残っている。</dd>
+                              <dt><em>福島県郡山市にて産まれる</em></dt>
+                              <dd>愛着は今も強い。</dd>
                             </dl>
                             <span class="border-line"></span>
                           </li>
@@ -181,8 +181,8 @@
                           <li>
                             <dl>
                               <dt>2000 - 2006</dt>
-                              <dt><em>栃木県宇都宮市へ移住。</em></dt>
-                              <dd>運転マナーの劣悪さに驚愕しながら中学へ通い、青春を謳歌しながら高校を卒業する。</dd>
+                              <dt><em>栃木県宇都宮市へ移住</em></dt>
+                              <dd>中高と宇都宮で過ごす。<br>英語の面白さに気付き、のめり込むように勉強する。</dd>
                             </dl>
                             <span class="border-line"></span>
                           </li>
@@ -190,9 +190,9 @@
                           <li>
                             <dl>
                               <dt>2008</dt>
-                              <dt><em>大学を中退、宇都宮へ戻る。</em></dt>
+                              <dt><em>大学を中退</em></dt>
                               <dd>
-                                経済的な問題や大学に馴染めなかったこともあるが、最大の理由は作家になる夢を諦めきれず実家へ帰る。
+                                作家になる夢を諦めきれず実家へ帰り、執筆を行う毎日を送る。<br>
                               </dd>
                             </dl>
                             <span class="border-line"></span>
@@ -201,7 +201,7 @@
                           <li>
                             <dl>
                               <dt>2008 - 2022</dt>
-                              <dt><em>下り坂の日々と止まない雨……</em></dt>
+                              <dt><em>下り坂の日々</em></dt>
                               <dd>コンビニやパチンコ店など主に接客業でアルバイト経験を積む。<br>お客様とコミュニケーションを取りながらする仕事は自分にピタリと合っていたが、夜勤の仕事の連続から不眠症を発症し、徐々にうつ病になり自宅に引きこもるようになる。</dd>
                             </dl>
                             <span class="border-line"></span>
@@ -210,7 +210,7 @@
                           <li>
                             <dl>
                               <dt>2022 - </dt>
-                              <dt><em>心機一転！万里一空！</em></dt>
+                              <dt><em>心機一転、万里一空</em></dt>
                               <dd>作家の道を諦め始めたときプログラミングに興味を持つようになる。<br>「就労移行支援事業所ITスクール八王子」へITスキルを学ぶために宇都宮市から八王子市へ引っ越す。<br>フロンドエンドエンジニアを目指し日々、学習を続けており、人の役に立つようなWEBアプリケーションを作りたいと考えている。</dd>
                             </dl>
                             <span class="border-line"></span>
@@ -270,7 +270,7 @@
                method="POST" target="hidden_iframe" onsubmit="submitted=true" class="cf">
                   <dl>
                     <dt><label class="cf-label" for="field-name">お名前・会社名<span class="required">必須</span></label></dt>
-                    <dd><input name="entry.747616679" class="cf-input" id="field-name" placeholder="株式会社　田中" type="text" required="required"></dd>
+                    <dd><input name="entry.747616679" class="cf-input" id="field-name" placeholder="株式会社XX　鈴木" type="text" required="required"></dd>
                     <dt><label class="cf-label" for="field-mail">メールアドレス<span class="required">必須</span></label></dt>
                     <dd><input name="entry.484596433" class="cf-input" id="field-mail" placeholder="sample@gmail.com" type="email" required="required"></dd>
                     <dt><label class="cf-label" for="field-message">お問い合わせ内容<span class="required">必須</span></label></dt>
@@ -292,8 +292,9 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js" integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js" integrity="sha512-dmLpQXesGDP0ZM/s8zGKQU3Xlbix57QfwFNFh+BY5Ad/afObQ/lBo200mHWuHu8LOoI7tlK09yP3L/4DjdQ5Xw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" integrity="sha512-7U4rRB8aGAHGVad3u2jiC7GA5/1YhQcQjxKeaVms/bT66i3LVBMRcBI9KwABNWnxOSwulkuSXxZLGuyfvo7V1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" integrity="sha512-7U4rRB8aGAHGVad3u2jiC7GA5/1YhQcQjxKeaVms/bT66i3LVBMRcBI9KwABNWnxOSwulkuSXxZLGuyfvo7V1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js" integrity="sha512-D68mBFX2aQwVh2wV6uCDLmabIveaSQL3uVUo2Ze7VwxIeOcAd4C1/JagkVoObb/NLkYDrdvY3JHK1KOfenHVcA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js" integrity="sha512-dy8Q+KMsxJmEgLqvZA7kk/Pcaij/OhCK1LPj+oGuxfd/tcbbqrDSGOtiXNfzKbMun+ZBnQsTWUnhuXhVkISDOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <script type="text/javascript">
