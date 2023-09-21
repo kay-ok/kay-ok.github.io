@@ -86,12 +86,12 @@ $(function(){
     $('.mytimeline em').toggleClass('mtlbbDark');
 
     if($('#main-bg').hasClass('darkTheme') == true) {
-      $(darkBx).css('color', '#ff9a44')
+      $(darkBx).css('color', '#ff4500')
       // $(darkFc).css('color', '#f4d03f')
       // $(darkFc).css('color', '#f9f047')
-      $(darkFc).css('color', '#ff9a44')
-      $(idDarkFc).css('color', '#ff9a44')
-      $(darkBgc).css('color', '#ff9a44')
+      $(darkFc).css('color', '#ff4500')
+      $(idDarkFc).css('color', '#ff4500')
+      $(darkBgc).css('color', '#ff4500')
     } else {
       $(darkBx).css('color', '#d7fffe')
       $(darkFc).css('color', '#d7fffe')
