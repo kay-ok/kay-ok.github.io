@@ -42,20 +42,21 @@
       <ul class="nav_menu_ul">
         <li class="nav_menu_li"><a href="#aboutme" class="btn02">ABOUT ME</a></li>
         <li class="nav_menu_li"><a href="#works" class="btn02">WORKS</a></li>
-        <li class="nav_menu_li"><a href="#contact" class="btn02">CONTACT</a></li>
+        <li class="nav_menu_li"><a href="#contact" class="btn02">CAREER</a></li>
         <li class="nav_menu_li"><a href="javascript:void(0)" class="btn02 linkshow" onclick="clickBtnAC()">ACCESSIBILITY</a>
         </li>
       </ul>
     </nav>
-
-      <div id="nav_message">
-          <p id="nav_message_text">Touch lampshade if you are COLOR BLINDNESS person. This Website's colors will be changed, easy to read for you.</p>
-      </div>
-      <span class="nav_toggle">
-        <i></i>
-        <i></i>
-        <i></i>
-      </span>
+    
+    
+    <div id="nav_message">
+      <p id="nav_message_text">ランプのシェードに触れると、色覚に障がいがある方にとって見やすい色に変わります。</p>
+    </div>
+    <span class="nav_toggle">
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
   </header>
 
 
@@ -78,8 +79,8 @@
     
 
       <div id="right-wrapper"><!--右エリア-->
-        <div class="op-area"></div>  
-        <div class="blur-area"></div>
+        <!-- <div class="op-area"></div>  
+        <div class="blur-area"></div> -->
           <section id="first-section">
             <h1>
               <div class="flex-first delayShow">
@@ -113,7 +114,7 @@
               </div>
           </section>
 
-          <div id="right-wrapper">
+          <div id="right-container">
             <section class="right-section">
               <div class="right-area">
                 <h2 class="section-title" id="title-center">
@@ -132,14 +133,14 @@
                       <dt>年齢</dt><dd>36歳</dd>
                       <!-- <dt>血液型</dt><dd>O型</dd> -->
                       <dt class="vertical-fix">性格</dt><dd>・好奇心旺盛<br>・几帳面<br>・完璧主義</dd>
-                      <dt class="vertical-fix">好きなこと</dt><dd><span class="dot"></span><br>・人と話すこと<br>・サッカー<br>・ビリヤード<br>（最近特にハマっています！）</dd>
-                      <dt class="vertical-fix">得意なこと</dt><dd>・初対面でも積極的に話しかけられること<br>・精密な作業や調整が好きなこと</dd>
-                      <dt>不得意なこと</dt><dd>・完璧性を求め過ぎてしまうこと</dd>
+                      <dt class="vertical-fix">好きなこと</dt><dd><span class="dot"></span><br>・人と話すこと<br>・サッカー<br>・ビリヤード</dd>
+                      <dt class="vertical-fix">得意なこと</dt><dd>・自ら積極的に話しかけられること<br>・精密な作業や調整が好きなこと</dd>
+                      <!-- <dt>不得意なこと</dt><dd>・完璧性を求め過ぎてしまうこと</dd> -->
                       <dt>自身の強み</dt><dd>・協調性があり、気配りができること</dd>
                       <!-- <dt class="vertical-fix">自身の弱み</dt><dd>・自分を大切にできないこと</dd> -->
-                      <dt class="vertical-fix">興味があること</dt><dd>・WEBサイトデザイン<br>（ユーザーがWEBサイトを見た時に、どのようにしたら視覚的快楽を得られるかを考えながらWEBサイトを作っています。）</dd>
+                      <dt>興味関心があること</dt><dd>・WEBサイトデザイン観察とその模写</dd>
                       </dd>
-                      <dt class="vertical-fix">抱えている障害</dt><dd>・うつ病<br>・双極性障害<br>・持続性気分障害<br>・入眠障害</dd>
+                      <!-- <dt class="vertical-fix">抱えている障害</dt><dd>・うつ病<br>・双極性障害<br>・持続性気分障害<br>・入眠障害</dd> -->
                     </dl>
                   </div>
                 </section>
@@ -151,8 +152,9 @@
                     </h3>
                     <div class="text-wrapper">
                       <div class="text">
-                        <!-- <canvas id="chart"></canvas> -->
-                        <canvas id="chart" width="300" height="150"></canvas>
+                        <div class="chart-container">
+                          <canvas id="chart"></canvas>
+                        </div>
                         <p>  
                         <span id="inview-point">HTML, CSS, jQueryなどのWEBサイト制作に<br>
                           直結する言語が得意です。<br>
@@ -161,19 +163,49 @@
                     </div>
                   </div>
                 </section>
+
+
+                <section id="works" class="container">  
+                  <h2 class="section-title" id="title-center">
+                    <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Works</span></span>
+                  </h2>
+                  <h3 class="sub-title" id="title-center">
+                    <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 制作物 -</span></span>
+                  </h3>
+                      <div class="works-contents">
+                        <ul>
+                          <li>
+                            <a href="https://kay-ok.github.io/Salon/" target="_blank">
+                              <img src="img/mainvisual.jpg" alt="架空のサロンサイト">
+                              <p>美容院のウェブサイト</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://kay-ok.github.io/OXGame/" target="blank">
+                              <img src="img/OXGame02.png" alt="マルバツゲームのウェブサイト">
+                              <p>シンプルマルバツゲーム</p>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                </section>
+
               
                 <section class="right-section">
                   <div class="right-area">
+                    <h2 class="section-title" id="title-center">
+                      <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Career And After</span></span>
+                    </h2>
                     <h3 class="sub-title" id="title-center">
-                      <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 経歴 -</span></span>
+                      <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 経歴と今後 -</span></span>
                     </h3>
                     <div class="text-wrapper">
                         <ul class="mytimeline">
                           <li>
                             <dl>
-                              <dt>1987</dt>
-                              <dt><em>福島県郡山市にて産まれる</em></dt>
-                              <dd>愛着は今も強い。</dd>
+                              <dt>1987 Sep.</dt>
+                              <dt><em>福島県にて産まれる</em></dt>
+                              <dd>地元、郡山市への愛着は今も強い。<br>喜多方ラーメンや、ゆべし等は有名ではあるが、個人的に最もおすすめなものは「さい餅」である。<img class="mtl1" src="img/akabeko.png" alt=""></dd>
                             </dl>
                             <span class="border-line"></span>
                           </li>
@@ -181,8 +213,8 @@
                           <li>
                             <dl>
                               <dt>2000 - 2006</dt>
-                              <dt><em>栃木県宇都宮市へ移住</em></dt>
-                              <dd>中高と宇都宮で過ごす。<br>英語の面白さに気付き、のめり込むように勉強する。</dd>
+                              <dt><em>栃木県へ</em></dt>
+                              <dd>中高と宇都宮市で過ごす。<br>英語の面白さに気付き、のめり込むように勉強する。</dd>
                             </dl>
                             <span class="border-line"></span>
                           </li>
@@ -190,7 +222,7 @@
                           <li>
                             <dl>
                               <dt>2008</dt>
-                              <dt><em>大学を中退</em></dt>
+                              <dt><em>大学中退</em></dt>
                               <dd>
                                 作家になる夢を諦めきれず実家へ帰り、執筆を行う毎日を送る。<br>
                               </dd>
@@ -200,88 +232,84 @@
       
                           <li>
                             <dl>
-                              <dt>2008 - 2022</dt>
-                              <dt><em>下り坂の日々</em></dt>
-                              <dd>コンビニやパチンコ店など主に接客業でアルバイト経験を積む。<br>お客様とコミュニケーションを取りながらする仕事は自分にピタリと合っていたが、夜勤の仕事の連続から不眠症を発症し、徐々にうつ病になり自宅に引きこもるようになる。</dd>
+                              <dt>2008 - 2022 May.</dt>
+                              <dt><em>下り坂</em></dt>
+                              <dd>コンビニやパチンコ店など主に接客業でアルバイト経験を積む。<br>お客様とコミュニケーションを取りながらする仕事は自分にピタリと合っていたが、夜勤の仕事の連続から不眠症を発症し、徐々にうつ病になる。<br>療養しつつ、執筆を続ける。</dd>
                             </dl>
                             <span class="border-line"></span>
                           </li>
       
                           <li>
                             <dl>
-                              <dt>2022 - </dt>
-                              <dt><em>心機一転、万里一空</em></dt>
-                              <dd>作家の道を諦め始めたときプログラミングに興味を持つようになる。<br>「就労移行支援事業所ITスクール八王子」へITスキルを学ぶために宇都宮市から八王子市へ引っ越す。<br>フロンドエンドエンジニアを目指し日々、学習を続けており、人の役に立つようなWEBアプリケーションを作りたいと考えている。</dd>
+                              <dt>2022 Oct.</dt>
+                              <dt><em>万里一空</em></dt>
+                              <dd>「就労移行支援事業所ITスクール八王子」へITスキルを学ぶために宇都宮市から八王子市へ引っ越す。<br>安定した通所と日々の学習を重ねながら、フロントエンドエンジニアを目指す道を選ぶ。</dd>
                             </dl>
                             <span class="border-line"></span>
                           </li>
+
+                          <li>
+                            <dl>
+                              <dt>2023 Aug.</dt>
+                              <dt><em>プラスアルファ</em></dt>
+                              <dd>親身な職員や様々な障がいを持つ利用者と接し、単におしゃれなサイトよりも「人に優しい」WEBサイト・WEBアプリケーションを作りたいと考えるようになる。</dd>
+                            </dl>
+                            <span class="border-line"></span>
+                          </li>
+
+                          <li>
+                            <dl>
+                              <dt>2024 - </dt>
+                              <dt><em>これから</em></dt>
+                              <dd>安定した通勤と健康状態を維持し、しっかりと実務経験を積みたいという強い気持ちがある。<br>
+                              「IT + 福祉」という環境にいた自分が吸収したものを精一杯表現していきたい。<br>
+                              自身の大きな目標は、結婚し、子供をもち、幸せな家庭を築くこと。<br>
+                              この次の項目がハッピーエンドになるように何事にも全力で臨みたい。
+                              </dd>
+                            </dl>
+                            <span class="border-line"></span>
+                          </li>
+
                         </ul>
                       </div>
                   </div>
                 </section>
-    </div>
+            </section>
 
+
+           
+
+
+            <!-- <section id="contact" class="container">
+              <h2 class="section-title" id="title-center">
+                <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Contact</span></span>
+              </h2>
+              <h3 class="sub-title" id="title-center">
+                <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- お問い合わせ -</span></span>
+              </h3>
+
+              <div class="contact-container">
+                <div class="contact-form">
+                  <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSd5E1ZT9cFF9AqJCwvMk5mPU5nLUR4lWKry1y47cD_Q2RhlmA/formResponse"
+                  method="POST" target="hidden_iframe" onsubmit="submitted=true" class="cf">
+                      <dl>
+                        <dt><label class="cf-label" for="field-name">お名前・会社名<span class="required">必須</span></label></dt>
+                        <dd><input name="entry.747616679" class="cf-input" id="field-name" placeholder="株式会社XX　鈴木" type="text" required="required"></dd>
+                        <dt><label class="cf-label" for="field-mail">メールアドレス<span class="required">必須</span></label></dt>
+                        <dd><input name="entry.484596433" class="cf-input" id="field-mail" placeholder="sample@gmail.com" type="email" required="required"></dd>
+                        <dt><label class="cf-label" for="field-message">お問い合わせ内容<span class="required">必須</span></label></dt>
+                        <dd><textarea name="entry.228675920" class="cf-input" id="field-message" placeholder="お問い合わせ内容"></textarea></dd>              
+                      </dl>
+                      <div class="submit-button"><button type="submit">送　信</button></div>
+                  </form>
+                </div>
+              </div>
+            </section> コンタクトセクション外す-->
             
-            
-            </div>
-          </section>
-
-
-          
-
-
-    <section id="works" class="container">  
-      <h2 class="section-title" id="title-center">
-        <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Works</span></span>
-      </h2>
-      <h3 class="sub-title" id="title-center">
-        <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 制作物 -</span></span>
-      </h3>
-          <div class="works-contents">
-            <ul>
-              <li>
-                <a href="https://kay-ok.github.io/Salon/" target="_blank">
-                  <img src="img/mainvisual.jpg" alt="架空のサロンサイト">
-                  <p>美容院のウェブサイト</p>
-                </a>
-              </li>
-              <li>
-                <a href="https://kay-ok.github.io/OXGame/" target="blank">
-                  <img src="img/OXGame02.png" alt="マルバツゲームのウェブサイト">
-                  <p>シンプルマルバツゲーム</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-
-        <section id="contact" class="container">
-          <h2 class="section-title" id="title-center">
-            <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Contact</span></span>
-          </h2>
-          <h3 class="sub-title" id="title-center">
-            <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- お問い合わせ -</span></span>
-          </h3>
-
-          <div class="contact-container">
-            <div class="contact-form">
-              <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSd5E1ZT9cFF9AqJCwvMk5mPU5nLUR4lWKry1y47cD_Q2RhlmA/formResponse"
-               method="POST" target="hidden_iframe" onsubmit="submitted=true" class="cf">
-                  <dl>
-                    <dt><label class="cf-label" for="field-name">お名前・会社名<span class="required">必須</span></label></dt>
-                    <dd><input name="entry.747616679" class="cf-input" id="field-name" placeholder="株式会社XX　鈴木" type="text" required="required"></dd>
-                    <dt><label class="cf-label" for="field-mail">メールアドレス<span class="required">必須</span></label></dt>
-                    <dd><input name="entry.484596433" class="cf-input" id="field-mail" placeholder="sample@gmail.com" type="email" required="required"></dd>
-                    <dt><label class="cf-label" for="field-message">お問い合わせ内容<span class="required">必須</span></label></dt>
-                    <dd><textarea name="entry.228675920" class="cf-input" id="field-message" placeholder="お問い合わせ内容"></textarea></dd>              
-                  </dl>
-                  <div class="submit-button"><button type="submit">送　信</button></div>
-              </form>
-            </div>
-          </div>
-        </section>
+          </div> <!-- right-container's div -->
+      </div> <!-- right-wrapper's div-->      
   </main>
+
 
   <footer class="footer" id="right-section">
     <p>&copy; 2023<span> Kei Okubo </span></p>

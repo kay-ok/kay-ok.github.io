@@ -69,65 +69,50 @@ const boxes = document.getElementsByClassName('box');
 
 $(function(){ 
 
-  $('.nav_toggle').on('click', function(){
+$('.nav_toggle').on('click', function(){
     $('.nav_toggle, .nav').toggleClass('show');
   });
-
+ 
 
   const darkBx = document.querySelectorAll('.box');
-  const darkFc = document.querySelectorAll('.section-title, .sub-title, .scrolldown2 span, .text dt, .text dd, .skill-section, .mytimeline, .works-contents p, .contact-container, .contact-form, textarea, .footer p');
-  const idDarkFc = document.getElementById('aboutme ');
+  const darkFc = document.querySelectorAll('.section-title, .sub-title, .scrolldown2 span, .text dt, .text dd, .text p, .mytimeline, .works-contents p, .contact-container, .contact-form, textarea, .footer p');
+  // const idDarkFc = document.getElementById('aboutme');
   const darkBgc = document.querySelector('.mytimeline li, .border-line');
-  // const darker = darkElements.css('color', '#030303');
+
   // .mytimeline em border-bottom #d7fffe
+
+
   $('.btn-area').on('click', function(){
     $('#main-bg').toggleClass('darkTheme');
     $('.message').toggleClass('appear');
     $('.mytimeline em').toggleClass('mtlbbDark');
 
     if($('#main-bg').hasClass('darkTheme') == true) {
-      $(darkBx).css('color', '#ff4500')
+      $(darkBx).css('color', 'coral')
+      // $(darkBx).css('textShadow', '3px 1.25px .1px #606060')
       // $(darkFc).css('color', '#f4d03f')
       // $(darkFc).css('color', '#f9f047')
-      $(darkFc).css('color', '#ff4500')
-      $(idDarkFc).css('color', '#ff4500')
-      $(darkBgc).css('color', '#ff4500')
+      $(darkFc).css('color', 'coral')
+      // $('.section-title').css('textShadow','3.2px 1.35px .125px #606060')
+      // $('.sub-title').css('textShadow', '2.25px .937px .075px #606060')
+      // $(idDarkFc).css('color', 'coral')
+      $(darkBgc).css('color', 'coral')
     } else {
       $(darkBx).css('color', '#d7fffe')
+      // $(darkBx).css('textShadow', '3px 1.25px .1px #000')
       $(darkFc).css('color', '#d7fffe')
-      $(idDarkFc).css('color', '#d7fffe')
+      // $(idDarkFc).css('color', '#d7fffe')
+      // $('.section-title').css('textShadow','3.2px 1.35px .125px #000')
+      // $('.sub-title').css('textShadow', '2.25px .937px .075px #000')
       $(darkBgc).css('color', '#d7fffe')
     }
   });
  
 
 
+
   
-
-
-
-  //   if($('body').hasClass('darkTheme')){
-  //     $('.box').addClass('boxDark');
-  //   } else {
-  //     $('.box').removeClass('boxDark');
-  //   }
-  // });
-  
-  // ここからダークモード but jq
-  // const changeColor = $('');
-
-  // $('.btn-area').on('click', function(){
-
-  //   if ($('body').hasClass('dark-theme')) {
-  //     $('#bgc').removeClass('.bgc-alt')
-  //     $('#bgc').addClass('.bgc-original')
-  //     // $('.required').css('background','blue')
-  //   } else {
-  //     $('#bgc').removeClass('.bgc-original')
-  //     $('#bgc').addClass('.bgc-alt')
-  //     // $('.required').css('background','#feada6')
-  //   }
-  // })
+ 
 
 
 
@@ -293,7 +278,7 @@ $('#chart').on('inview', function(event, isInView) {//画面上に入ったら�
     var data = {
       labels: ["HTML", "CSS", "JavaScript", "jQuery", "Python"],
       datasets: [{
-          label: '現役エンジニアを10としたプログラミングスキル',
+          label: '現役エンジニアを10とした自身のスキル',
           data: [6.5, 6, 4, 5, 1],
           backgroundColor:[
             "rgba(153, 102, 255, 0.35)"
@@ -312,6 +297,7 @@ var options = {
     indexAxis: 'y',
     responsive: true,
     display: false,
+    maintainAspectRatio: false,
     scales: {
         x:{
             beginAtZero:true,
@@ -424,7 +410,7 @@ $(window).on('scroll',function(){
 
 
 
-
+// 以下、レスポンシブ
 
 // menuIconSPだけ実装する
 if (window.matchMedia('(max-width: 640px)').matches) {
@@ -439,14 +425,14 @@ if (window.matchMedia('(max-width: 640px)').matches) {
     navSP.classList.toggle('showSP');
     navMessageText.toggle('showSP');
 
-    // if(menuIconSP.contains('.show')) {
-    //   navMessageText.style.visibility = "visible";
-    // } else {
-    //   navMessageText.style.visibility = "hidden";
-    // }
+    if(menuIconSP.contains('.show')) {
+      navMessageText.style.visibility = "visible";
+    } else {
+      navMessageText.style.visibility = "hidden";
+    }
   });
 
-
+  
 
   menuIconSP.addEventListener('click',() => {
 
@@ -493,6 +479,8 @@ if (window.matchMedia('(max-width: 640px)').matches) {
   
 
 
+
+};
   // message表示時アニメーションJquery
  
   
@@ -513,17 +501,16 @@ if (window.matchMedia('(max-width: 640px)').matches) {
   
 // ここから上はいじらない
 
-  btn.addEventListener('click', () => {
+  // btn.addEventListener('click', () => {
 
-    if(btnText.textContent === btnTextEN) {
-    navMessageText.textContent = btnTextJP;
-    navMessage.style.animation = '';
-    document.body.classList.add('darkTheme');
-    } else {
-    navMessageText.textContent = btnTextEN;
-    document.body.classList.remove('darkTheme');
-    }
-  });    
+  //   if(btnText.textContent === btnTextEN) {
+  //   navMessageText.textContent = btnTextJP;
+  //   document.body.classList.add('darkTheme');
+  //   } else {
+  //   navMessageText.textContent = btnTextEN;
+  //   document.body.classList.remove('darkTheme');
+  //   }
+  // });    
   
   
 
@@ -566,7 +553,7 @@ if (window.matchMedia('(max-width: 640px)').matches) {
 
 
 
-};
+
 
 // if (window.matchMedia('(max-width: 640px)').matches) {
 

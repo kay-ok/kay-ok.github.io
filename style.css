@@ -22,27 +22,15 @@ li {
 
 /* セクションタイトル（その他共通部） */
 
-.darkFont {
-  color: (to right, #f83600 0%, #f9d423 100%);
-}
-
-.darkBgc {
-  background-color: #030303;
-}
-
-.darkBgi {
-  background-image: #030303;
-}
-
 
 .section-title {
   font-size: 2.2rem;
   padding: 4% 0 1.5% 0;
   letter-spacing: 0.07em;
   color: #D7FFFE;
-  /* font-family: 'Cinzel'; */
   font-family: 'Zen Kurenaido';
   font-style: italic;
+  text-shadow: 3.2px 1.35px .125px #000;
   margin-top: 10%;
 }
 
@@ -53,7 +41,7 @@ li {
   color: #D7FFFE;
   font-family: 'Zen Kurenaido';
   font-style: italic;
-  /* font-weight: medium; */
+  text-shadow: 2.25px .937px .075px #000;
 }
 
 .bgextend{
@@ -162,23 +150,21 @@ li {
 /* ヘッダー */
 
 #header {
-  width: 100%;
-  height: 50px;
   display: none;
 }
 
-.header-nav {
+/* .header-nav {
   width: 100%;
   position: fixed;
-}
+} */
 
-.header-nav ul {
+/* .header-nav ul {
   display: flex;
   text-align: center;
   width: 100%;
-}
+} */
 
-.header-nav ul li {
+/* .header-nav ul li {
   display: inline;
   width: 100%;
   max-width: calc(100% / 3);
@@ -268,6 +254,7 @@ li {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  transition: all .1s;
 }
 
 
@@ -315,7 +302,7 @@ li {
   text-align: center;
   filter: blur(20px);
   color: #D7FFFE;
-  /* text-shadow: 3px 1.25px .1px #000; */
+  text-shadow: 3px 1.25px .1px #000;
 }
 
 /* .boxdark {
@@ -392,7 +379,8 @@ li {
   top: -55px;
   font-family: 'Cinzel';
   color: #D7FFFE;
-  font-size: .95rem;
+  text-shadow: .5px .625px .05px #000;
+  font-size: .9rem;
   letter-spacing: 0.06em;
   -ms-writing-mode: tb-rl;
   -webkit-writing-mode: vertical-rl;
@@ -487,7 +475,6 @@ li {
   /* バッググラウンド自画像 */
   /* background-size: contain; */
   /* background-origin: border-box; */
-
 }
 
 
@@ -607,14 +594,19 @@ li {
 /*右エリア*/
 #right-wrapper{
   /*横半分50%にする*/
-  width: 60%;
-  margin: 0 auto;
-  
+  width: 62%;
 }
+
+#right-container {
+  margin: 0 auto;
+  width: 85%;
+}
+
 /*右各セクション 装飾のためのCSS*/
 .right-section {
   height: 100%;
   width: 100%;
+  margin: 20% 0;
   /* margin-left: 40%; */
   /* 上記でもいける */
   /* margin: 0 10% 10% 10%; */
@@ -628,6 +620,7 @@ section:nth-of-type(2n){
 
 .text-wrapper {
   position: relative;
+  /* padding-bottom: 2.5%; */
 }
 
 .text-wrapper::before, .text-wrapper::after {
@@ -642,14 +635,12 @@ section:nth-of-type(2n){
   border-top: 1px solid #fff;
   top: 0;
   left: 0;
-}
-
-.text-wrapper::after {
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  bottom: 0;
-  right: 0;
 } */
+
+.text-wrapper:last-child::after {
+  width: 0;
+  height: 0;
+}
 
 
 
@@ -660,8 +651,8 @@ section:nth-of-type(2n){
   /* text-shadow: .75px .31px .025px #000; */
   /* text-shadow: .1px .075px .055px #000; */
   /* font-size: 1.45rem; */
-  font-size: 1.4rem;
-  letter-spacing: 0.09em;
+  /* font-size: 1.4rem; */
+  /* letter-spacing: 0.09em; */
 }
 
 h4, #container p, small {
@@ -696,7 +687,7 @@ small{
   color: #D7FFFE;
   font-family: 'Zen Kurenaido';
   font-style: italic;
-  font-weight: normal;
+  text-shadow: 1.79px .748px .598px #000;
 }
 
 /* .text dd {
@@ -716,6 +707,7 @@ small{
 
 
 
+
 /* スキルセクション */
 
 
@@ -723,26 +715,38 @@ small{
 .skill-section {
   display: flex;
   align-items: center;
-  color: #D7FFFE;
-  margin: 35% 0;
+  
 }
 
 .text p {
   font-size: 1.2rem;
+  color: #D7FFFE;
   font-family: 'Zen Kurenaido';
   font-style: italic;
+  text-shadow: 1.79px .748px .598px #000;
   letter-spacing: 0.09em;
   padding: 8% 0;
   margin: 0 auto;
 }
 
+.chart-container {
+  position: relative;
+  width: 180%;
+  
+}
 
 #chart {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  /* object-fit: cover; */
   background-color: rgba(255, 255, 255, 0.5);
+  width: 75%;
+  max-height: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.mtl1 {
+  width: 50%;
+  height: 50%;
+  opacity: 0.5;
 }
 
 
@@ -750,8 +754,8 @@ small{
 
 
 .mytimeline{
-  padding: 5%;
-  color: #D7FFFE;
+  padding: 3.9% 5%;
+  color: #d7fffe;
   font-family: 'Zen Kurenaido';
   font-style: italic;
 }
@@ -779,6 +783,8 @@ small{
 .mytimeline dt:nth-child(1) {
   /* font-family: 'Poppins'; */
   font-size: 1.4rem;
+  text-shadow: 2.08px .872px .697px #000;
+  /* text-shadow: 1.79px .748px .598px #000; */
   letter-spacing: 0.09em;
 }
 
@@ -787,15 +793,19 @@ small{
   /* font-family: 'Klee One'; */
   /* font-weight: bold; */
   font-size: 1.4rem;
+  text-shadow: 2.08px .872px .697px #000;
+  /* text-shadow: 1.79px .748px .598px #000; */
   letter-spacing: 0.09em;
 }
 
 .mytimeline em {
-  border-bottom: 1px dotted #D7FFFE;
+  border-bottom: 2px solid #d7fffe;
+  box-shadow: 0px 1px #000;
+
 }
 
 .mytimeline em.mtlbbDark{
-  border-bottom: 1px dotted #ff9a44;
+  border-bottom: 1px dotted #ff4500;
 }
 
 
@@ -803,6 +813,7 @@ small{
   display: flex;
   flex-wrap: wrap;
   font-size: 1.2rem;
+  text-shadow: 1.79px .748px .598px #000;
   letter-spacing: 0.09em;
   padding-left: 1.35rem;
   margin: 2% 0;
@@ -835,25 +846,25 @@ small{
 .works-contents ul li {
   display: flex;
   justify-content: center;
-  /* justify-content: space-evenly; */
-  /* flex-wrap: wrap; */
+  width: 100%;
 }
 
 #works img {
-  width: 25em;
+  width: 30em;
   height: 15em;
   object-fit: cover;
-  border: 2px solid;
+  border: 1px solid;
   padding: 0px;
   border-radius: 8px;
 }
 
 .works-contents p {
   text-align: center;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: #D7FFFE;
   font-family: 'Zen Kurenaido';
   font-style: italic;
+  text-shadow: 1.79px .748px .598px #000;
 }
 
 .works-contents ul li:first-child {
@@ -872,7 +883,6 @@ small{
 
 .contact-form {
   margin: 0 auto;
-  width: 50%;
 }
 
 
@@ -945,6 +955,7 @@ small{
   color: #D7FFFE;
   font-family: 'Cinzel';
   text-align: center;
+  text-shadow: 1.79px .748px .598px #000;
 }
 
 .footer span {
@@ -979,8 +990,19 @@ small{
 
 @media screen and (max-width: 640px) {
   
+  .section-title {
+    margin-top: 200px;
+    font-size: 1.3rem;
+  }
+
+  .sub-title {
+    font-size: 0.95rem;
+  }
+
   #header {
     display: block;
+    width: 100%;
+    height: 75px;
   }
 
   .nav {
@@ -988,6 +1010,14 @@ small{
     justify-content: space-evenly;
     opacity: 0;
     visibility: hidden;
+    /* transition: 2s; */
+  }
+  
+  .nav.show {
+    /* display: block; */
+    /* justify-content: space-evenly; */
+    opacity: 1;
+    visibility: visible;
     /* transition: 2s; */
   }
 
@@ -1019,33 +1049,62 @@ small{
     display: flex;
     text-align: center;
     justify-content: center;
-    width: 85%;
-    height: 4.7rem;
-    color: #fff;
-    opacity: 0;
+    width: 45%;
+    /* height: 4.7rem; */
+    height: 5rem;
+    color: #D7FFFE;
+    /* opacity: 0; */
     visibility: hidden;
   }
+
 
   
   #nav_message_text {
     color: #D7FFFE;
+    font-family: 'Shippori Mincho';
     font-style: italic;
+    font-size: 0.75rem;
     display: block;
     text-align: center;
     justify-content: center;
     letter-spacing: .03rem;
-    font-family: 'Shippori Mincho';
-    font-weight: 550;
-    font-style: normal;
-    opacity: 0;
+    /* opacity: 0; */
     visibility: hidden;
+    padding: 1% 2%;
+    margin-left: 4%;
+    border-radius: 8px;
+    /* transition: 0.3s ease-in-out; */
+    border: 1px solid #fff;
   }
 
 
-  .nav_toggle {
-    display: block;
+
+  #nav_message_text:before {
+    content: '';
     position: absolute;
-    top: 1.65%;
+    top: 125%;
+    left: calc(60px - 6%);
+    transform: translateY(calc(-50% - 2px)) rotate(30deg);
+    width: 12px;
+    height: 2px;
+    background-color: #fff;
+  }
+
+  #nav_message_text:after {
+    content: '';
+    position: absolute;
+    top: 125%;
+    left: 1%;
+    /* transform: translateY(-50%); */
+    width: 60px;
+    height: 2px;
+    background-color: #fff;
+  }
+  
+  .nav_toggle {
+    /* display: block; */
+    position: absolute;
+    top: 15px;
     right: 4%;
     width: 1.75rem;
     height: 1.5rem;
@@ -1090,7 +1149,6 @@ small{
     transform: translateY(-12px) rotate(45deg);
   }
   
-
   
   
 
@@ -1110,19 +1168,18 @@ small{
   }
 
   /* ダークモードここまで */
-  .section-title {
-    margin-top: 200px;
-  }
+
   
-  /* #main-bg {
+/* #
+{
     width: 100vw;
     height: 100dvh;
     position: relative;
   } */
 
-  #main-bg img {
+  /* #main-bg img {
     object-fit: cover;
-  }
+  } */
 
   .delaySec1 {
     animation-delay: none;
@@ -1132,45 +1189,66 @@ small{
     animation-delay: 3.0s;
   }
 
+  #first-section {
+    height: calc(100vh - 6%);
+    width: 90%;
+    margin-left: 10%;
+    /* justify-content: none; */
+  }
 
   .flex-first, .flex-second, .flex-third {
-    padding-left: 38%;
+    padding-left: 0;
     letter-spacing: 0.01px;
   }
 
   .box {
     width: 7%;
     padding: 2%;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     /* text-shadow: .3% .125% .01% #000; */
   }
 
-  /* AboutMEセクション */
-  #aboutme {
-    flex-direction: column;
+  .scrolldown2 {
+    top: calc(100dvh - 2.25%);
+    left: 55%;
+  }
 
+  .scrolldown2 span {
+    font-size: .8rem;
   }
 
 
+
+
+
+  /* AboutMEセクション */
+
+
+  #aboutme {
+    width: 118%;
+  }
   
-  #left-wrapper {
-    flex-direction: column;
-    position: relative;
+  .text-wrapper {
+    width: 100%;
   }
   
   
   #left-fixed {
     position: sticky;
     position: -webkit-sticky;
-    width: 30%;
+    width: 25%;
     height: 100dvh;
     top: 0;
     margin-left: 0;
     
   }
 
-  .right-wrapper .section-title {
-    width: 70%;
+  #right-wrapper {
+    width: 75%;
+  }
+
+  #right-container {
+    margin: 0;
   }
 
   .right-area span {
@@ -1181,24 +1259,47 @@ small{
 
   .text {
     padding: 0;
+    width: 93%;
+  }
+
+  .text .ruby {
+    font-size: .1em;
+  }
+
+  .text dt {
+    width: 36%;
+  }
+
+  .text dd {
+    width: 63%;
   }
 
   .mytimeline dt:nth-child(1),
   .mytimeline dt:nth-child(2) {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
   .text dt, .text dd, .text p,
   .mytimeline dd, .contact-container,
   .contact-form input, textarea,
   .submit-button button {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
-  .right-section {
-    margin: 0 5px 5px 5px;
+  .right-area {
+    width: 100%;
+  }
+
+  .chart-container {
+    position: relative;
+    height: 40vh;
+    width: 45vw;
   }
   
+  #chart {
+    max-height: 180%;
+    min-width: 160%;
+  }
   /* WORKSセクション */
    
   
