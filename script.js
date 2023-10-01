@@ -75,7 +75,7 @@ $('.nav_toggle').on('click', function(){
  
 
   const darkBx = document.querySelectorAll('.box');
-  const darkFc = document.querySelectorAll('.section-title, .sub-title, .scrolldown2 span, .text dt, .text dd, .text p, .mytimeline, .works-contents p, .contact-container, .contact-form, textarea, .footer p');
+  const darkFc = document.querySelectorAll('.section-title, .sub-title, .scrolldown2 span, .text dt, .text dd, .chart-text p, .mytimeline, .works-contents p, .footer p');
   // const idDarkFc = document.getElementById('aboutme');
   const darkBgc = document.querySelector('.mytimeline li, .border-line');
 
