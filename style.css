@@ -305,9 +305,6 @@ li {
   text-shadow: 3px 1.25px .1px #000;
 }
 
-/* .boxdark {
-  color: #030303;
-} */
 
 
 
@@ -1416,4 +1413,101 @@ small{
     margin-bottom: 20vh;
     padding: 0 15px;
   }
+}
+
+
+
+
+
+
+
+/* レスポンシブタブレット */
+
+@media screen and (min-width:640px) and (max-width: 820px) {
+
+  #main-bg {
+    /* position: relative; */
+    background: url("img/Shst4kmozjpeg_134745942238402160.jpg") no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    transition: all .1s;
+    min-width: 151%;
+  }
+
+  #left-fixed {
+    width: 28%;
+  }
+
+  #right-wrapper {
+    width: 72%;
+  }
+
+  #btn-graphic {
+    position: absolute;
+    top: 40%;
+    max-width: 100%;
+  }
+
+
+
+
+/* ファーストセクション */
+
+#first-section {
+  height: calc(100vh + 180px);
+}
+
+.scrolldown2 {
+  position: absolute;
+  top: calc(100dvh + 6.25%);
+  left: 65%;
+}
+
+
+
+/* aboutme セクション */
+
+.section-title {
+  margin-top: 75%;
+}
+  
+.chart-container {
+  width: 70vw;
+  height: 25vh;
+}
+
+.chart-text {
+  width: 75%;
+  margin: 0 auto;
+}
+
+/* worksセクション */
+.works-contents ul li:first-child {
+  margin-bottom: 65px;
+}
+
+
+/* 経歴セクション */
+
+.mytimeline {
+  width: 99%;
+  margin-top: 10%;
+  margin-bottom: calc(795px - 2.5vh);
+}
+
+
+/* フッター */
+
+}
+
+@media screen and (min-width: 820px) and (max-width: 900px) {
+
+
+  .mytimeline {
+    width: 99%;
+    margin-top: 5%;
+    margin-bottom: calc(1040px - 2.5vh);
+  }
+
 }
