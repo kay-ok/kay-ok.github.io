@@ -42,7 +42,7 @@
       <ul class="nav_menu_ul">
         <li class="nav_menu_li"><a href="#aboutme" class="btn02">ABOUT ME</a></li>
         <li class="nav_menu_li"><a href="#works" class="btn02">WORKS</a></li>
-        <li class="nav_menu_li"><a href="#contact" class="btn02">CAREER</a></li>
+        <li class="nav_menu_li"><a href="#career" class="btn02">CAREER</a></li>
         <li class="nav_menu_li"><a href="javascript:void(0)" class="btn02 linkshow" onclick="clickBtnAC()">ACCESSIBILITY</a>
         </li>
       </ul>
@@ -51,6 +51,7 @@
     
     <div id="nav_message">
       <p id="nav_message_text">ランプのシェードに触れると、色覚に障がいがある方にとって見やすい色に変わります。</p>
+      <!-- <p id="nav_message_text">Touch lampshade if you are COLOR BLINDNESS person. This Website's colors will be changed, easy to read for you.</p> -->
     </div>
     <span class="nav_toggle">
       <i></i>
@@ -138,7 +139,7 @@
                       <!-- <dt>不得意なこと</dt><dd>・完璧性を求め過ぎてしまうこと</dd> -->
                       <dt>自身の強み</dt><dd>・協調性があり、気配りができること</dd>
                       <!-- <dt class="vertical-fix">自身の弱み</dt><dd>・自分を大切にできないこと</dd> -->
-                      <dt>興味関心があること</dt><dd>・WEBサイトデザイン観察とその模写</dd>
+                      <!-- <dt>興味関心があること</dt><dd>・WEBサイトデザイン観察とその模写</dd> -->
                       </dd>
                       <!-- <dt class="vertical-fix">抱えている障害</dt><dd>・うつ病<br>・双極性障害<br>・持続性気分障害<br>・入眠障害</dd> -->
                     </dl>
@@ -151,14 +152,16 @@
                       <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- スキル -</span></span>
                     </h3>
                     <div class="text-wrapper">
-                      <div class="text">
+                      <div class="skill-text">
                         <div class="chart-container">
                           <canvas id="chart"></canvas>
                         </div>
-                        <p>  
-                        <span id="inview-point">HTML, CSS, jQueryなどのWEBサイト制作に<br>
-                          直結する言語が得意です。<br>
-                          現在はPythonを集中的に学習しています。</span></p>
+                        <div class="chart-text">
+                          <p>  
+                            <span id="inview-point">HTML, CSS, jQueryなどのWEBサイト制作に直結する言語が得意です。<br>
+                            現在はPythonを集中的に学習しています。</span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -182,7 +185,7 @@
                           </li>
                           <li>
                             <a href="https://kay-ok.github.io/OXGame/" target="blank">
-                              <img src="img/OXGame02.png" alt="マルバツゲームのウェブサイト">
+                              <img src="img/simplegame3.jpg" alt="マルバツゲームのウェブサイト">
                               <p>シンプルマルバツゲーム</p>
                             </a>
                           </li>
@@ -191,7 +194,7 @@
                 </section>
 
               
-                <section class="right-section">
+                <section id="career" class="right-section">
                   <div class="right-area">
                     <h2 class="section-title" id="title-center">
                       <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Career And After</span></span>
@@ -199,7 +202,8 @@
                     <h3 class="sub-title" id="title-center">
                       <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 経歴と今後 -</span></span>
                     </h3>
-                    <div class="text-wrapper">
+                    <div class="carrer-wrapper">
+                      <!-- text-wrapperが3つあるため大きく崩れる。PCサイトに影響しないように調整すること -->
                         <ul class="mytimeline">
                           <li>
                             <dl>
@@ -264,7 +268,7 @@
                               <dd>安定した通勤と健康状態を維持し、しっかりと実務経験を積みたいという強い気持ちがある。<br>
                               「IT + 福祉」という環境にいた自分が吸収したものを精一杯表現していきたい。<br>
                               自身の大きな目標は、結婚し、子供をもち、幸せな家庭を築くこと。<br>
-                              この次の項目がハッピーエンドになるように何事にも全力で臨みたい。
+                              この後に続く、最後の項目がハッピーエンドになるように何事にも全力で臨みたい。
                               </dd>
                             </dl>
                             <span class="border-line"></span>
@@ -276,40 +280,9 @@
                 </section>
             </section>
 
-
-           
-
-
-            <!-- <section id="contact" class="container">
-              <h2 class="section-title" id="title-center">
-                <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Contact</span></span>
-              </h2>
-              <h3 class="sub-title" id="title-center">
-                <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- お問い合わせ -</span></span>
-              </h3>
-
-              <div class="contact-container">
-                <div class="contact-form">
-                  <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSd5E1ZT9cFF9AqJCwvMk5mPU5nLUR4lWKry1y47cD_Q2RhlmA/formResponse"
-                  method="POST" target="hidden_iframe" onsubmit="submitted=true" class="cf">
-                      <dl>
-                        <dt><label class="cf-label" for="field-name">お名前・会社名<span class="required">必須</span></label></dt>
-                        <dd><input name="entry.747616679" class="cf-input" id="field-name" placeholder="株式会社XX　鈴木" type="text" required="required"></dd>
-                        <dt><label class="cf-label" for="field-mail">メールアドレス<span class="required">必須</span></label></dt>
-                        <dd><input name="entry.484596433" class="cf-input" id="field-mail" placeholder="sample@gmail.com" type="email" required="required"></dd>
-                        <dt><label class="cf-label" for="field-message">お問い合わせ内容<span class="required">必須</span></label></dt>
-                        <dd><textarea name="entry.228675920" class="cf-input" id="field-message" placeholder="お問い合わせ内容"></textarea></dd>              
-                      </dl>
-                      <div class="submit-button"><button type="submit">送　信</button></div>
-                  </form>
-                </div>
-              </div>
-            </section> コンタクトセクション外す-->
-            
           </div> <!-- right-container's div -->
       </div> <!-- right-wrapper's div-->      
   </main>
-
 
   <footer class="footer" id="right-section">
     <p>&copy; 2023<span> Kei Okubo </span></p>

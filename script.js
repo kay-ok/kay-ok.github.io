@@ -279,7 +279,7 @@ $('#chart').on('inview', function(event, isInView) {//画面上に入ったら�
       labels: ["HTML", "CSS", "JavaScript", "jQuery", "Python"],
       datasets: [{
           label: '現役エンジニアを10とした自身のスキル',
-          data: [6.5, 6, 4, 5, 1],
+          data: [6.5, 6, 4, 5, 3],
           backgroundColor:[
             "rgba(153, 102, 255, 0.35)"
           ],
@@ -475,12 +475,26 @@ if (window.matchMedia('(max-width: 640px)').matches) {
       }
     );  
   });
-  
-  
 
+
+
+  btn.addEventListener('click', () => {
+    if(navMessageText.textContent === btnTextEN) {
+      navMessageText.textContent = btnTextJP;
+    } else {
+      navMessageText.textContent = btnTextEN;
+    }
+  })
 
 
 };
+
+
+
+// $('.btn-area').on('click', function(){
+//   $('#nav_message_text').toggleClass('appear');
+// });
+
   // message表示時アニメーションJquery
  
   

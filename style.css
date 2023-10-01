@@ -250,7 +250,7 @@ li {
 
 #main-bg {
   /* position: relative; */
-  background: url("img/Shst4kmozjpeg_134745942238402160.jpg") no-repeat center;
+  background: url("img/Shst4kmozjpeg_134745942238402160.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -715,10 +715,10 @@ small{
 .skill-section {
   display: flex;
   align-items: center;
-  
+  justify-content: center;
 }
 
-.text p {
+.skill-text p {
   font-size: 1.2rem;
   color: #D7FFFE;
   font-family: 'Zen Kurenaido';
@@ -726,19 +726,21 @@ small{
   text-shadow: 1.79px .748px .598px #000;
   letter-spacing: 0.09em;
   padding: 8% 0;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .chart-container {
   position: relative;
-  width: 180%;
-  
+  width: 40vw;
+  height: auto;  
+  margin: 0 auto;
 }
 
 #chart {
   background-color: rgba(255, 255, 255, 0.5);
-  width: 75%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   object-fit: cover;
 }
@@ -825,7 +827,7 @@ small{
   left: 0.22em;
   top: 10px;
   width: 2px;
-  height: 12px;
+  height: 14px;
   background-color: #D7FFFE;
 }
 
@@ -873,7 +875,7 @@ small{
 
 
 /* コンタクトセクション */
-
+/* 
 .contact-container {
   color: #D7FFFE;
   font-family: 'Zen Kurenaido';
@@ -941,7 +943,7 @@ small{
 .submit-button button:hover {
   background-color: #ff4500;
   color: white;
-}
+} */
 
 /* フッターセクション */
 
@@ -990,13 +992,16 @@ small{
 
 @media screen and (max-width: 640px) {
   
+
   .section-title {
     margin-top: 200px;
     font-size: 1.3rem;
+    width: 120%;
   }
 
   .sub-title {
     font-size: 0.95rem;
+    width: 120%;
   }
 
   #header {
@@ -1049,7 +1054,7 @@ small{
     display: flex;
     text-align: center;
     justify-content: center;
-    width: 45%;
+    width: 55%;
     /* height: 4.7rem; */
     height: 5rem;
     color: #D7FFFE;
@@ -1061,29 +1066,32 @@ small{
   
   #nav_message_text {
     color: #D7FFFE;
-    font-family: 'Shippori Mincho';
+    font-family: 'Shippori Mincho B1';
     font-style: italic;
     font-size: 0.75rem;
     display: block;
     text-align: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
     letter-spacing: .03rem;
     /* opacity: 0; */
     visibility: hidden;
     padding: 1% 2%;
     margin-left: 4%;
     border-radius: 8px;
-    /* transition: 0.3s ease-in-out; */
+    /* transition: 1s ease-in-out; */
+    animation: 1.75s fadeIn;
     border: 1px solid #fff;
+    height: 6rem;
   }
-
 
 
   #nav_message_text:before {
     content: '';
     position: absolute;
-    top: 125%;
-    left: calc(60px - 6%);
+    top: 115%;
+    left: calc(60px - 4.5%);
     transform: translateY(calc(-50% - 2px)) rotate(30deg);
     width: 12px;
     height: 2px;
@@ -1093,7 +1101,7 @@ small{
   #nav_message_text:after {
     content: '';
     position: absolute;
-    top: 125%;
+    top: 115%;
     left: 1%;
     /* transform: translateY(-50%); */
     width: 60px;
@@ -1150,9 +1158,10 @@ small{
   }
   
   
-  
 
   /* ハンバーガーアイコンここまで */
+
+
 
   /* ダークモードここから */
 
@@ -1170,15 +1179,10 @@ small{
   /* ダークモードここまで */
 
   
-/* #
-{
-    width: 100vw;
-    height: 100dvh;
+  /* #main-bg {
+    width: 100%;
+    height: 100%;
     position: relative;
-  } */
-
-  /* #main-bg img {
-    object-fit: cover;
   } */
 
   .delaySec1 {
@@ -1186,12 +1190,13 @@ small{
   }
   
   .delaySec2 {
-    animation-delay: 3.0s;
+    animation-delay: 3s;
   }
 
   #first-section {
-    height: calc(100vh - 6%);
-    width: 90%;
+    /* height: calc(100vh - 6%); */
+    height: 70dvh;
+    width: 100%;
     margin-left: 10%;
     /* justify-content: none; */
   }
@@ -1209,8 +1214,8 @@ small{
   }
 
   .scrolldown2 {
-    top: calc(100dvh - 2.25%);
-    left: 55%;
+    top: 85dvh;
+    left: 60%;
   }
 
   .scrolldown2 span {
@@ -1226,13 +1231,10 @@ small{
 
   #aboutme {
     width: 118%;
+
   }
   
-  .text-wrapper {
-    width: 100%;
-  }
-  
-  
+
   #left-fixed {
     position: sticky;
     position: -webkit-sticky;
@@ -1244,11 +1246,12 @@ small{
   }
 
   #right-wrapper {
-    width: 75%;
+    height: 100%;
   }
 
   #right-container {
     margin: 0;
+    width: 95%;
   }
 
   .right-area span {
@@ -1257,9 +1260,25 @@ small{
     align-items: center;
   }
 
-  .text {
+  .text-wrapper {
+    width: 100%;
+  }
+
+  .skill-text {
     padding: 0;
-    width: 93%;
+  }
+
+  .chart-text {
+    width: 120%;
+    margin-left: 2%;
+  }
+
+  .chart-text p span{
+    color:#d7fffe;
+    font-size: 0.7rem;
+    font-family: 'Zen Kurenaido';
+    font-style: italic;
+
   }
 
   .text .ruby {
@@ -1267,11 +1286,11 @@ small{
   }
 
   .text dt {
-    width: 36%;
+    width: 45%;
   }
 
   .text dd {
-    width: 63%;
+    width: 55%;
   }
 
   .mytimeline dt:nth-child(1),
@@ -1280,7 +1299,7 @@ small{
   }
 
   .text dt, .text dd, .text p,
-  .mytimeline dd, .contact-container,
+  .mytimeline dd, .contact-container, .works-contents p,
   .contact-form input, textarea,
   .submit-button button {
     font-size: 0.7rem;
@@ -1293,24 +1312,27 @@ small{
   .chart-container {
     position: relative;
     height: 40vh;
-    width: 45vw;
+    width: 72.5vw;
   }
   
   #chart {
     max-height: 180%;
-    min-width: 160%;
+    min-width: 99%;
   }
+
+
   /* WORKSセクション */
    
   
   #works img {
-    width: calc(100% - 14px);
-    margin: 0 5px;
+    width: 100%;
+    opacity: 0.9;
     /* justify-content: initial; */
   }
 
+
   #works li {
-    width: 100%;
+    width: 120%;
   }
 
   #works li:nth-child(2) {
@@ -1323,13 +1345,35 @@ small{
   }
 
   #works p {
-    font-family: "Klee One";
-    font-size: 1rem;
+    font-family: "Zen Kurenaido";
+    font-style: italic;
   }
 
+   
+  .mytimeline {
+    width: 110%;
+    margin-bottom: calc(450px - 12.5vh);
+    padding: 0 15px;
+  }
 
+  .mytimeline li{
+  position: relative;
+  padding:0 0 30px 0;
+}
+
+  .mytimeline dl {
+    margin: 0 0 20px 2em;
+  }
+
+  .border-line {
+  position: absolute;
+  left:0.25em;
+  top:10;
+  height:0;
+
+  }
   /* コンタクトセクション */
-  #contact dl span {
+  /* #contact dl span {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1351,9 +1395,25 @@ small{
 
  .submit-button button {
     width: 100%;
+  } */
+
+
+  .footer {
+    width: 75%;
+    margin-left: 25%;
+    
   }
 
-  #footer {
-    margin-top: 200px;
+  .footer p {
+    font-size: .55rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  
+  .mytimeline {
+    width: 110%;
+    margin-bottom: 20vh;
+    padding: 0 15px;
   }
 }
