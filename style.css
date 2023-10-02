@@ -1165,7 +1165,8 @@ small{
   .btn-area {
     top: 2%;
     left: 0;
-    height: calc(100dvh / 2.8);
+    /* height: calc(100dvh / 2.8); */
+    height: calc(100vh / 2.8);
     width: calc(100vw / 2.8);
   }
 
@@ -1192,7 +1193,7 @@ small{
 
   #first-section {
     /* height: calc(100vh - 6%); */
-    height: 70dvh;
+    height: 70vh;
     width: 100%;
     margin-left: 10%;
     /* justify-content: none; */
@@ -1211,7 +1212,7 @@ small{
   }
 
   .scrolldown2 {
-    top: 85dvh;
+    top: 85vh;
     left: 60%;
   }
 
@@ -1236,7 +1237,7 @@ small{
     position: sticky;
     position: -webkit-sticky;
     width: 25%;
-    height: 100dvh;
+    height: 100vh;
     top: 0;
     margin-left: 0;
     
@@ -1460,7 +1461,7 @@ small{
 
 .scrolldown2 {
   position: absolute;
-  top: calc(100dvh + 6.25%);
+  top: calc(100vh + 6.25%);
   left: 65%;
 }
 
