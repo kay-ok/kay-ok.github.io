@@ -38,6 +38,7 @@ li {
   font-size: 1.5rem;
   letter-spacing: 0.09em;
   padding-bottom: 3.5%;
+  margin-bottom: 5%;
   color: #D7FFFE;
   font-family: 'Zen Kurenaido';
   font-style: italic;
@@ -687,10 +688,6 @@ small{
   text-shadow: 1.79px .748px .598px #000;
 }
 
-/* .text dd {
-  padding: 10% 0;
-} */
-
 .text .vertical-fix {
   display: flex;
   justify-content: center;
@@ -716,7 +713,7 @@ small{
 }
 
 .skill-text p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #D7FFFE;
   font-family: 'Zen Kurenaido';
   font-style: italic;
@@ -761,7 +758,7 @@ small{
 
 .mytimeline li {
   position: relative;
-  padding-bottom: 10%;
+  padding-bottom: 15%;
 }
 
 .mytimeline li:after {
@@ -811,7 +808,7 @@ small{
 .mytimeline dd {
   display: flex;
   flex-wrap: wrap;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-shadow: 1.79px .748px .598px #000;
   letter-spacing: 0.09em;
   padding-left: 1.35rem;
@@ -992,12 +989,12 @@ small{
 
   .section-title {
     margin-top: 200px;
-    font-size: 3.3rem;
+    font-size: 1.8rem;
     width: 120%;
   }
 
   .sub-title {
-    font-size: 2.25rem;
+    font-size: 1.3rem;
     width: 120%;
   }
 
@@ -1201,14 +1198,14 @@ small{
 
   .flex-first, .flex-second, .flex-third {
     padding-left: 0;
-    letter-spacing: 0.01px;
+    letter-spacing: 0.08em;
+    font-size: 2.1rem;
   }
 
   .box {
     width: 7%;
     padding: 2%;
-    font-size: 1.3rem;
-    /* text-shadow: .3% .125% .01% #000; */
+    font-size: 1.2rem;
   }
 
   .scrolldown2 {
@@ -1217,7 +1214,7 @@ small{
   }
 
   .scrolldown2 span {
-    font-size: .8rem;
+    font-size: .9rem;
   }
 
 
@@ -1229,7 +1226,6 @@ small{
 
   #aboutme {
     width: 118%;
-
   }
   
 
@@ -1237,7 +1233,7 @@ small{
     position: sticky;
     position: -webkit-sticky;
     width: 25%;
-    height: 100vh;
+    max-height: 100vh;
     top: 0;
     margin-left: 0;
     
@@ -1273,7 +1269,7 @@ small{
 
   .chart-text p span{
     color:#d7fffe;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-family: 'Zen Kurenaido';
     font-style: italic;
 
@@ -1297,10 +1293,8 @@ small{
   }
 
   .text dt, .text dd, .text p,
-  .mytimeline dd, .contact-container, .works-contents p,
-  .contact-form input, textarea,
-  .submit-button button {
-    font-size: 1.8rem;
+  .mytimeline dt, .mytimeline dd {
+    font-size: .9rem;
   }
 
   .right-area {
@@ -1342,26 +1336,32 @@ small{
     margin-top: 20px;
   }
 
-  #works p {
+  .works-contents p {
     font-family: "Zen Kurenaido";
     font-style: italic;
+    font-size: 0.9rem;
   }
 
    
   .mytimeline {
-    width: 110%;
+    width: 115%;
     /* margin-bottom: calc(450px - 12.5vh); */
-    margin-bottom: 125%;
-    padding: 0 15px;
+    /* margin-bottom: 125%; */
+    /* mytimeline li paddingで解決しない場合、上記を使う */
+    padding-left: 15px;
   }
 
   .mytimeline li{
   position: relative;
-  padding:0 0 30px 0;
+  padding-bottom: 15%;
 }
 
   .mytimeline dl {
     margin: 0 0 20px 2em;
+  }
+
+  .mytimeline li:last-child {
+    padding-bottom: 90%;
   }
 
   .border-line {
@@ -1369,8 +1369,14 @@ small{
   left:0.25em;
   top:10;
   height:0;
-
   }
+
+
+
+
+
+
+
   /* コンタクトセクション */
   /* #contact dl span {
     display: flex;
@@ -1404,16 +1410,16 @@ small{
   }
 
   .footer p {
-    font-size: .55rem;
+    font-size: .6rem;
   }
 }
 
+
+/* SE用したスペース */
 @media screen and (max-width: 375px) {
   
-  .mytimeline {
-    width: 110%;
-    margin-bottom: 20vh;
-    padding: 0 15px;
+  .mytimeline li:last-child {
+    padding-bottom: 22.2%;
   }
 }
 
