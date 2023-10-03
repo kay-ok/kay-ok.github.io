@@ -777,7 +777,6 @@ small{
 }
 
 .mytimeline dt:nth-child(1) {
-  /* font-family: 'Poppins'; */
   font-size: 1.4rem;
   text-shadow: 2.08px .872px .697px #000;
   /* text-shadow: 1.79px .748px .598px #000; */
@@ -785,9 +784,7 @@ small{
 }
 
 .mytimeline dt:nth-child(2) {
-  padding: 2px 0 4px 0;
-  /* font-family: 'Klee One'; */
-  /* font-weight: bold; */
+  padding: 1.5% 0 2.5% 0;
   font-size: 1.4rem;
   text-shadow: 2.08px .872px .697px #000;
   /* text-shadow: 1.79px .748px .598px #000; */
@@ -1455,6 +1452,7 @@ small{
     position: absolute;
     top: 40%;
     max-width: 100%;
+    margin-left: 2%;
   }
 
 
@@ -1468,8 +1466,8 @@ small{
 
 .scrolldown2 {
   position: absolute;
-  top: calc(100vh + 6.25%);
-  left: 65%;
+  top: calc(100vh + 5.25%);
+  left: 63%;
 }
 
 
@@ -1478,6 +1476,10 @@ small{
 
 .section-title {
   margin-top: 75%;
+}
+
+.sub-titlte {
+  margin-bottom: 10%;
 }
   
 .chart-container {
@@ -1490,22 +1492,29 @@ small{
   margin: 0 auto;
 }
 
-/* worksセクション */
-.works-contents ul li:first-child {
-  margin-bottom: 65px;
-}
+
 
 
 /* 経歴セクション */
 
 .mytimeline {
   width: 99%;
-  margin-top: 10%;
-  margin-bottom: calc(795px - 2.5vh);
+  /* margin-bottom: calc(795px - 2.5vh); */
 }
 
+.mytimeline dl {
+  margin: 0 0 15% 3em;
+}
 
-/* フッター */
+.mytimeline li {
+  position: relative;
+  padding-bottom: 20%;
+}
+
+.mytimeline li:last-child {
+  margin-bottom: 67%;
+}
+
 
 }
 
@@ -1514,8 +1523,10 @@ small{
 
   .mytimeline {
     width: 99%;
-    margin-top: 5%;
-    margin-bottom: calc(1040px - 2.5vh);
+  }
+
+  .mytimeline li:last-child {
+    margin-bottom: 90%;
   }
 
 }
