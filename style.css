@@ -268,7 +268,7 @@ li {
   background-color: transparent;
   opacity: 0.5;
   z-index: 10;
-  /* border: 1px solid black; */
+  border: 1px solid black;
 }
 
 
