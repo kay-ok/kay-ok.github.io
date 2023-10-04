@@ -264,11 +264,14 @@ li {
   position: sticky; */
   position: fixed;
   top: 0;
-  height: 1%;
+  height: 15%;
+  width: 70%;
+  margin-left: 10%;
   background-color: transparent;
   opacity: 0.5;
-  z-index: 10;
-  border: 1px solid black;
+  border: 2px solid white;
+  z-index: -99;
+  /* z-index: 10; */
 }
 
 
@@ -279,7 +282,7 @@ li {
 #first-section {
   font-family: 'Cinzel';
   width: 100%;
-  height: calc(100vh - 50px);
+  height: calc(100dvh - 50px);
   /* レスポンシブの場合heightの値に注意 */
   display: flex;
   flex-direction: column;
@@ -366,7 +369,7 @@ li {
 /* スクロールバーの場所 */
 .scrolldown2 {
   position: absolute;
-  top: calc(100vh - .5%);
+  top: calc(100dvh - .5%);
   left: 70%;
 }
 
@@ -443,18 +446,17 @@ li {
 
 
 
-/*========= 左固定レイアウトのためのCSS ===============*/
 
-/*左と右を囲う全体のエリア*/
+
+/* 左右共通設定 */
 #left-wrapper{
-  position: relative;/*position stickyの基点にするため relativeをかける*/
-  display: flex;/*左エリア、右エリア横並び指定*/
-  flex-wrap: wrap;/*ボックスの折り返し可*/
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/*左エリア*/
+
 #left-fixed{
-  /*左固定記述*/
   /* position: -webkit-sticky; */
   /* position: sticky; */
   /* top: 0px; */
@@ -481,10 +483,10 @@ li {
 
 .btn-area {
   /* position: absolute; */
-  top: calc(100vh / 8.5);
+  top: calc(100dvh / 8.5);
   right: calc(100vw / 2);
   max-width: calc(100vw / 2.2);
-  height: calc(100vh / 3);
+  height: calc(100dvh / 3);
   /* position: fixed; */
   position: -webkit-sticky;
   position: sticky;
@@ -962,9 +964,6 @@ small{
 }
 
 .joke {
-  /* position: sticky; */
-  /* position: -webkit-sticky; */
-  /* position: fixed; */
   position: absolute;
   top: 76%;
   left: 1px;
@@ -1107,7 +1106,9 @@ small{
     right: 4%;
     width: 1.75rem;
     height: 1.5rem;
-    transition-duration: 1s; 
+    transition-duration: 1s;
+
+    z-index: 99;
   }
   
   .nav_toggle.show {
@@ -1123,6 +1124,8 @@ small{
     background-color: #D7FFFE;
     position: absolute;
     transition: transform 1.1s, opacity .7s;
+
+    z-index: 99;
   }
 
   .nav_toggle i:nth-child(1) {
@@ -1159,8 +1162,7 @@ small{
   .btn-area {
     top: 2%;
     left: 0;
-    /* height: calc(100dvh / 2.8); */
-    height: calc(100vh / 2.8);
+    height: calc(100dvh / 2.8);
     width: calc(100vw / 2.8);
   }
 
@@ -1169,13 +1171,6 @@ small{
   }
 
   /* ダークモードここまで */
-
-  
-  /* #main-bg {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  } */
 
   .delaySec1 {
     animation-delay: none;
@@ -1187,8 +1182,8 @@ small{
 
   #first-section {
     /* height: calc(100vh - 6%); */
-    height: 70vh;
-    width: 100%;
+    height: 70dvh;
+    width: 88%;
     margin-left: 10%;
     /* justify-content: none; */
   }
@@ -1206,7 +1201,7 @@ small{
   }
 
   .scrolldown2 {
-    top: 80vh;
+    top: 80dvh;
     left: 60%;
   }
 
@@ -1230,7 +1225,6 @@ small{
     position: sticky;
     position: -webkit-sticky;
     width: 25%;
-    max-height: 100vh;
     top: 0;
     margin-left: 0;
     
@@ -1238,11 +1232,12 @@ small{
 
   #right-wrapper {
     height: 100%;
+    width: 75%;
   }
 
   #right-container {
     margin: 0;
-    width: 95%;
+    width: 81%;
   }
 
   .right-area span {
@@ -1300,7 +1295,7 @@ small{
 
   .chart-container {
     position: relative;
-    height: 40vh;
+    height: 40dvh;
     width: 72.5vw;
   }
   
@@ -1345,7 +1340,7 @@ small{
     /* margin-bottom: calc(450px - 12.5vh); */
     /* margin-bottom: 125%; */
     /* mytimeline li paddingで解決しない場合、上記を使う */
-    padding-left: 15px;
+    padding: 3.9% 0  3.9% 5%;
   }
 
   .mytimeline li{
@@ -1461,12 +1456,12 @@ small{
 /* ファーストセクション */
 
 #first-section {
-  height: calc(100vh + 180px);
+  height: calc(100dvh + 180px);
 }
 
 .scrolldown2 {
   position: absolute;
-  top: calc(100vh + 5.25%);
+  top: calc(100dvh + 5.25%);
   left: 63%;
 }
 
@@ -1484,7 +1479,7 @@ small{
   
 .chart-container {
   width: 70vw;
-  height: 25vh;
+  height: 25dvh;
 }
 
 .chart-text {
@@ -1516,6 +1511,7 @@ small{
 }
 
 
+/* フッター */
 }
 
 @media screen and (min-width: 820px) and (max-width: 900px) {
