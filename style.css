@@ -249,7 +249,7 @@ li {
 
 /* メイン */
 #main-bg {
-  background: url("img/Shst4k_2.png") no-repeat;
+  background: url("img/Shst4k_2.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -261,7 +261,7 @@ li {
 
 .moveRight {
   /* position: relative; */
-  background: url("img/Shst4k_2.png") no-repeat;
+  background: url("img/Shst4k_2.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: right;
