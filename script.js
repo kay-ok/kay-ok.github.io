@@ -6,12 +6,21 @@ window.addEventListener('load',() => {
 });
 
 
+$(function() {
+  $.scrollify({
+    section : "適応したい要素名(この場合はsection)",
+  });
+});
+
+
 const btn = document.querySelector('.btn-area');
 // const bgc = document.querySelector('#bgc');
 const btnText = document.querySelector('#btn-graphic');
 
-const btnTextJP = ("ランプのシェードに触れると、色覚に障がいがある方にとって見やすい色に変わります。");
-const btnTextEN = ("Touch lampshade if you are COLOR BLINDNESS person. This Website's colors will be changed, easy to read for you.");
+// const btnTextJP = ("ランプのシェードに触れると、色覚に障がいがある方にとって見やすい色に変わります。");
+const btnTextJP = ("ランプシェードに触れてダークモードをONにする");
+// const btnTextEN = ("Touch lampshade if you are COLOR BLINDNESS person. This Website's colors will be changed, easy to read for you.");
+const btnTextEN = ("ランプシェードに触れてダークモードをOFFにする");
 const boxes = document.getElementsByClassName('box');
 
 // const formColors = document.querySelectorAll('.contact-form span');
@@ -75,36 +84,77 @@ $('.nav_toggle').on('click', function(){
  
 
   const darkBx = document.querySelectorAll('.box');
-  const darkFc = document.querySelectorAll('.section-title, .sub-title, .scrolldown2 span, .text dt, .text dd, .chart-text p, .mytimeline, .works-contents p, .footer p');
+  const darkFc = document.querySelectorAll('.section-title, .sub-title, .text dt, .text dd, .chart-text p, .mytimeline, .works-contents p, .footer p');
   // const idDarkFc = document.getElementById('aboutme');
-  const darkBgc = document.querySelector('.mytimeline li, .border-line');
-
+  // const darkBgc = document.querySelector('.border-line');
+  const mainBg = document.querySelector('#main-bg');
   // .mytimeline em border-bottom #d7fffe
+  const firstSection = document.querySelector('#first-section');
+  const works = document.querySelector('#works');
+  const footer = document.querySelector('.footer');
 
 
   $('.btn-area').on('click', function(){
-    $('#main-bg').toggleClass('darkTheme');
+    $(mainBg).toggleClass('lightTheme');
+    $(firstSection).toggleClass('hide');
+    $(works).toggleClass('appear');
+    $(footer).toggleClass('appear');
     $('.message').toggleClass('appear');
     $('.mytimeline em').toggleClass('mtlbbDark');
+    $('#btn-graphic').toggleClass('dark');
+    $('.scrolldown2').toggleClass('dark');
+    $('.scrolldown2 span').toggleClass('dark');
 
-    if($('#main-bg').hasClass('darkTheme') == true) {
-      $(darkBx).css('color', 'coral')
+    if($(mainBg).hasClass('lightTheme') == true) {
+      // $(mainBg).css('background', 'url("img/Shst4kmozjpeg_134745942238402160.jpg") no-repeat')
+      // $(mainBg).css('filter', 'contrast(105%) saturate(190%) brightness(100%) grayscale(0%)')
+      
+      $(mainBg).css('backgroundAttachment', 'fixed')
+      $(mainBg).css('backgroundSize', 'cover')
+      $(mainBg).css('backgroundPosition', 'right')
+      $(darkBx).css('color', '#fff')
+      $(darkBx).css('textShadow', '2.5px 1.95px 1px #000')
+      $(btnText).css('color', '#fff')
+      $(btnText).css('border', '1px solid #fff')
+      // $('#main-bg').classList.remove()
+
+
       // $(darkBx).css('textShadow', '3px 1.25px .1px #606060')
       // $(darkFc).css('color', '#f4d03f')
       // $(darkFc).css('color', '#f9f047')
-      $(darkFc).css('color', 'coral')
+      $(darkFc).css('color', '#d7fffe')
+      $(darkFc).css('textShadow', '2.5px 1.95px 1px #000')
       // $('.section-title').css('textShadow','3.2px 1.35px .125px #606060')
       // $('.sub-title').css('textShadow', '2.25px .937px .075px #606060')
       // $(idDarkFc).css('color', 'coral')
-      $(darkBgc).css('color', 'coral')
+      
+      // $(darkBgc).css('backgroundColor', '#fff')
+
     } else {
+      // $(darkBx).css('color', '#d7fffe')
+      
+      // $(mainBg).css('filter', 'contrast(90%) saturate(90%) brightness(100%) grayscale(100%)')
+      // $(mainBg).css('background', 'url("img/Shst4kmozjpeg_134745942238402160.jpg") no-repeat')
+      $(mainBg).css('backgroundAttachment', 'fixed')
+      $(mainBg).css('backgroundSize', 'cover')
+      $(mainBg).css('backgroundPosition', 'center')
+      // 左右に動くのを禁止する
       $(darkBx).css('color', '#d7fffe')
+      $(darkBx).css('textShadow', '2.5px 1.95px 1px #000')
+      $(btnText).css('color', '#fff')
+      $(btnText).css('border', '1px solid #fff')
+
+      // $('#main-bg').add('background', 'url(img/Shst4kmozjpeg_134745942238402160.jpg) no-repeat')
+      
       // $(darkBx).css('textShadow', '3px 1.25px .1px #000')
       $(darkFc).css('color', '#d7fffe')
+      // $(darkFc).css('textShadow', '2.5px 1.95px 1px #d7fffe')
+      $(darkFc).css('textShadow', '2.5px 1.95px 1px #000')
       // $(idDarkFc).css('color', '#d7fffe')
       // $('.section-title').css('textShadow','3.2px 1.35px .125px #000')
       // $('.sub-title').css('textShadow', '2.25px .937px .075px #000')
-      $(darkBgc).css('color', '#d7fffe')
+      
+      // $(darkBgc).css('backgroundColor', '#d7fffe')
     }
   });
  
@@ -181,6 +231,8 @@ $('.section-title .bgLRextendTrigger').on('inview', function(event, isInView, vi
   if (isInView) {
     //要素が見えたときに実行する処理
     $(this).addClass('bgLRextend');
+  } else {
+    $(this).removeClass('bgLRextend');
   }
 });
 
@@ -188,6 +240,8 @@ $('.section-title .bgappearTrigger').on('inview', function(event, isInView, visi
   if (isInView) {
     //要素が見えたときに実行する処理
     $(this).addClass('bgappear');
+  } else {
+    $(this).removeClass('bgappear');
   }
 });
 
@@ -234,25 +288,25 @@ $('.sub-title .bgappearTrigger').on('inview', function(event, isInView, visibleP
 
 
 // blur verここから。CSS .boxにblur値をつけてから
+// LPではBlurを外す
+// const fadeBox = document.querySelectorAll('.box');
 
-const fadeBox = document.querySelectorAll('.box');
+// for (let i = 0; i < fadeBox.length; i++){
+//   const keyframes = {
+//     rotate: ['20deg', 0],
+//     filter: ['blur(25px)', 'blur(0)'],
+//     translate: ['0 4px', 0],
+//   };
+//   const options = {
+//     duration: 400,
+//     delay: i * 135,
+//     fill: 'forwards',
+//   };
 
-for (let i = 0; i < fadeBox.length; i++){
-  const keyframes = {
-    rotate: ['20deg', 0],
-    filter: ['blur(25px)', 'blur(0)'],
-    translate: ['0 4px', 0],
-  };
-  const options = {
-    duration: 416,
-    delay: i * 147,
-    fill: 'forwards',
-  };
-
-  setTimeout(function(){
-  fadeBox[i].animate(keyframes, options);
-  },137);
-}
+//   setTimeout(function(){
+//   fadeBox[i].animate(keyframes, options);
+//   },137);
+// }
 
   // setTimeout(function(){
   //   $('#overWright').fadeOut(850);
@@ -270,7 +324,6 @@ for (let i = 0; i < fadeBox.length; i++){
 
 
 
-
 // 横棒グラフ
 $('#chart').on('inview', function(event, isInView) {//画面上に入ったらグラフを描画
   if (isInView) {
@@ -284,7 +337,7 @@ $('#chart').on('inview', function(event, isInView) {//画面上に入ったら�
             "rgba(153, 102, 255, 0.35)"
           ],
           borderColor: [
-            "rgba(153, 102, 255, 0.35)"
+            "rgba(215, 255, 254, 1)"
           ],
           fontColor: [
             "rgba(255, 255, 255, 1)"
@@ -368,35 +421,59 @@ var chart = new Chart(ctx, {
 // });
 
 
+// Ver1.0
+// function scrollTimelineAnime() {
+//   $('.mytimeline li').each(function(){
+//     var elemPos = $(this).offset().top; //要素の位置（上から）
+//     var scroll = $(window).scrollTop(); //スクロール値（上から）
+//     var windowHeight = $(window).height();  //windowの高さ値
+//     var startPoint = 220; //線のスタート位置
+//     if (scroll >= elemPos - windowHeight - startPoint) {
+//       var H = $(this).outerHeight(true); //liの余白と高さ
+//       var percent = (scroll + startPoint - elemPos) / (H/2) * 100;
 
-function scrollTimelineAnime() {
-  $('.mytimeline li').each(function(){
-    var elemPos = $(this).offset().top; //要素の位置（上から）
-    var scroll = $(window).scrollTop(); //スクロール値（上から）
-    var windowHeight = $(window).height();  //windowの高さ値
-    var startPoint = 220; //線のスタート位置
-    if (scroll >= elemPos - windowHeight - startPoint) {
-      var H = $(this).outerHeight(true); //liの余白と高さ
-      var percent = (scroll + startPoint - elemPos) / (H/2) * 100;
+//       if (percent > 100){
+//         percent = 100;
+//       }
+//       $(this).children('.border-line').css({
+//         height: percent + "%",
+//       });
+//     }
+//   });
+// }
 
-      if (percent > 100){
-        percent = 100;
-      }
-      $(this).children('.border-line').css({
-        height: percent + "%",
-      });
-    }
-  });
+// $(window).on('scroll',function(){
+//   scrollTimelineAnime();
+// });
+
+
+function ScrollTimelineAnime(){
+	$('.mytimeline li').each(function(){// それぞれのli要素の
+		var elemPos = $(this).offset().top;// 上からの高さ取得
+		var scroll = $(window).scrollTop();// スクロール値取得
+		var windowHeight = $(window).height();// windowの高さ取得
+		var startPoint = 220; //線をスタートさせる位置を指定※レイアウトによって調整してください
+		if (scroll >= elemPos - windowHeight-startPoint){				
+			var H = $(this).outerHeight(true)//liの余白と高さを含めた数値を取得
+			//スクロール値から要素までの高さを引いた値を、liの高さの半分のパーセントで出す
+			var percent = (scroll+startPoint - elemPos) / (H/2) *100;//liの余白と高さの半分で線を100％に伸ばす
+
+			// 100% を超えたらずっと100%を入れ続ける
+			if(percent  > 100){
+				percent  = 100;
+			}
+			// ボーダーの長さをセット
+			$(this).children('.border-line').css({
+				height: percent + "%", //CSSでパーセント指定
+			});
+		} 
+	});
 }
 
-$(window).on('scroll',function(){
-  scrollTimelineAnime();
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).on('scroll', function(){
+	ScrollTimelineAnime();// 線が伸びる関数を呼ぶ
 });
-
-
-
-
-
 
 
 
@@ -413,7 +490,7 @@ $(window).on('scroll',function(){
 // 以下、レスポンシブ
 
 // menuIconSPだけ実装する
-if (window.matchMedia('(max-width: 640px)').matches) {
+if (window.matchMedia('(max-width: 640px) and (min-width:820px)')) {
 
   const menuIconSP = document.querySelector('.nav_toggle');
   const navSP = document.querySelector('.nav');
@@ -486,6 +563,30 @@ if (window.matchMedia('(max-width: 640px)').matches) {
     }
   })
 
+
+
+  // function ScrollTimelineAnime(){
+  //   $('.mytimeline li').each(function(){// それぞれのli要素の
+  //     var elemPos = $(this).offset().top;// 上からの高さ取得
+  //     var scroll = $(window).scrollTop();// スクロール値取得
+  //     var windowHeight = $(window).height();// windowの高さ取得
+  //     var startPoint = 100; //線をスタートさせる位置を指定※レイアウトによって調整してください
+  //     if (scroll >= elemPos - windowHeight-startPoint){				
+  //       var H = $(this).outerHeight(true)//liの余白と高さを含めた数値を取得
+  //       //スクロール値から要素までの高さを引いた値を、liの高さの半分のパーセントで出す
+  //       var percent = (scroll+startPoint - elemPos) / (H/2) *100;//liの余白と高さの半分で線を100％に伸ばす
+  
+  //       // 100% を超えたらずっと100%を入れ続ける
+  //       if(percent  > 100){
+  //         percent  = 100;
+  //       }
+  //       // ボーダーの長さをセット
+  //       $(this).children('.border-line').css({
+  //         height: percent + "%", //CSSでパーセント指定
+  //       });
+  //     } 
+  //   });
+  // }
 
 };
 

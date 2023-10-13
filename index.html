@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Kei's Portfolio</title>
+  <title>Okubo Kei's Works Collection</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="reset.css">
@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Gochi+Hand&family=Shippori+Mincho+B1&family=Zen+Kurenaido&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.3/ScrollTrigger.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 
@@ -22,21 +24,10 @@
 
 
 
-<!-- <div class="header-nav fadeDown delaySec1">
-  <ul>
-    <li><a href="#aboutme" class="btn02 rotateback">
-      <span>ABOUT ME</span><span>自己紹介</span>
-    </a></li>
-    <li><a href="#works" class="btn02 rotateback">
-      <span>WORKS</span><span>制作物</span>
-    </a></li>
-    <li><a href="#contact" class="btn02 rotateback">
-          <span>CONTACT</span><span>お問い合わせ</span>
-        </a></li>
-      </ul>
-    </div> -->
+
     
 <div id="main-bg">
+
   <header id="header">
     <nav class="nav">
       <ul class="nav_menu_ul">
@@ -50,7 +41,7 @@
     
     
     <div id="nav_message">
-      <p id="nav_message_text">ランプのシェードに触れると、色覚に障がいがある方にとって見やすい色に変わります。</p>
+      <p id="nav_message_text">ランプシェードに触れてダークモードをONにする</p>
       <!-- <p id="nav_message_text">Touch lampshade if you are COLOR BLINDNESS person. This Website's colors will be changed, easy to read for you.</p> -->
     </div>
     <span class="nav_toggle">
@@ -62,230 +53,130 @@
 
 
   <main>
+
+    <!-- <div class="header-nav fadeDown delaySec1">
+      <ul>
+        <li><a href="#aboutme" class="btn02 rotateback">
+          <span>ABOUT ME</span><span>自己紹介</span>
+        </a></li>
+        <li><a href="#works" class="btn02 rotateback">
+          <span>WORKS</span><span>制作物</span>
+        </a></li>
+        <li><a href="#contact" class="btn02 rotateback">
+              <span>CONTACT</span><span>お問い合わせ</span>
+            </a></li>
+      </ul>
+    </div> -->
+
     <div id="left-wrapper">
-      <div id="left-fixed"><!--左固定エリア-->
+      <div id="left-fixed">
         <div class="btn-area">
           <input id="btn-black" type="button">
             <span id="btn-graphic" class="fadeUp delaySec3">
-              <p class="message">Touch lampshade if you are COLOR BLINDNESS person. This Website's colors will be changed, easy to read for you.</p>
-              <p class="message appear">ランプのシェードに触れると、色覚に障がいがある方にとって見やすい色に変わります。</p>
+              <p class="message">ランプに触れて作品群を閉じる</p>
+              <p class="message appear">ランプに触れて作品群を見る</p>
             </span>
           </input>
         </div>
-        <div class="secret-container"> 
-          <p class="joke">A 1 1 3</p>
-        </div>
+       
       </div>
+      
+      
+      
+        <div id="right-wrapper">
 
-    
+              <section id="first-section">
+                <h1 class="fadeIn">
+                  <div class="flex-first delayShow">
+                    <div class="box">O</div>
+                    <div class="box">K</div>
+                    <div class="box">U</div>
+                    <div class="box">B</div>
+                    <div class="box">O</div>
+                  </div>
+                  <div class="flex-second delayShow">
+                    <div class="box">K</div>
+                    <div class="box">E</div>
+                    <div class="box">I</div>
+                    <div class="box">'S</div>
+                  </div>
+                  <div class="flex-third delayShow">
+                    <div class="box">W</div>
+                    <div class="box">O</div>
+                    <div class="box">R</div>
+                    <div class="box">K</div>
+                    <div class="box">S</div>
+                  </div>
+                  <div class="flex-fourth delayShow">
+                    <div class="box">C</div>
+                    <div class="box">O</div>
+                    <div class="box">L</div>
+                    <div class="box">L</div>
+                    <div class="box">E</div>
+                    <div class="box">C</div>
+                    <div class="box">T</div>
+                    <div class="box">I</div>
+                    <div class="box">O</div>
+                    <div class="box">N</div>
+                  </div>
+                </h1>
+        
+                  <!-- <div class="scrolldown2 fadeUp delaySec2">
+                    <span>Scroll</span>
+                  </div> -->
 
-      <div id="right-wrapper"><!--右エリア-->
-        <!-- <div class="op-area"></div>  
-        <div class="blur-area"></div> -->
-          <section id="first-section">
-            <h1>
-              <div class="flex-first delayShow">
-                <div class="box">O</div>
-                <div class="box">K</div>
-                <div class="box">U</div>
-                <div class="box">B</div>
-                <div class="box">O</div>
-              </div>
-              <div class="flex-second delayShow">
-                <div class="box">K</div>
-                <div class="box">E</div>
-                <div class="box">I</div>
-                <div class="box">'S</div>
-              </div>
-              <div class="flex-third delayShow">
-                <div class="box">P</div>
-                <div class="box">O</div>
-                <div class="box">R</div>
-                <div class="box">T</div>
-                <div class="box">F</div>
-                <div class="box">O</div>
-                <div class="box">L</div>
-                <div class="box">I</div>
-                <div class="box">O</div>
-              </div>
-            </h1>
-    
-              <div class="scrolldown2 fadeUp delaySec2">
-                <span>Scroll</span>
-              </div>
-          </section>
-
-          <div id="right-container">
-            <section class="right-section">
-              <div class="right-area">
+              </section>
+              <section id="works" class="container">  
                 <h2 class="section-title" id="title-center">
-                  <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">About Me</span></span>
+                  <!-- <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Works</span></span> -->
+                  <span class="fadeIn">WORKS</span>
                 </h2>
                 <h3 class="sub-title" id="title-center">
-                  <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 自己紹介 -</span></span>
+                  <!-- <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 制作物 -</span></span> -->
+                  <span class="fadeIn">- 制作物 -</span>
                 </h3>
-                
-                <section id="aboutme">
-                  <div class="text-wrapper">
-                    <dl class="text">
-                      <dt class="vertical-fix">名前</dt><dd><span class="ruby">おおくぼ　けい</span><br>大久保　慧</dd>
-                      <!-- <dt>性別</dt><dd>男</dd> -->
-                      <!-- <dt>誕生日</dt><dd>1987年 9月 16日</dd> -->
-                      <dt>年齢</dt><dd>36歳</dd>
-                      <!-- <dt>血液型</dt><dd>O型</dd> -->
-                      <dt class="vertical-fix">性格</dt><dd>・好奇心旺盛<br>・几帳面<br>・完璧主義</dd>
-                      <dt class="vertical-fix">好きなこと</dt><dd><span class="dot"></span><br>・人と話すこと<br>・サッカー<br>・ビリヤード</dd>
-                      <dt class="vertical-fix">得意なこと</dt><dd>・自ら積極的に話しかけられること<br>・精密な作業や調整が好きなこと</dd>
-                      <!-- <dt>不得意なこと</dt><dd>・完璧性を求め過ぎてしまうこと</dd> -->
-                      <dt>自身の強み</dt><dd>・協調性があり、気配りができること</dd>
-                      <!-- <dt class="vertical-fix">自身の弱み</dt><dd>・自分を大切にできないこと</dd> -->
-                      <!-- <dt>興味関心があること</dt><dd>・WEBサイトデザイン観察とその模写</dd> -->
-                      </dd>
-                      <!-- <dt class="vertical-fix">抱えている障害</dt><dd>・うつ病<br>・双極性障害<br>・持続性気分障害<br>・入眠障害</dd> -->
-                    </dl>
-                  </div>
-                </section>
-              
-                <section class="right-section skill-section">
-                  <div class="right-area">
-                    <h3 class="sub-title" id="title-center">
-                      <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- スキル -</span></span>
-                    </h3>
-                    <div class="text-wrapper">
-                      <div class="skill-text">
-                        <div class="chart-container">
-                          <canvas id="chart"></canvas>
-                        </div>
-                        <div class="chart-text">
-                          <p>  
-                            <span id="inview-point">HTML, CSS, jQueryなどのWEBサイト制作に直結する言語が得意です。<br>
-                            現在はPythonを集中的に学習しています。</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
 
-
-                <section id="works" class="container">  
-                  <h2 class="section-title" id="title-center">
-                    <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Works</span></span>
-                  </h2>
-                  <h3 class="sub-title" id="title-center">
-                    <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 制作物 -</span></span>
-                  </h3>
-                      <div class="works-contents">
-                        <ul>
-                          <li>
-                            <a href="https://kay-ok.github.io/Salon/" target="_blank">
-                              <img src="img/mainvisual.jpg" alt="架空のサロンサイト">
-                              <p>美容院のウェブサイト</p>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://kay-ok.github.io/OXGame/" target="blank">
-                              <img src="img/simplegame3.jpg" alt="マルバツゲームのウェブサイト">
-                              <p>シンプルマルバツゲーム</p>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                </section>
-
-              
-                <section id="career" class="right-section">
-                  <div class="right-area">
-                    <h2 class="section-title" id="title-center">
-                      <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">Career And After</span></span>
-                    </h2>
-                    <h3 class="sub-title" id="title-center">
-                      <span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">- 経歴と今後 -</span></span>
-                    </h3>
-                    <div class="carrer-wrapper">
-                      <!-- text-wrapperが3つあるため大きく崩れる。PCサイトに影響しないように調整すること -->
-                        <ul class="mytimeline">
-                          <li>
-                            <dl>
-                              <dt>1987 Sep.</dt>
-                              <dt><em>福島県にて産まれる</em></dt>
-                              <dd>地元、郡山市への愛着は今も強い。<br>喜多方ラーメンや、ゆべし等は有名ではあるが、個人的に最もおすすめなものは「さい餅」である。<img class="mtl1" src="img/akabeko.png" alt=""></dd>
-                            </dl>
-                            <span class="border-line"></span>
-                          </li>
-      
-                          <li>
-                            <dl>
-                              <dt>2000 - 2006</dt>
-                              <dt><em>栃木県へ</em></dt>
-                              <dd>中高と宇都宮市で過ごす。<br>英語の面白さに気付き、のめり込むように勉強する。</dd>
-                            </dl>
-                            <span class="border-line"></span>
-                          </li>
+                    <div class="works-contents fadeIn">
+                      <ul>
+                        <li>
+                          <a href="https://kay-ok.github.io/Portfolio/" target="blank">
+                            <img src="img/PortfolioThumbMOZ.jpg" alt="ポートフォリオ">
+                            <p>ポートフォリオ</p>
+                          </a>
+                        </li>
                         
-                          <li>
-                            <dl>
-                              <dt>2008</dt>
-                              <dt><em>大学中退</em></dt>
-                              <dd>
-                                作家になる夢を諦めきれず実家へ帰り、執筆を行う毎日を送る。<br>
-                              </dd>
-                            </dl>
-                            <span class="border-line"></span>
-                          </li>
-      
-                          <li>
-                            <dl>
-                              <dt>2008 - 2022 May.</dt>
-                              <dt><em>トンネル</em></dt>
-                              <dd>コンビニやパチンコ店など主に接客業でアルバイト経験を積む。<br>お客様とコミュニケーションを取りながらする仕事は自分にピタリと合っていたが、夜勤の仕事の連続から不眠症を発症し、うつ病になる。<br>療養しつつ、執筆を続ける。</dd>
-                            </dl>
-                            <span class="border-line"></span>
-                          </li>
-      
-                          <li>
-                            <dl>
-                              <dt>2022 Oct.</dt>
-                              <dt><em>万里一空</em></dt>
-                              <dd>「就労移行支援事業所ITスクール八王子」へITスキルを学ぶために宇都宮市から八王子市へ引っ越す。<br>安定した通所と日々の学習を重ねながら、フロントエンドエンジニアを目指す道を選ぶ。</dd>
-                            </dl>
-                            <span class="border-line"></span>
-                          </li>
+                        <li>
+                          <a href="https://kay-ok.github.io/Salon/" target="_blank">
+                            <img src="img/mainvisual.jpg" alt="架空のサロンサイト">
+                            <p>美容院のウェブサイト</p>
+                          </a>
+                        </li>
 
-                          <li>
-                            <dl>
-                              <dt>2023 Aug.</dt>
-                              <dt><em>プラスアルファ</em></dt>
-                              <dd>親身な職員や様々な障がいを持つ利用者と接し、単におしゃれなサイトよりも「人に優しい」WEBサイト・WEBアプリケーションを作りたいと考えるようになる。</dd>
-                            </dl>
-                            <span class="border-line"></span>
-                          </li>
+                        <li>
+                          <a href="https://kay-ok.github.io/OXGame/" target="blank">
+                            <img src="img/simplegame3.jpg" alt="マルバツゲームのウェブサイト">
+                            <p>シンプルマルバツゲーム</p>
+                          </a>
+                        </li>
+                        
 
-                          <li>
-                            <dl>
-                              <dt>2024 - </dt>
-                              <dt><em>これから</em></dt>
-                              <dd>安定した通勤と健康状態を維持し、しっかりと実務経験を積みたいという強い気持ちがある。<br>
-                              「IT + 福祉」という環境にいた自分が吸収したものを精一杯表現していきたい。<br>
-                              自身の大きな目標は、結婚し、子供をもち、幸せな家庭を築くこと。<br>
-                              この後に続く、最後の項目がハッピーエンドになるように何事にも全力で臨みたい。
-                              </dd>
-                            </dl>
-                            <span class="border-line"></span>
-                          </li>
+                      </ul>
+                    </div>
 
-                        </ul>
-                      </div>
-                  </div>
-                </section>
-            </section>
+                    <div class="secret-container"> 
+                      <p class="joke fadeIn">A 1 1 3</p>
+                    </div>
+              </section>
 
-          </div> <!-- right-container's div -->
-      </div> <!-- right-wrapper's div-->      
+
+            </div> <!-- right-container's div -->
+        <!-- </div> right-wrapper's div      -->
+    </div> <!-- left-wrapper's div-->
+    
   </main>
 
   <footer class="footer" id="right-section">
-    <p>&copy; 2023<span> Kei Okubo </span></p>
+    <p class="fadeIn">&copy; 2023<span> Kei Okubo </span></p>
   </footer>
 </div>
 
