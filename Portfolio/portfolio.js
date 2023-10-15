@@ -35,25 +35,39 @@ var ctx1 = document.getElementById("myRadarChart");
   var myChart = new Chart(ctx1, {
     type: 'radar',
     data: {
-      labels: ["コミュニケーション力", "自己コントロール", "要領の良さ", "積極性", "共感力"],
+      labels: ["コミュニケーション力 [8]", "自己コントロール [4]", "要領の良さ [2]", "几帳面 [7]", "積極性 [8]", "共感力 [9]"],
       datasets: [{
         label: "性格",
-        data: [5, 3, 2, 4, 6],
-        backgroundColor: "rgba(67, 133, 215, 0.5)",  //グラフ背景色
+        data: [8, 4, 2, 7, 8, 9],
+        backgroundColor: "rgba(67, 133, 215, 0.35)",  //初期グラフ背景色
         borderColor: "rgba(67, 133, 215, 1)",        //グラフボーダー色
+        pointBackgroundColor: "rgba(255, 255, 255, 0.1)",
+        pointBorderColor: "rgba(255, 255, 255, 0.1)",
+        lintTension: 0
       }]
     },
     options: {
       scales: {
         r: {
-          max: 7,        //グラフの最大値
+          max: 10,        //グラフの最大値
           min: 0,        //グラフの最小値
+          pointLabels: {
+            font: {
+              size: 10.5
+            }
+          },
           ticks: {
-            stepSize: 1  //目盛間隔
-          }
-        }
+            stepSize: 1,  //目盛間隔
+          },
+          angleLines: {
+            color: 'green',
+          },
+          pointBorderColor: {
+            color: 'rgba(0, 0, 0, 0.1)',
+          },
+        },
       },
-    }
+    },
   });
 }
 }
@@ -68,7 +82,7 @@ $('#chart').on('inview', function(event, isInView) {//画面上に入ったら�
       labels: ["HTML", "CSS", "JavaScript", "jQuery", "Python"],
       datasets: [{
           label: '現役エンジニアを10とした自身のスキル',
-          data: [7, 6, 4, 6, 3],
+          data: [8, 7, 4, 7, 3],
           backgroundColor:[
             "rgba(153, 102, 255, 0.35)"
           ],
@@ -138,7 +152,7 @@ function init() {
     colorList = [];
     // canvas1個めの色指定
     canvasList.push(document.getElementById("waveCanvas"));
-    colorList.push(['#0ff', '#ff0', '#f00', '#00f', '#f0f']);//重ねる波線の色設定
+    colorList.push(['#0ff', '#ff0', '#fff', '#00f', '#f0f']);//重ねる波線の色設定
     // colorList.push(['#0ff', '#ff0', '#f00', '#00f', '#f0f']);//重ねる波線の色設定
     
 	
@@ -183,7 +197,7 @@ function draw(canvas, color) {
 	drawWave(canvas, color[1], 0.5, 4, 0);
 	drawWave(canvas, color[2], 0.3, 1.6, 0);
 	drawWave(canvas, color[3], 0.2, 3, 100);
-	drawWave(canvas, color[4], 0.5, 1.6, 250);
+	drawWave(canvas, color[4], 0.5, 1.6, 255);
 }
 
 /**
@@ -228,75 +242,3 @@ init();
 
 
 // 波線ここまで
-// パーティクルここから
-
-// particlesJS("particles-js",{
-// 	"particles":{
-// 		"number":{
-// 			"value":100,//この数値を変更するとホタルの数が増減できる
-// 			"density":{
-// 				"enable":true,
-// 				"value_area":1602.3971861905397
-// 			}
-// 		},
-// 		"color":{
-// 			"value":"#000"//色
-// 		},
-// 		"shape":{
-// 			"type":"circle",//形状はcircleを指定
-// 			"stroke":{
-// 				"width":0,
-// 			}
-// 		},
-// 		"opacity":{
-// 			"value":1,
-// 			"random":true,//透過をランダムに
-// 			"anim":{
-// 				"enable":false,
-// 				"speed":1.10115236356258881,
-// 				"opacity_min":0,
-// 				"sync":false
-// 			}
-// 		},
-// 		"size":{
-// 			"value":4.005992965476349,
-// 			"random":true,//サイズをランダムに
-// 			"anim":{
-// 				"enable":true,
-// 				"speed":24.345709068776642,
-// 				"size_min":0.1,
-// 				"sync":false
-// 			}
-// 		},
-// 		"line_linked":{
-// 			"enable":false,
-// 		},
-// 		"move":{
-// 			"enable":true,
-// 			"speed":6,//この数値を小さくするとゆっくりな動きになる
-// 			"direction":"none",//方向指定なし
-// 			"random":true,//動きはランダムに
-// 			"straight":false,//動きをとどめない
-// 			"out_mode":"out",//画面の外に出るように描写
-// 			"bounce":false,//跳ね返りなし
-// 			"attract":{
-// 				"enable":false,
-// 				"rotateX":600,
-// 				"rotateY":600
-// 			}
-// 		}
-// 	},
-// 	"interactivity":{
-// 		"detect_on":"canvas",
-// 		"events":{
-// 			"onhover":{
-// 				"enable":false
-// 			},
-// 			"onclick":{
-// 				"enable":false
-// 			},
-// 			"resize":true
-// 		}
-// 	},
-// 	"retina_detect":true
-// });
