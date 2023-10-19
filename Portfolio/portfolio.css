@@ -18,14 +18,6 @@ li {
 
 /* 共通部 */
 
-/* wave */
-
-#waveCanvas{
-  position: absolute;
-  bottom: 0;
-  left:0;
-  width: 100%;
-}
 
 
 .section-title {
@@ -48,15 +40,25 @@ li {
   margin-bottom: 3%;
 }
 
+/* wave */
+
+#waveCanvas{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  z-index: 2;
+}
 
 /* バブル共通部 */
 
 
 
-
-
 .area{
   background: transparent;
+  /* position: relative; */
+  /* width: 100%; */
+  z-index: 1;
   /* background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);   */
   /* width: 1%; */
 }
@@ -129,14 +131,15 @@ li {
   left: 35%;
   width: 150px;
   height: 150px;
-  animation-delay: 7s;
+  animation-delay: 5s;
 }
 
 .circles li:nth-child(8){
   left: 50%;
   width: 25px;
   height: 25px;
-  animation-delay: 15s;
+  /* animation-delay: 15s; */
+  animation-delay: 1s;
   animation-duration: 45s;
 }
 
@@ -184,6 +187,7 @@ li {
   height:100%;
   overflow:auto;
   display:flex;
+  /* position: relative; */
 }
  
 .section {
@@ -191,17 +195,21 @@ li {
   height:100%;
   width:100%;
   flex:none;
+  position: relative;
 }
 
 section:nth-child(1){
+  /* position: relative; */
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
 section:nth-child(2){
+  /* position: relative; */
   background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
 }
 
 section:nth-child(3){
+  /* position: relative; */
   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 
