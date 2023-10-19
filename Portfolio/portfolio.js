@@ -6,6 +6,8 @@ window.addEventListener('load',() => {
 });
 
 
+
+
 const boxes = document.getElementsByClassName('box, scrollbar');
 const fadeBox = document.querySelectorAll('.box, .scrollbar');
 

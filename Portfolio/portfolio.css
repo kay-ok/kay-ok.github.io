@@ -1,12 +1,10 @@
 html {
   font-size: 100%;
-  /* height: 100%; */
 }
 
 body {
   font-family: 'Cinzel', serif;
   font-family: 'Zen Kurenaido', sans-serif;
-  /* height: 100%; */
 }
 
 a {
@@ -28,6 +26,7 @@ li {
   left:0;
   width: 100%;
 }
+
 
 .section-title {
   width: 90vw;
@@ -57,18 +56,16 @@ li {
 
 
 .area{
-  /* background: #4e54c8;   */
   background: transparent;
-  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
-  width: 1%;
-  /* height:100vh; */
+  /* background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);   */
+  /* width: 1%; */
 }
 
 .circles{
   position: absolute;
   top: 0;
   left: 0;
-  width: 33%;
+  width: calc(100% / 3);
   height: 100%;
   /* overflow: hidden; */
 }
@@ -76,13 +73,11 @@ li {
 .circles li{
   position: absolute;
   display: block;
-  list-style: none;
   width: 20px;
   height: 20px;
   background: rgba(255, 255, 255, 0.2);
   animation: animate 25s linear infinite;
   bottom: 0px;
-  
 }
 
 .circles li:nth-child(1){
@@ -183,19 +178,19 @@ li {
 
 /* スクロールスナップ・セクション設定共通 */
 
-.total-container/*親要素 */ {
-  scroll-snap-type: x mandatory;/* scroll-snap */
-  width:100%;/* 任意 */
-  height:100vh;/* 任意 */
-  overflow:auto;/* 必要 */
-  display:flex;/* 必要 */
+.total-container {
+  scroll-snap-type: x mandatory;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  display:flex;
 }
  
-.section/*子要素 */ {
-  scroll-snap-align: start;/* scroll-snap */
-  height:100%;/* 任意 */
-  width:100%;/* 任意 */
-  flex:none;/* 必要 */
+.section {
+  scroll-snap-align: start;
+  height:100%;
+  width:100%;
+  flex:none;
 }
 
 section:nth-child(1){
@@ -208,7 +203,6 @@ section:nth-child(2){
 
 section:nth-child(3){
   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-  /* overflow: hidden; */
 }
 
 
@@ -246,7 +240,6 @@ section:nth-child(3){
 /* ローディング終わり */
 
 
-/* 第一セクション */
 
 /* ファーストセクション */
 
@@ -340,7 +333,7 @@ section:nth-child(3){
 /* 第一セクションここまで*/
 
 
-/* 第二セクション(aboutme)ここから */
+/* 第二セクション(自己紹介)ここから */
 
 .aboutme {
   display: flex;
@@ -404,7 +397,6 @@ section:nth-child(3){
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 
@@ -421,7 +413,6 @@ section:nth-child(3){
   height: auto;
   /* margin: 0 auto; */
   display: flex;
-  /* align-items: center; */
 }
 
 
@@ -489,3 +480,22 @@ section:nth-child(3){
 
 /* 第三セクションここまで */
 
+
+
+/* レスポンシブスマホ */
+
+@media screen and (max-width: 640px) {
+  
+
+#first-section {
+  width: 100vw;
+}
+
+}
+
+
+
+
+@media screen and (min-width:640px) and (max-width: 820px) {
+
+}
