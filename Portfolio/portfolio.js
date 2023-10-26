@@ -34,6 +34,7 @@ for (let i = 0; i < fadeBox.length; i++){
 $('#myRadarChart').on('inview', function(event, isInView) {//画面上に入ったらグラフを描画
   if (isInView) {
 var ctx1 = document.getElementById("myRadarChart");
+
   var myChart = new Chart(ctx1, {
     type: 'radar',
     data: {
@@ -49,6 +50,8 @@ var ctx1 = document.getElementById("myRadarChart");
       }]
     },
     options: {
+      maintainAspectRatio: false,
+      responsive: true,
       scales: {
         r: {
           max: 10,        //グラフの最大値
@@ -69,6 +72,7 @@ var ctx1 = document.getElementById("myRadarChart");
           },
         },
       },
+
     },
   });
 }
@@ -131,12 +135,21 @@ var chart = new Chart(ctx, {
 // スキルバーここまで
 
 
-
+// ウェーブ最初の色設定
+// colorList.push(['#0ff', '#ff0', '#fff', '#00f', '#f0f']);
 
 
 
 
 // ウェーブここから
+
+
+
+// 波線ここまで
+
+
+// 波線複数ここから
+
 var unit = 100,
     canvasList, // キャンバスの配列
     info = {}, // 全キャンバス共通の描画情報
@@ -150,27 +163,34 @@ var unit = 100,
 function init() {
     info.seconds = 0;
     info.t = 0;
-		canvasList = [];
+    canvasList = [];
     colorList = [];
     // canvas1個めの色指定
     canvasList.push(document.getElementById("waveCanvas"));
-    colorList.push(['#0ff', '#ff0', '#fff', '#00f', '#f0f']);//重ねる波線の色設定
-    // colorList.push(['#0ff', '#ff0', '#f00', '#00f', '#f0f']);//重ねる波線の色設定
+    colorList.push(['#0ff', '#ff0', '#fff', '#00f', '#ff99cc']);//重ねる波線の色設定
     
-	
-		// 各キャンバスの初期化
-		for(var canvasIndex in canvasList) {
+    // canvas2個めの色指定
+    canvasList.push(document.getElementById("waveCanvas2"));
+    colorList.push(['#43c0e4']);
+    
+    // canvas3個めの色指定
+    canvasList.push(document.getElementById("waveCanvas3"));
+    colorList.push(['#cc99ff']);
+
+  
+    // 各キャンバスの初期化
+    for(var canvasIndex in canvasList) {
         var canvas = canvasList[canvasIndex];
         canvas.width = document.documentElement.clientWidth; //Canvasのwidthをウィンドウの幅に合わせる
         canvas.height = 200;//波の高さ
         canvas.contextCache = canvas.getContext("2d");
     }
     // 共通の更新処理呼び出し
-		update();
+    update();
 }
 
 function update() {
-		for(var canvasIndex in canvasList) {
+    for(var canvasIndex in canvasList) {
         var canvas = canvasList[canvasIndex];
         // 各キャンバスの描画
         draw(canvas, colorList[canvasIndex]);
@@ -189,17 +209,17 @@ function update() {
  * itself again.
  */
 function draw(canvas, color) {
-		// 対象のcanvasのコンテキストを取得
+    // 対象のcanvasのコンテキストを取得
     var context = canvas.contextCache;
     // キャンバスの描画をクリア
     context.clearRect(0, 0, canvas.width, canvas.height);
 
-    //波線を描画 drawWave(canvas, color[数字（波の数を0から数えて指定）], 透過, 波の幅のzoom,波の開始位置の遅れ )
+    //波を描画 drawWave(canvas, color[数字（波の数を0から数えて指定）], 透過, 波の幅のzoom,波の開始位置の遅れ )
     drawWave(canvas, color[0], 0.8, 3, 0);
-	drawWave(canvas, color[1], 0.5, 4, 0);
-	drawWave(canvas, color[2], 0.3, 1.6, 0);
-	drawWave(canvas, color[3], 0.2, 3, 100);
-	drawWave(canvas, color[4], 0.5, 1.6, 255);
+    drawWave(canvas, color[1], 0.5, 4, 0);
+    drawWave(canvas, color[2], 0.3, 1.6, 0);
+    drawWave(canvas, color[3], 0.2, 3, 100);
+    drawWave(canvas, color[4], 0.8, 2, 0);
 }
 
 /**
@@ -207,9 +227,9 @@ function draw(canvas, color) {
 * drawWave(色, 不透明度, 波の幅のzoom, 波の開始位置の遅れ)
 */
 function drawWave(canvas, color, alpha, zoom, delay) {
-	var context = canvas.contextCache;
+  var context = canvas.contextCache;
     context.strokeStyle = color;//線の色
-	context.lineWidth = 1;//線の幅
+  context.lineWidth = 1;//線の幅
     context.globalAlpha = alpha;
     context.beginPath(); //パスの開始
     drawSine(canvas, info.t / 0.5, zoom, delay);
@@ -243,4 +263,23 @@ function drawSine(canvas, t, zoom, delay) {
 init();
 
 
-// 波線ここまで
+
+
+
+
+// 以下、レスポンシブ
+
+
+if (window.matchMedia('(max-width: 640px)')) {
+    
+  // ここと<section id="second-sectionSP" class="section">
+  //   <div class="aboutme-right">
+  //       <div class="rChart-container">
+  //         <canvas id="myRadarChart"></canvas>
+  //       </div>
+  //   </div>
+  // ここ</section>
+
+  // $(function(){ 
+  // });
+};

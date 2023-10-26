@@ -1,3 +1,8 @@
+
+.second
+
+
+
 html {
   font-size: 100%;
 }
@@ -37,19 +42,35 @@ li {
   justify-content: center;
   align-items: center;
   font-family: 'Zen Kurenaido';
-  margin-bottom: 3%;
+  margin: 4.5% 0 2% 0;
 }
 
 /* wave */
+
+.wavaContainer {
+  position: relative;
+}
 
 #waveCanvas{
   position: absolute;
   bottom: 0;
   left:0;
   width: 100%;
-  z-index: 2;
 }
 
+#waveCanvas2{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+}
+
+#waveCanvas3{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+}
 /* バブル共通部 */
 
 
@@ -58,7 +79,7 @@ li {
   background: transparent;
   /* position: relative; */
   /* width: 100%; */
-  z-index: 1;
+  /* z-index: 1; */
   /* background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);   */
   /* width: 1%; */
 }
@@ -139,7 +160,7 @@ li {
   width: 25px;
   height: 25px;
   /* animation-delay: 15s; */
-  animation-delay: 1s;
+  animation-delay: 6s;
   animation-duration: 45s;
 }
 
@@ -183,8 +204,9 @@ li {
 
 .total-container {
   scroll-snap-type: x mandatory;
+  /* overflow-y: auto; */
   width:100%;
-  height:100%;
+  height:100vh;
   overflow:auto;
   display:flex;
   /* position: relative; */
@@ -192,30 +214,50 @@ li {
  
 .section {
   scroll-snap-align: start;
-  height:100%;
+  height:100vh;
+  width:100%;
+  flex:none;
+  position: relative;
+}
+
+.SP {
+  scroll-snap-align: start;
+  height:100vh;
   width:100%;
   flex:none;
   position: relative;
 }
 
 section:nth-child(1){
-  /* position: relative; */
+
   background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
 section:nth-child(2){
-  /* position: relative; */
   background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
 }
 
 section:nth-child(3){
-  /* position: relative; */
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+
+}
+
+section:nth-child(4){
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+section:nth-child(5){
   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 
 
 
 /* スクロールスナップここまで */
+
+
+
+
+
 
 /* セクションごと共通部ここまで */
 
@@ -294,21 +336,24 @@ section:nth-child(3){
 
 
 
-/* スクロールバーの場所 */
+
 .scrollbar {
-  position: relative;
-  top: 150px;
-  left: 0%;
+  position: absolute;
+  top: 44vh;
+  left: 90vw;
   filter: blur(20px);
+  font-size: 0.88rem;
+  letter-spacing: 0em;
+  margin: 0% 0%;
+  text-shadow: none;
 }
 
 
-/* スクロールテキスト */
 .bar-text {
   font-family: 'Cinzel';
   color: #000;
   display: flex;
-  font-size: .9rem;
+  font-size: .8rem;
 }
 
 .bar-icon {
@@ -343,11 +388,14 @@ section:nth-child(3){
 
 /* 第二セクション(自己紹介)ここから */
 
+
 .aboutme {
   display: flex;
   align-items: center;
-  margin: 5%;
-  width: 100%;
+  margin-left: 50%;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100dvh;
 }
 
 
@@ -368,6 +416,11 @@ section:nth-child(3){
   margin-top: 4.5%;
 }
 
+.aboutme-right2 {
+  width: 50vw;
+  margin-right: 5%;
+  margin-top: 4.5%;
+}
 
 
 .text {
@@ -418,7 +471,7 @@ section:nth-child(3){
 .rChart-container {
   position: relative;
   width: 38vw;
-  height: auto;
+  height: 65vh;
   /* margin: 0 auto; */
   display: flex;
 }
@@ -434,6 +487,7 @@ section:nth-child(3){
   margin: 0% 2% 2% 2%;
   margin: 0 auto;
   /* width: 100vw; */
+  height: 100dvh;
 }
 
 .career-center {
@@ -495,15 +549,528 @@ section:nth-child(3){
 @media screen and (max-width: 640px) {
   
 
-#first-section {
+.total-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  width:100%;
+  height:100vh;
+  /* overflow:auto; */
+  display: block;
+  /* position: relative; */
+}
+  
+.section {
+  scroll-snap-align: start;
+  /* height:100vh; */
+  /* width:100%; */
+  /* flex:none; */
+  position: relative;
+}
+
+.section {
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 1.5rem;
+}
+
+
+.box {
+  width: 20px;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+
+
+.scrollbar {
+  position: absolute;
+  top: 75%;
+  left: 44%;
+  font-size: 1rem;
+  width: auto;
+}
+
+.bar-text {
+  font-size: 0.8rem;
+}
+
+.bar-icon {
+  display: inline-block;
+  width: .7em;
+  height: .7em;
+  border: 0.15em solid #000;
+  border-left: 0;
+  border-bottom: 0;
+  display: flex;
+  transform: translateX(150%) rotate(135deg);
+}
+
+
+/* 第二セクション */
+
+#second-section {
+  padding: 0 0 4% 0;
+}
+
+.aboutme {
+  margin-left: 0;
+  flex-direction: column;
+  height: initial;
+}
+
+.aboutme-left {
+  width: 90vw;
+  margin-left: 0;
+}
+
+.text dt, .text dd {
+  font-size: 0.9rem;
+  padding: 2.5% 0;
+}
+
+.text dt {
+  margin-left: 0;
+}
+
+dt:first-child + dd {
+  margin-left: 1%;
+}
+
+
+.aboutme-right {
+  width: 100vw;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.rChart-container {
+  height: 38vh;
   width: 100vw;
 }
 
+
+.section-title2 {
+  font-size: 1.5rem;
+  margin: 4.5% 0 0 0;
+}
+
+.career {
+  height: initial;
+
+}
+
+.career-center {
+  display: flex;
+  flex-direction: column;
+}
+
+.career-left {
+  width: 90%;
+  margin-left: initial;
+  margin: 0 5% 0 5%;
+}
+
+.career-left p {
+  font-size: 0.9rem;
+}
+
+.career-right {
+  width: 90%;
+  margin: 0 5% 0 5%;
+}
+
+.bChart-container {
+  width: 100%;
+  height: 21vh;
+  margin: 0 0 0 0;
+}
+
+.chart-text {
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+
+}
+
+@media screen and (max-width: 389px) {
+
+  #second-section {
+    padding: 0 0 1% 0;
+  }
+
+  .section-title {
+    font-size: 1.0rem;
+  }
+
+  .bar-text {
+    transform: translateX(10%);
+  }
+
+  .bar-icon {
+    transform: translateX(200%) rotate(135deg);
+  }
+
+  .text img {
+    width: 100px;
+    height: 100px;
+  }
+
+
+  .text dt, .text dd {
+    font-size: .75rem;
+    padding: 1.5% 0;
+  }
+
+  dt:first-child + dd {
+    margin-left: 10%;
+  }
+
+  .rChart-container {
+    height: 43vh;
+  }
+
+  .section-title2 {
+    font-size: 1.0rem;
+    margin: -20px 0 0 0;
+  }
+
+  .career-left p {
+    font-size: 0.75rem;
+  }
+
+  .chart-text p {
+    font-size: 0.75rem;
+  }
+
+  .bChart-container {
+    width: 100%;
+    height: 23vh;
+    margin: 0 0 0 0;
+  }
+
 }
 
 
 
 
-@media screen and (min-width:640px) and (max-width: 820px) {
+
+
+
+
+
+
+
+
+
+
+/* タブレット */
+
+@media screen and (min-width:640px) and (max-width: 819px) {
+
+
+  .total-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    width:100%;
+    height:100vh;
+    /* overflow:auto; */
+    display: block;
+    /* position: relative; */
+  }
+    
+  .section {
+    scroll-snap-align: start;
+    /* height:100vh; */
+    /* width:100%; */
+    /* flex:none; */
+    position: relative;
+  }
+  
+  .section {
+    overflow: hidden;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  
+  .box {
+    width: 50px;
+    padding: 7px;
+    font-size: 2rem;
+  }
+  
+  
+  .scrollbar {
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    font-size: 1rem;
+    width: auto;
+  }
+  
+  .bar-text {
+    font-size: 0.8rem;
+  }
+  
+  .bar-icon {
+    display: inline-block;
+    width: .7em;
+    height: .7em;
+    border: 0.15em solid #000;
+    border-left: 0;
+    border-bottom: 0;
+    display: flex;
+    transform: translateX(150%) rotate(135deg);
+  }
+  
+  
+  /* 第二セクション */
+  
+  #second-section {
+    padding: 0;
+  }
+  
+  .aboutme {
+    margin-left: 0;
+    flex-direction: column;
+    height: initial;
+  }
+  
+  .aboutme-left {
+    width: 90vw;
+    margin-left: 0;
+  }
+  
+  .text {
+    margin-left: 25%;
+    justify-content: initial;
+  }
+
+  .text dt, .text dd {
+    font-size: 1.1rem;
+    padding: 2.5% 0;
+  }
+  
+  .text dt {
+    margin-left: 0;
+  }
+  
+  dt:first-child + dd {
+    margin-left: 1%;
+  }
+  
+  
+  .aboutme-right {
+    width: 100vw;
+    margin-right: 0;
+    margin-top: 4.5%;
+  }
+  
+  .rChart-container {
+    height: 40vh;
+    width: 100vw;
+  }
+  
+  
+  .section-title2 {
+    font-size: 2rem;
+    margin: 1.5% 0 5.5% 0;
+  }
+  
+  .career {
+    height: 100dvh;
+  }
+  
+  .career-center {
+    display: flex;
+    flex-direction: column;
+    height: 82.5dvh;
+  }
+  
+  .career-left {
+    width: 80%;
+    margin-left: initial;
+    margin: 0 5% 0 5%;
+  }
+  
+  .career-left p {
+    font-size: 1.1rem;
+  }
+  
+  .career-right {
+    width: 80%;
+    margin: 2.5% 2.5% 0 2.5%;
+  }
+  
+  .bChart-container {
+    width: 100%;
+    height: 25vh;
+    margin: 2vh 0;
+  }
+  
+  .chart-text {
+    font-size: 1.1rem;
+    padding: 0;
+    margin-top: 2.5%;
+  }
+
+}
+
+
+@media screen and (min-width: 820px) and (max-width: 880px) {
+
+  .total-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    width:100%;
+    height:100vh;
+    /* overflow:auto; */
+    display: block;
+    /* position: relative; */
+  }
+    
+  .section {
+    scroll-snap-align: start;
+    /* height:100vh; */
+    /* width:100%; */
+    /* flex:none; */
+    position: relative;
+  }
+  
+  .section {
+    overflow: hidden;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  
+  .box {
+    width: 50px;
+    padding: 7px;
+    font-size: 2rem;
+  }
+  
+  
+  .scrollbar {
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    font-size: 1rem;
+    width: auto;
+  }
+  
+  .bar-text {
+    font-size: 0.8rem;
+  }
+  
+  .bar-icon {
+    display: inline-block;
+    width: .7em;
+    height: .7em;
+    border: 0.15em solid #000;
+    border-left: 0;
+    border-bottom: 0;
+    display: flex;
+    transform: translateX(150%) rotate(135deg);
+  }
+  
+  
+  /* 第二セクション */
+  
+  #second-section {
+    padding: 0;
+  }
+  
+  .aboutme {
+    margin-left: 0;
+    flex-direction: column;
+    height: initial;
+  }
+  
+  .aboutme-left {
+    width: 90vw;
+    margin-left: 0;
+  }
+  
+  .text {
+    margin-left: 25%;
+    justify-content: initial;
+  }
+
+  .text dt, .text dd {
+    font-size: 1.1rem;
+    padding: 2.5% 0;
+  }
+  
+  .text dt {
+    margin-left: 0;
+  }
+  
+  dt:first-child + dd {
+    margin-left: 1%;
+  }
+  
+  
+  .aboutme-right {
+    width: 100vw;
+    margin-right: 0;
+    margin-top: 4.5%;
+  }
+  
+  .rChart-container {
+    height: 40vh;
+    width: 100vw;
+  }
+  
+  
+  .section-title2 {
+    font-size: 2rem;
+    margin: 4.5% 0 1.5% 0;
+  }
+  
+  .career {
+    height: 100dvh;
+  }
+  
+  .career-center {
+    display: flex;
+    flex-direction: column;
+    height: 82.5dvh;
+  }
+  
+  .career-left {
+    width: 80%;
+    margin-left: initial;
+    margin: 0 5% 0 5%;
+  }
+  
+  .career-left p {
+    font-size: 1.1rem;
+  }
+  
+  .career-right {
+    width: 80%;
+    margin: 2.5% 2.5% 0 2.5%;
+  }
+  
+  .bChart-container {
+    width: 100%;
+    height: 25vh;
+    margin: 2vh 0;
+  }
+  
+  .chart-text {
+    font-size: 1.1rem;
+    padding: 0;
+    margin-top: 2.5%;
+  }
+
+
 
 }
