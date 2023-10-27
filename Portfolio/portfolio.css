@@ -544,6 +544,18 @@ section:nth-child(5){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* レスポンシブスマホ */
 
 @media screen and (max-width: 640px) {
@@ -572,7 +584,7 @@ section:nth-child(5){
 }
 
 .section-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 
@@ -624,8 +636,12 @@ section:nth-child(5){
   margin-left: 0;
 }
 
+.text {
+  margin-bottom: 5%;
+}
+
 .text dt, .text dd {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   padding: 2.5% 0;
 }
 
@@ -645,14 +661,14 @@ dt:first-child + dd {
 }
 
 .rChart-container {
-  height: 38vh;
-  width: 100vw;
+  height: 36vh;
+  width: 99vw;
 }
 
 
 .section-title2 {
-  font-size: 1.5rem;
-  margin: 4.5% 0 0 0;
+  font-size: 1.25rem;
+  margin: 0% 0 0% 0;
 }
 
 .career {
@@ -672,7 +688,8 @@ dt:first-child + dd {
 }
 
 .career-left p {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
+  margin: 7% 0;
 }
 
 .career-right {
@@ -687,8 +704,9 @@ dt:first-child + dd {
 }
 
 .chart-text {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   padding: 0;
+  margin-top: 7%;
 }
 
 
@@ -719,7 +737,7 @@ dt:first-child + dd {
 
 
   .text dt, .text dd {
-    font-size: .75rem;
+    font-size: .6rem;
     padding: 1.5% 0;
   }
 
@@ -737,11 +755,11 @@ dt:first-child + dd {
   }
 
   .career-left p {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
   }
 
   .chart-text p {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
   }
 
   .bChart-container {

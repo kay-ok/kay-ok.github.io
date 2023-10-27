@@ -50,6 +50,11 @@ var ctx1 = document.getElementById("myRadarChart");
       }]
     },
     options: {
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
       maintainAspectRatio: false,
       responsive: true,
       scales: {
@@ -85,7 +90,7 @@ $('#chart').on('inview', function(event, isInView) {//画面上に入ったら�
   if (isInView) {
     var ctx = document.getElementById('chart');
     var data = {
-      labels: ["HTML", "CSS", "JavaScript", "jQuery", "Python"],
+      labels: ["HTML", "CSS", "JavaScript", "jQuery", "React"],
       datasets: [{
           label: '現役エンジニアを10とした自身のスキル',
           data: [8, 7, 4, 7, 3],
@@ -261,25 +266,3 @@ function drawSine(canvas, t, zoom, delay) {
 }
 
 init();
-
-
-
-
-
-
-// 以下、レスポンシブ
-
-
-if (window.matchMedia('(max-width: 640px)')) {
-    
-  // ここと<section id="second-sectionSP" class="section">
-  //   <div class="aboutme-right">
-  //       <div class="rChart-container">
-  //         <canvas id="myRadarChart"></canvas>
-  //       </div>
-  //   </div>
-  // ここ</section>
-
-  // $(function(){ 
-  // });
-};
