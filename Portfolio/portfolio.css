@@ -434,7 +434,7 @@ section:nth-child(5){
 .text dt, .text dd {
   font-size: 1.2rem;
   letter-spacing: 0.09em;
-  padding: 3.5% 0;
+  padding: 4% 0 0 0;
   color: #000;
   font-family: 'Zen Kurenaido';
 }
@@ -585,6 +585,7 @@ section:nth-child(5){
 
 .section-title {
   font-size: 1.25rem;
+  margin-top: 4%;
 }
 
 
@@ -642,7 +643,7 @@ section:nth-child(5){
 
 .text dt, .text dd {
   font-size: 0.7rem;
-  padding: 2.5% 0;
+  padding: 1.5% 0;
 }
 
 .text dt {
