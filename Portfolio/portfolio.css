@@ -670,6 +670,7 @@ dt:first-child + dd {
 /* 第三セクション */
 #third-section {
   height: 95vh;
+  padding-top: 5vh;
 }
 
 .section-title2 {
