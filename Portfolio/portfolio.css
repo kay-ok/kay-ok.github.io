@@ -669,7 +669,7 @@ dt:first-child + dd {
 
 /* 第三セクション */
 #third-section {
-  height: 100%;
+  height: 100vh;
 }
 
 .section-title2 {
@@ -678,7 +678,7 @@ dt:first-child + dd {
 }
 
 .career {
-  height: 70vh;
+  height: initial;
 }
 
 .career-center {
@@ -704,8 +704,8 @@ dt:first-child + dd {
 
 .bChart-container {
   width: 100%;
-  height: 28vh;
-  margin: 7.5% 0;
+  height: 21vh;
+  margin: 20% 0 0 0;
 }
 
 .chart-text {
