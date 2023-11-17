@@ -426,7 +426,7 @@ section:nth-child(5){
 .text {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 
@@ -624,6 +624,7 @@ section:nth-child(5){
 
 #second-section {
   padding: 0 0 4% 0;
+  height: 100dvh;
 }
 
 .aboutme {
@@ -638,7 +639,8 @@ section:nth-child(5){
 }
 
 .text {
-  margin-bottom: 5%;
+  margin-bottom: 15%;
+  margin-left: 15%;
 }
 
 .text dt, .text dd {
@@ -650,9 +652,9 @@ section:nth-child(5){
   margin-left: 0;
 }
 
-dt:first-child + dd {
+/* dt:first-child + dd {
   margin-left: 1%;
-}
+} */
 
 
 .aboutme-right {
@@ -882,9 +884,9 @@ dt:first-child + dd {
     margin-left: 0;
   }
   
-  dt:first-child + dd {
+  /* dt:first-child + dd {
     margin-left: 1%;
-  }
+  } */
   
   
   .aboutme-right {
